@@ -16,9 +16,11 @@
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="1" Background="Aqua">
             <TextBlock Text="Ragna-Rundt" TextAlignment="Center" FontWeight="Bold" FontSize="30"></TextBlock>
-            <Slider Margin="0,50" Maximum="3" TickPlacement="BottomRight" TickFrequency="1" SnapsTo="Ticks" Value="0"
+            <Button Click="Klick" Content="Hi" HorizontalAlignment="Left" Height="1305" VerticalAlignment="Center" Width="215" RenderTransformOrigin="0.514,0.321" />
+
+<Slider Margin="0,50" Maximum="3" TickPlacement="BottomRight" TickFrequency="1" SnapsTo="Ticks" Value="0"
                     ></Slider>
             <Image Source="../Assets/grundplan, ragnarock.jpg" Margin="0,110,0,60"></Image>
-        </StackPanel>
+                 </StackPanel>
     </Grid>
 </Page>

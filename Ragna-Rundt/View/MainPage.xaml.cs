@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Security.Cryptography.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -26,7 +27,14 @@ namespace Ragna_Rundt
         public MainPage()
         {
             this.InitializeComponent();
+           
+        }
+
+        private void Klick(object sender, RoutedEventArgs e)
+        {
             this.Frame.Navigate(typeof(BurgerMenu1));
+
         }
     }
+
 }
