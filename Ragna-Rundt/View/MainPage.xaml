@@ -9,6 +9,16 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="5*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="1" Background="Aqua">
+            <TextBlock Text="Ragna-Rundt" TextAlignment="Center"></TextBlock>
+            <Slider></Slider>
+            <Image></Image>
+        </StackPanel>
 
     </Grid>
 </Page>
