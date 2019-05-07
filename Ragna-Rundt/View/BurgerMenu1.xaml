@@ -14,17 +14,17 @@
             <ColumnDefinition Width="5*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <NavigationView x:Name="NavigationViewControl" PaneDisplayMode="LeftMinimal" Background="Blue">
-
-            <NavigationView.MenuItems>
-            <NavigationViewItem Content="Kort" x:Name="Kort" ></NavigationViewItem>
-            <NavigationViewItem Content="Søg" x:Name="Søg"></NavigationViewItem>
-            <NavigationViewItem Content="Udstilling" x:Name="Udstilling"></NavigationViewItem>
-            </NavigationView.MenuItems>
+        <NavigationView PaneDisplayMode="Auto" Background="LightGoldenrodYellow" Grid.ColumnSpan="2" Margin="0,0,308.4,0" VerticalAlignment="Stretch" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" FontSize="30">
+<NavigationView.MenuItems>
+                <NavigationViewItem FontFamily="Segoe MDL2 Assets" Content="&#xE909;" x:Name="Kort" FontSize="30" Background="Blue"></NavigationViewItem>
+                <NavigationViewItem FontFamily="Segoe MDL2 Assets" Content="&#xE721;" x:Name="Søg" FontSize="30"></NavigationViewItem>
+                <NavigationViewItem Content="Udstilling" x:Name="Udstilling"></NavigationViewItem>
+</NavigationView.MenuItems>
         </NavigationView>
         <StackPanel Grid.Column="1" Background="GreenYellow">
-            <TextBlock Text="Ragna-Rundt" TextAlignment="Center" FontWeight="Bold" FontSize="30"></TextBlock></StackPanel>
+            <TextBlock Text="Ragna-Rundt" TextAlignment="Center" FontWeight="Bold" FontSize="30"></TextBlock>
+        </StackPanel>
 
 
-</Grid>
+    </Grid>
 </Page>
