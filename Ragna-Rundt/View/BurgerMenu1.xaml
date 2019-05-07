@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="Ragna_Rundt.View.BurgerMenu1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Ragna_Rundt.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="5*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <NavigationView x:Name="NavigationViewControl" PaneDisplayMode="LeftMinimal">
+
+            <NavigationView.MenuItems>
+            <NavigationViewItem Content="Kort" x:Name="Kort" ></NavigationViewItem>
+            <NavigationViewItem Content="Søg" x:Name="Søg"></NavigationViewItem>
+            <NavigationViewItem Content="Udstilling" x:Name="Udstilling"></NavigationViewItem>
+            </NavigationView.MenuItems>
+        </NavigationView>
+        <StackPanel Grid.Column="1" Background="GreenYellow">
+            <TextBlock Text="Ragna-Rundt" TextAlignment="Center" FontWeight="Bold" FontSize="30"></TextBlock></StackPanel>
+
+
+</Grid>
+</Page>
