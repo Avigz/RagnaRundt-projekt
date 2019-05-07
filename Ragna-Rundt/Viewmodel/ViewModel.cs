@@ -12,11 +12,8 @@ namespace Ragna_Rundt.Viewmodel
     public class ViewModel
     {
 
-        static void Main(string[] args)
-        {
-            
-            
-            
-        }
-    }
+       
+
 }
+}
+
