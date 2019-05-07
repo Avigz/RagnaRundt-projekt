@@ -14,7 +14,7 @@
             <ColumnDefinition Width="5*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <NavigationView x:Name="NavigationViewControl" PaneDisplayMode="LeftMinimal">
+        <NavigationView x:Name="NavigationViewControl" PaneDisplayMode="LeftMinimal" Background="Blue">
 
             <NavigationView.MenuItems>
             <NavigationViewItem Content="Kort" x:Name="Kort" ></NavigationViewItem>
