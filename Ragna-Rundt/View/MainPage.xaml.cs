@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Ragna_Rundt.View;
+using Ragna_Rundt.Viewmodel;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -27,12 +28,13 @@ namespace Ragna_Rundt
         public MainPage()
         {
             this.InitializeComponent();
+            ViewModel viewModel = new ViewModel();
            
         }
 
         private void Klick(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(BurgerMenu1));
+            this.Frame.Navigate(typeof(Udstillingstemplate));
 
         }
     }

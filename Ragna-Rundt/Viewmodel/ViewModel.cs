@@ -12,8 +12,23 @@ namespace Ragna_Rundt.Viewmodel
     public class ViewModel
     {
 
-       
+        public string VideoLink(int key)
+        {
+            return DataKatalog.UdstillingsElementer[key].VideoLink;
+        }
 
-}
+        public string Name(int key)
+        {
+            return DataKatalog.UdstillingsElementer[key].Name;
+        }
+
+        public string Description(int key)
+        {
+            return DataKatalog.UdstillingsElementer[key].Description;
+        }
+
+    
+
+    }
 }
 

@@ -27,8 +27,7 @@ namespace Ragna_Rundt.View
         public Udstillingstemplate()
         {
             this.InitializeComponent();
-            string udstillingsvideo = "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/s9jOm4Lbj-U\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture </iframe>";
-            VideoLink.NavigateToString(udstillingsvideo);
+            VideoLink.NavigateToString("<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/VLW1ieY4Izw?autoplay=1\" frameborder=\"0\" allow=\"accelerometer; encrypted-media; gyroscope; picture-in-picture\"></iframe>");
         }
     }
 }
