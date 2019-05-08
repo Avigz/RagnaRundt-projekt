@@ -26,5 +26,61 @@ namespace Ragna_Rundt.View
         {
             this.InitializeComponent();
         }
+
+        private void NavigationView_OnLoaded(object sender, RoutedEventArgs e)
+        {
+            foreach (NavigationViewItemBase item in NavigationView.MenuItems)
+            {
+                if (item is NavigationViewItem && item.Tag.ToString() == "Kort_Side")
+                {
+                    NavigationView.SelectedItem = item;
+                    break;
+                }
+
+                if (item is NavigationViewItem && item.Tag.ToString() == "Søge_Side")
+                {
+                    this.Frame.Navigate(typeof(Søgeside));
+                    break;
+                }
+
+                if (item is NavigationViewItem && item.Tag.ToString() == "Udstillings_Side")
+                {
+                    this.Frame.Navigate(typeof(Udstillingstemplate));
+                    break;
+                }
+
+            }
+        }
     }
 }
+//            this.Frame.Navigate(typeof(MainPage));
+//        }
+//        }
+
+//        private void NavigationView_OnSelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
+//        {
+//            throw new NotImplementedException();
+//        }
+
+//        private void NavigationView_OnItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
+//    {
+//    TextBlock ItemContent = args.InvokedItem as TextBlock;
+//        if (ItemContent != null)
+//    {
+//            switch (ItemContent.Tag)
+//{
+//case "Nav_Home":
+//this.Frame.Navigate(typeof(HomePage));
+//break;
+
+//case "Nav_Shop":
+//this.Frame.Navigate(typeof(ShopPage));
+//break;
+
+//case "Nav_ShopCart":
+//this.Frame.Navigate(typeof(CartPage));
+//break;
+
+//    }
+//    }
+

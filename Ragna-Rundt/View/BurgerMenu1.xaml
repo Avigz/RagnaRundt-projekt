@@ -17,29 +17,29 @@
 
 
         <!--Nedenfor: Burgermenu-->
-        <NavigationView IsBackButtonVisible="Collapsed" IsSettingsVisible="False" PaneDisplayMode="Left" Background="LightGoldenrodYellow" Grid.ColumnSpan="2" Margin="0,0,308.4,0" VerticalAlignment="Stretch">
+        <NavigationView x:Name="NavigationView" Loaded="NavigationView_OnLoaded"  IsBackButtonVisible="Collapsed" IsSettingsVisible="False" PaneDisplayMode="Left" Background="LightGoldenrodYellow" Grid.ColumnSpan="2" Margin="0,0,308.4,0" VerticalAlignment="Stretch">
 
             <NavigationView.MenuItems>
-                <NavigationViewItem Content="Kort" x:Name="Kort"  Background="Blue">
+                <NavigationViewItem Content="Kort" x:Name="Kort"  Background="Blue" Tag="Kort_Side">
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE909;"></FontIcon>
 
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Content="Søg" x:Name="Søg"  Background="Red">
+                <NavigationViewItem Content="Søg" x:Name="Søg"  Background="Red" Tag="Søge_Side">
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE721;"></FontIcon>
 
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Content="Udstilling" x:Name="Udstilling"  Background="Orange">
+                <NavigationViewItem Content="Udstilling" x:Name="Udstilling"  Background="Orange" Tag="Udstillings_Side">
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE8A2;"></FontIcon>
 
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
             </NavigationView.MenuItems>
-
+<Frame x:Name="ContentFrame"></Frame>
         </NavigationView>
         <StackPanel Grid.Column="1" Background="GreenYellow">
             <TextBlock Text="Ragna-Rundt" TextAlignment="Center" FontWeight="Bold" FontSize="30"></TextBlock>
