@@ -30,10 +30,22 @@ namespace Ragna_Rundt
            
         }
 
-        private void Klick(object sender, RoutedEventArgs e)
+       
+        private void NavView_Navigate(NavigationViewItem item)
         {
-            this.Frame.Navigate(typeof(BurgerMenu1));
+            switch (item.Tag)
+            {
+                case "Søg":
+                    this.Frame.Navigate(typeof(Søgeside),null);
+                    break;
 
+                case "Udstilling":
+                    this.Frame.Navigate(typeof(Udstillingstemplate));
+                    break;
+                case "Kort":
+                    this.Frame.Navigate(typeof(MainPage),null);
+                    break;
+            }
         }
     }
 

@@ -17,19 +17,21 @@
         <NavigationView IsBackButtonVisible="Collapsed" IsSettingsVisible="False" PaneDisplayMode="Left" Background="LightGoldenrodYellow" Grid.ColumnSpan="2" Margin="0,0,308.4,0" VerticalAlignment="Stretch">
 
             <NavigationView.MenuItems>
-                <NavigationViewItem Content="Kort" x:Name="Kort"  Background="Blue">
+                <NavigationViewItem Content="Kort" x:Name="Kort"  Background="Blue" Tag="Kort">
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE909;"></FontIcon>
 
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Content="Søg" x:Name="Søg"  Background="Red">
+
+                <NavigationViewItem Content="Søg" x:Name="Søg"  Background="Red" Tag="Søg" SelectsOnInvoked="True" >
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE721;"></FontIcon>
 
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Content="Udstilling" x:Name="Udstilling"  Background="Orange">
+               
+                <NavigationViewItem  Content="Udstilling" x:Name="Udstilling"  Background="Orange" Tag="Udstilling">
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE8A2;"></FontIcon>
 
@@ -46,7 +48,7 @@
         <StackPanel Grid.Column="1" Background="Aqua">
             <TextBlock Text="Ragna-Rundt" TextAlignment="Center" FontWeight="Bold" FontSize="30"></TextBlock>
            
-<Slider Margin="0,50" Maximum="3" TickPlacement="BottomRight" TickFrequency="1" SnapsTo="Ticks" Value="0"
+            <Slider Margin="0,50" Maximum="3" TickPlacement="BottomRight" TickFrequency="1" SnapsTo="Ticks" Value="0"
                     ></Slider>
             <Image Source="../Assets/grundplan, ragnarock.jpg" Margin="0,110,0,60"></Image>
                  </StackPanel>
