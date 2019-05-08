@@ -25,6 +25,9 @@ namespace Ragna_Rundt.View
         public BurgerMenu1()
         {
             this.InitializeComponent();
+            
+            WebView.NavigateToString("<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/VLW1ieY4Izw?autoplay=1\" frameborder=\"0\" allow=\"accelerometer; encrypted-media; gyroscope; picture-in-picture\"></iframe>");
+
         }
     }
 }
