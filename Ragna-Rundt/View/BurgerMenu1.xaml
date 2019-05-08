@@ -15,7 +15,9 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <NavigationView PaneDisplayMode="Left" Background="LightGoldenrodYellow" Grid.ColumnSpan="2" Margin="0,0,308.4,0" VerticalAlignment="Stretch">
-<NavigationView.MenuItems>
+
+                 <!--Nedenfor: Burgermenu-->
+            <NavigationView.MenuItems>
                 <NavigationViewItem Content="Kort" x:Name="Kort"  Background="Blue">
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE909;"></FontIcon>
@@ -28,7 +30,6 @@
 
         </NavigationViewItem.Icon>
     </NavigationViewItem>
-                <!--<NavigationViewItem FontFamily="Segoe MDL2 Assets" Content="&#xE8A2;" x:Name="Udstilling"></NavigationViewItem>-->
                 <NavigationViewItem Content="Udstilling" x:Name="Udstilling"  Background="Orange">
                     <NavigationViewItem.Icon>
             <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE8A2;"></FontIcon>
