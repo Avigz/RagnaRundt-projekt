@@ -127,6 +127,9 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UdstillingsElementer.cs" />
+    <Compile Include="View\Navigation_Splitview.xaml.cs">
+      <DependentUpon>Navigation_Splitview.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Søgeside.xaml.cs">
       <DependentUpon>Søgeside.xaml</DependentUpon>
     </Compile>
@@ -163,6 +166,10 @@
     <Page Include="View\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Navigation_Splitview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Søgeside.xaml">
       <SubType>Designer</SubType>
