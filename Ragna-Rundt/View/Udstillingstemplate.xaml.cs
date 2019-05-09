@@ -30,5 +30,10 @@ namespace Ragna_Rundt.View
             string udstillingsvideo = "<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/s9jOm4Lbj-U\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture </iframe>";
             VideoLink.NavigateToString(udstillingsvideo);
         }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
