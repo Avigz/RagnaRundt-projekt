@@ -9,6 +9,9 @@
     xmlns:VM="using:Ragna_Rundt.Viewmodel"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.DataContext>
+        <VM:ViewModel></VM:ViewModel>
+    </Page.DataContext>
 
     <Grid>
 
@@ -24,7 +27,7 @@
             
         </StackPanel>
         <StackPanel Grid.Column="0" Background="blue" Orientation="Vertical">
-            <TextBox Margin="10,10,10,10" Text="{Binding }" ></TextBox>
+            <TextBox Margin="10,10,10,10" Text="{Binding Key}" ></TextBox>
         </StackPanel>
 
     </Grid>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Security.Cryptography.X509Certificates;
 using Windows.ApplicationModel.AppExtensions;
 using Windows.ApplicationModel.DataTransfer;
 using Windows.Foundation;
@@ -32,9 +33,10 @@ namespace Ragna_Rundt.View
             this.InitializeComponent();
             ViewModel viewModel = new ViewModel();
             DataContext = viewModel;
-
-            VideoLink.NavigateToString($"<iframe height=\"768\" width=\"1024\" src="+$"{viewModel.Catalog.VideoLink(viewModel.Key)}"+ "frameborder=\"0\" allow=\"accelerometer; encrypted-media; gyroscope; controls=0; picture-in-picture\"></iframe>");
             
+            VideoLink.NavigateToString($"<iframe height=\"768\" width=\"1024\" src="+$"{viewModel.Catalog.VideoLink(viewModel.Key)}"+ "frameborder=\"0\" allow=\"accelerometer; encrypted-media; gyroscope; picture-in-picture\"></iframe>");
+            
+           
 
         }
     }

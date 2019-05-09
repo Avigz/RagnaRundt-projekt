@@ -14,7 +14,7 @@ namespace Ragna_Rundt.Model
 
         public DataKatalog()
         {
-            UdstillingsElement a1 = new UdstillingsElement("Spejle", "https://www.youtube.com/embed/MvjQTA81MhY", "Spejl Rummet");
+            UdstillingsElement a1 = new UdstillingsElement("Spejle", "https://www.youtube.com/embed/s9jOm4Lbj-U?autoplay=1", "Spejl Rummet");
             UdstillingsElement a2 = new UdstillingsElement("Lys", "https://www.youtube.com/embed/s9jOm4Lbj-U?autoplay=1", "Lys Show");
 
             _udstillingsElementer.Add(1,a1);

@@ -30,6 +30,7 @@ namespace Ragna_Rundt.Viewmodel
                OnPropertyChanged(nameof(VideoLink));
                OnPropertyChanged(nameof(Description));
 
+
            }
        }
     
