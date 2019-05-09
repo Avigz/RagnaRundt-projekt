@@ -11,35 +11,48 @@ using Ragna_Rundt.Model;
 
 namespace Ragna_Rundt.Viewmodel
 {
-    public static class ViewModel 
+    public class ViewModel : INotifyPropertyChanged
     {
-        public static DataKatalog Catalog = new DataKatalog();
+        public DataKatalog Catalog = new DataKatalog();
 
-        private static int _key = 1;
+        private int _key = 1;
       
  
 
-       public static int Key
+       public int Key
        {
            get { return _key; }
-           set { _key = value; }
+           set
+           {
+               _key = value;
+               OnPropertyChanged();
+               OnPropertyChanged(nameof(Name));
+               OnPropertyChanged(nameof(VideoLink));
+               OnPropertyChanged(nameof(Description));
+
+           }
        }
     
-       public static string VideoLink
+       public  string VideoLink
        {
-           get {return Catalog.UdstillingsElementer[_key].VideoLink;}
+           get {return Catalog.UdstillingsElementer[Key].VideoLink;}
        }
 
-       public static string Name
+       public  string Name
        {
-           get{ return Catalog.UdstillingsElementer[_key].Name;}
+           get{ return Catalog.UdstillingsElementer[Key].Name;}
        }
 
-       public static string Description
+       public string Description
        {
-           get { return Catalog.UdstillingsElementer[_key].Description; }
+           get { return Catalog.UdstillingsElementer[Key].Description; }
        }
-     
+
+       public event PropertyChangedEventHandler PropertyChanged;
+
+       protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        { PropertyChanged?.Invoke(this,new  PropertyChangedEventArgs(propertyName));}
+
     }
 }
 

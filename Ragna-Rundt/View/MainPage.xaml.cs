@@ -28,7 +28,7 @@ namespace Ragna_Rundt
         public MainPage()
         {
             this.InitializeComponent();
-            ViewModel viewModel = new ViewModel();
+            
            
         }
 

@@ -5,14 +5,11 @@
     xmlns:local="using:Ragna_Rundt"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:viewmodel="using:Ragna_Rundt.Viewmodel"
     xmlns:view="using:Ragna_Rundt.View"
+    xmlns:VM="using:Ragna_Rundt.Viewmodel"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    <Page.DataContext>
-        <viewmodel:ViewModel>
-        </viewmodel:ViewModel>
-    </Page.DataContext>
+
     <Grid>
 
         <Grid.ColumnDefinitions>
@@ -27,7 +24,7 @@
             
         </StackPanel>
         <StackPanel Grid.Column="0" Background="blue" Orientation="Vertical">
-            <TextBox Margin="10,10,10,10" Text="{Binding Key, Mode=TwoWay}" ></TextBox>
+            <TextBox Margin="10,10,10,10" Text="{Binding }" ></TextBox>
         </StackPanel>
 
     </Grid>
