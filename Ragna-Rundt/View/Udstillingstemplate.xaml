@@ -47,8 +47,8 @@
         <StackPanel Grid.Column="1" Background="MediumVioletRed">
             <TextBlock Text="Ragna-Rundt" TextAlignment="Center" FontWeight="Bold" FontSize="30"></TextBlock>
             <Slider Margin="0,50" Maximum="3" TickPlacement="BottomRight" TickFrequency="1" SnapsTo="Ticks" Value="0"></Slider>
-            <WebView x:Name="VideoLink" ></WebView>
-            <TextBlock Height="200" VerticalAlignment="Center" Margin="0,180,0,0" HorizontalAlignment="Stretch" SelectionChanged="TextBlock_SelectionChanged" >OM RAGNAROCK Oplev ungdommens historie 
+            <WebView  x:Name="VideoLink"  Height="200"  Source="https://www.youtube.com/embed/s9jOm4Lbj-U" ></WebView>
+            <TextBlock Height="200" VerticalAlignment="Center" Margin="0,0,0,0" HorizontalAlignment="Stretch" SelectionChanged="TextBlock_SelectionChanged" >OM RAGNAROCK Oplev ungdommens historie 
                 <LineBreak/>og udvikling – fortalt gennem rockens og <LineBreak/>poppens lyd, billeder og symboler. Det er 
                 <LineBreak/>fortællingen om, hvordan unge med musikken<LineBreak/> 
                 har flyttet grænser og påvirket samfundet <LineBreak/> gennem nye danseformer, forbrug, politiske <LineBreak/> 
@@ -56,7 +56,7 @@
                 nye teknologier – og meget mere. Det handler <LineBreak/> 
                 om os, når vi lytter til musik, danser, kæmper, <LineBreak/>
                 skaber og dyrker idoler.</TextBlock>
-            <Image Height="200" Width="309" Source="../Assets/grundplan, ragnarock.jpg" Margin="0,10,0,0"></Image>
+            <Image Height="200" Width="309" Source="../Assets/grundplan, ragnarock.jpg" Margin="0,0,0,0"></Image>
 
         </StackPanel>
     </Grid>

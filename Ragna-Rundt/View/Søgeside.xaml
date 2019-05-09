@@ -41,6 +41,9 @@
         </NavigationView>
         <StackPanel Grid.Column="1" Background="GreenYellow">
             <TextBlock Text="Ragna-Rundt" TextAlignment="Center" FontWeight="Bold" FontSize="30"></TextBlock>
+            <StackPanel>
+                
+            </StackPanel>
         </StackPanel>
 
 

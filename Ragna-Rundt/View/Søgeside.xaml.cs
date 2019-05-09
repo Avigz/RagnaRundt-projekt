@@ -26,5 +26,7 @@ namespace Ragna_Rundt.View
         {
             this.InitializeComponent();
         }
+
+       
     }
 }
