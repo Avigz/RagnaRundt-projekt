@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.AppExtensions;
 using Windows.ApplicationModel.DataTransfer;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -14,8 +15,9 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Ragna_Rundt.Model;
+using Ragna_Rundt.Viewmodel;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace Ragna_Rundt.View
 {
@@ -26,8 +28,11 @@ namespace Ragna_Rundt.View
     {
         public Udstillingstemplate()
         {
+            
             this.InitializeComponent();
-            VideoLink.NavigateToString("<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/VLW1ieY4Izw?autoplay=1\" frameborder=\"0\" allow=\"accelerometer; encrypted-media; gyroscope; picture-in-picture\"></iframe>");
+            VideoLink.NavigateToString($"<iframe height=\"768\" width=\"1024\" src="+$"{ViewModel.Catalog.VideoLink(ViewModel.Key)}"+ "frameborder=\"0\" allow=\"accelerometer; encrypted-media; gyroscope; controls=0; picture-in-picture\"></iframe>");
+            
+
         }
     }
 }
