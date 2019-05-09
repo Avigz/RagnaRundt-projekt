@@ -45,17 +45,17 @@ namespace Ragna_Rundt.View
 
         private void Kort_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Frame.Navigate(typeof(MainPage));
         }
 
         private void Søg_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Frame.Navigate(typeof(Søgeside));
         }
 
         private void Udstilling_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
     }
 }

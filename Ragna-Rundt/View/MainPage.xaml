@@ -20,7 +20,7 @@
 
                     <Button FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,100,0" VerticalAlignment="Center" Click="Button_Click" BorderThickness="0,0,0,0"></Button>
 
-                    <Button Background="Transparent" Name="Kort_Button" Click="Kort_Button_Click" BorderThickness="0,0,0,0" Width="150">
+                    <Button Background="Gray" Name="Kort_Button" Click="Kort_Button_Click" BorderThickness="0,0,0,0" Width="150">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-25.2,0,0,0" VerticalAlignment="Stretch" Width="105">
                             <TextBlock Margin="0,0,0,0" IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE909;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
                             <TextBlock IsTextSelectionEnabled="False" Text="Kort" FontSize="16" HorizontalAlignment="Left"/>

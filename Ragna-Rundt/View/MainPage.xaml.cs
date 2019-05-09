@@ -44,17 +44,17 @@ namespace Ragna_Rundt
 
         private void Kort_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void Søg_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Frame.Navigate(typeof(Søgeside));
         }
 
         private void Udstilling_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Frame.Navigate(typeof(Udstillingstemplate));
         }
         //private void NavView_Navigate(NavigationViewItem item)
         //{

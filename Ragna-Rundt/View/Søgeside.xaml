@@ -27,7 +27,7 @@
                         </StackPanel>
                     </Button>
 
-                    <Button Background="Transparent" x:Name="Søg_Button" Click="Søg_Button_Click" BorderThickness="0,0,0,0" Width="150">
+                    <Button Background="Gray" x:Name="Søg_Button" Click="Søg_Button_Click" BorderThickness="0,0,0,0" Width="150">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-25.2,0,0,0" VerticalAlignment="Stretch" Width="105">
                             <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE721;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
                             <TextBlock IsTextSelectionEnabled="False"  Text="Søg" FontSize="16" HorizontalAlignment="Left"/>
