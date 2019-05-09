@@ -11,18 +11,12 @@ using Ragna_Rundt.Model;
 
 namespace Ragna_Rundt.Viewmodel
 {
-    public class ViewModel 
+    public static class ViewModel 
     {
-        public static DataKatalog Catalog;
+        public static DataKatalog Catalog = new DataKatalog();
 
-        private static int _key;
-
-        public ViewModel()
-        {
-            Catalog = new DataKatalog();
-            _key = 1;
-        }
-        
+        private static int _key = 1;
+      
  
 
        public static int Key
@@ -31,17 +25,17 @@ namespace Ragna_Rundt.Viewmodel
            set { _key = value; }
        }
     
-       public  string VideoLink
+       public static string VideoLink
        {
            get {return Catalog.UdstillingsElementer[_key].VideoLink;}
        }
 
-       public  string Name
+       public static string Name
        {
            get{ return Catalog.UdstillingsElementer[_key].Name;}
        }
 
-       public  string Description
+       public static string Description
        {
            get { return Catalog.UdstillingsElementer[_key].Description; }
        }
