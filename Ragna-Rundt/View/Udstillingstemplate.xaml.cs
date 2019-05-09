@@ -31,7 +31,29 @@ namespace Ragna_Rundt.View
             VideoLink.NavigateToString(udstillingsvideo);
         }
 
-        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (SplitviewMenu.IsPaneOpen == false)
+            {
+                SplitviewMenu.IsPaneOpen = true;
+            }
+            else if (SplitviewMenu.IsPaneOpen == true)
+            {
+                SplitviewMenu.IsPaneOpen = false;
+            }
+        }
+
+        private void Kort_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Søg_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Udstilling_Button_Click(object sender, RoutedEventArgs e)
         {
 
         }

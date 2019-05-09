@@ -30,23 +30,48 @@ namespace Ragna_Rundt
            
         }
 
-       
-        private void NavView_Navigate(NavigationViewItem item)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            switch (item.Tag)
+            if (SplitviewMenu.IsPaneOpen == false)
             {
-                case "Søg":
-                    this.Frame.Navigate(typeof(Søgeside),null);
-                    break;
-
-                case "Udstilling":
-                    this.Frame.Navigate(typeof(Udstillingstemplate));
-                    break;
-                case "Kort":
-                    this.Frame.Navigate(typeof(MainPage),null);
-                    break;
+                SplitviewMenu.IsPaneOpen = true;
+            }
+            else if (SplitviewMenu.IsPaneOpen == true)
+            {
+                SplitviewMenu.IsPaneOpen = false;
             }
         }
+
+        private void Kort_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Søg_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Udstilling_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        //private void NavView_Navigate(NavigationViewItem item)
+        //{
+        //    switch (item.Tag)
+        //    {
+        //        case "Søg":
+        //            this.Frame.Navigate(typeof(Søgeside),null);
+        //            break;
+
+        //        case "Udstilling":
+        //            this.Frame.Navigate(typeof(Udstillingstemplate));
+        //            break;
+        //        case "Kort":
+        //            this.Frame.Navigate(typeof(MainPage),null);
+        //            break;
+        //    }
+        //}
     }
 
 }

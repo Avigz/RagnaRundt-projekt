@@ -15,30 +15,36 @@
             <ColumnDefinition Width="5*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <NavigationView IsBackButtonVisible="Collapsed" IsSettingsVisible="False" PaneDisplayMode="Left" Background="MediumVioletRed" Grid.ColumnSpan="2" Margin="0,0,308.4,0" VerticalAlignment="Stretch">
+        <SplitView x:Name="SplitviewMenu" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="50" OpenPaneLength="150" Margin="0,0,0,0">
+            <SplitView.Pane>
+                <StackPanel>
 
-            <NavigationView.MenuItems>
-                <NavigationViewItem Content="Kort" x:Name="Kort"  Background="Blue">
-                    <NavigationViewItem.Icon>
-                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE909;"></FontIcon>
+                    <Button FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,100,0" VerticalAlignment="Center" Click="Button_Click" BorderThickness="0,0,0,0"></Button>
 
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-                <NavigationViewItem Content="Søg" x:Name="Søg"  Background="Red">
-                    <NavigationViewItem.Icon>
-                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE721;"></FontIcon>
+                    <Button Background="Transparent" Name="Kort_Button" Click="Kort_Button_Click" BorderThickness="0,0,0,0" Width="150">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-25.2,0,0,0" VerticalAlignment="Stretch" Width="105">
+                            <TextBlock Margin="0,0,0,0" IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE909;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+                            <TextBlock IsTextSelectionEnabled="False" Text="Kort" FontSize="16" HorizontalAlignment="Left"/>
+                        </StackPanel>
+                    </Button>
 
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-                <NavigationViewItem Content="Udstilling" x:Name="Udstilling"  Background="Orange">
-                    <NavigationViewItem.Icon>
-                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE8A2;"></FontIcon>
+                    <Button Background="Transparent" x:Name="Søg_Button" Click="Søg_Button_Click" BorderThickness="0,0,0,0" Width="150">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-25.2,0,0,0" VerticalAlignment="Stretch" Width="105">
+                            <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE721;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+                            <TextBlock IsTextSelectionEnabled="False"  Text="Søg" FontSize="16" HorizontalAlignment="Left"/>
+                        </StackPanel>
+                    </Button>
 
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-            </NavigationView.MenuItems>
+                    <Button Background="Transparent" Name="Udstilling_Button" Click="Udstilling_Button_Click" BorderThickness="0,0,0,0" Width="150">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-5.2,0,0,0" VerticalAlignment="Stretch" Width="125">
+                            <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE8A2;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+                            <TextBlock IsTextSelectionEnabled="False" Text="Udstilling" FontSize="16" HorizontalAlignment="Left"></TextBlock>
+                        </StackPanel>
+                    </Button>
 
-        </NavigationView>
+                </StackPanel>
+            </SplitView.Pane>
+        </SplitView>
         <StackPanel Grid.Column="1" Background="GreenYellow">
             <TextBlock Text="Ragna-Rundt" TextAlignment="Center" FontWeight="Bold" FontSize="30"></TextBlock>
         </StackPanel>
@@ -48,7 +54,7 @@
             <TextBlock Text="Ragna-Rundt" TextAlignment="Center" FontWeight="Bold" FontSize="30"></TextBlock>
             <Slider Margin="0,50" Maximum="3" TickPlacement="BottomRight" TickFrequency="1" SnapsTo="Ticks" Value="0"></Slider>
             <WebView  x:Name="VideoLink"  Height="200"  Source="https://www.youtube.com/embed/s9jOm4Lbj-U" ></WebView>
-            <TextBlock Height="200" VerticalAlignment="Center" Margin="0,0,0,0" HorizontalAlignment="Stretch" SelectionChanged="TextBlock_SelectionChanged" >OM RAGNAROCK Oplev ungdommens historie 
+            <TextBlock Height="200" VerticalAlignment="Center" Margin="0,0,0,0" HorizontalAlignment="Stretch" >OM RAGNAROCK Oplev ungdommens historie 
                 <LineBreak/>og udvikling – fortalt gennem rockens og <LineBreak/>poppens lyd, billeder og symboler. Det er 
                 <LineBreak/>fortællingen om, hvordan unge med musikken<LineBreak/> 
                 har flyttet grænser og påvirket samfundet <LineBreak/> gennem nye danseformer, forbrug, politiske <LineBreak/> 
@@ -61,3 +67,28 @@
         </StackPanel>
     </Grid>
 </Page>
+
+<!--<NavigationView IsBackButtonVisible="Collapsed" IsSettingsVisible="False" PaneDisplayMode="Left" Background="MediumVioletRed" Grid.ColumnSpan="2" Margin="0,0,308.4,0" VerticalAlignment="Stretch">
+
+    <NavigationView.MenuItems>
+        <NavigationViewItem Content="Kort" x:Name="Kort"  Background="Blue">
+            <NavigationViewItem.Icon>
+                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE909;"></FontIcon>
+
+            </NavigationViewItem.Icon>
+        </NavigationViewItem>
+        <NavigationViewItem Content="Søg" x:Name="Søg"  Background="Red">
+            <NavigationViewItem.Icon>
+                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE721;"></FontIcon>
+
+            </NavigationViewItem.Icon>
+        </NavigationViewItem>
+        <NavigationViewItem Content="Udstilling" x:Name="Udstilling"  Background="Orange">
+            <NavigationViewItem.Icon>
+                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE8A2;"></FontIcon>
+
+            </NavigationViewItem.Icon>
+        </NavigationViewItem>
+    </NavigationView.MenuItems>
+
+</NavigationView>-->
