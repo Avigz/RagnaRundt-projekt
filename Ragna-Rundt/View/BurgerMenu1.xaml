@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid Background="GreenYellow">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="5*"></ColumnDefinition>
@@ -17,10 +17,10 @@
 
 
         <!--Nedenfor: Burgermenu-->
-        <NavigationView x:Name="NavigationView" Loaded="NavigationView_OnLoaded"  IsBackButtonVisible="Collapsed" IsSettingsVisible="False" PaneDisplayMode="Left" Background="LightGoldenrodYellow" Grid.ColumnSpan="2" Margin="0,0,308.4,0" VerticalAlignment="Stretch">
+        <NavigationView x:Name="NavigationView"  IsBackButtonVisible="Collapsed" IsSettingsVisible="False" PaneDisplayMode="Left" Background="GreenYellow" Grid.ColumnSpan="2" Margin="0,0,308.4,0" VerticalAlignment="Stretch">
 
             <NavigationView.MenuItems>
-                <NavigationViewItem Content="Kort" x:Name="Kort"  Background="Blue" Tag="Kort_Side">
+                <NavigationViewItem Content="Kort" x:Name="Kort_Side" Background="Blue" Tag="Kort_Side">
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE909;"></FontIcon>
 
@@ -39,7 +39,7 @@
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
             </NavigationView.MenuItems>
-<Frame x:Name="ContentFrame"></Frame>
+          <Frame x:Name="ContentFrame"></Frame>
         </NavigationView>
         <StackPanel Grid.Column="1" Background="GreenYellow">
             <TextBlock Text="Ragna-Rundt" TextAlignment="Center" FontWeight="Bold" FontSize="30"></TextBlock>

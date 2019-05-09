@@ -8,14 +8,14 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid Background="MediumVioletRed">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="5*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <NavigationView IsBackButtonVisible="Collapsed" IsSettingsVisible="False" PaneDisplayMode="Left" Background="LightGoldenrodYellow" Grid.ColumnSpan="2" Margin="0,0,308.4,0" VerticalAlignment="Stretch">
+        <NavigationView IsBackButtonVisible="Collapsed" IsSettingsVisible="False" PaneDisplayMode="Left" Background="MediumVioletRed" Grid.ColumnSpan="2" Margin="0,0,308.4,0" VerticalAlignment="Stretch">
 
             <NavigationView.MenuItems>
                 <NavigationViewItem Content="Kort" x:Name="Kort"  Background="Blue">

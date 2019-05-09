@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using NavigationViewItemInvokedEventArgs = Microsoft.UI.Xaml.Controls.NavigationViewItemInvokedEventArgs;
+using NavigationViewPaneDisplayMode = Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -27,32 +29,54 @@ namespace Ragna_Rundt.View
             this.InitializeComponent();
         }
 
-        private void NavigationView_OnLoaded(object sender, RoutedEventArgs e)
-        {
-            foreach (NavigationViewItemBase item in NavigationView.MenuItems)
-            {
-                if (item is NavigationViewItem && item.Tag.ToString() == "Kort_Side")
-                {
-                    NavigationView.SelectedItem = item;
-                    break;
-                }
+        //private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
+        //{
+        //    FrameNavigationOptions navOptions = new FrameNavigationOptions();
+        //    navOptions.TransitionInfoOverride = args.RecommendedNavigationTransitionInfo;
+        //    if (sender.PaneDisplayMode == NavigationViewPaneDisplayMode.Left)
+        //    {
+        //        navOptions.IsNavigationStackEnabled = false;
+        //    }
 
-                if (item is NavigationViewItem && item.Tag.ToString() == "Søge_Side")
-                {
-                    this.Frame.Navigate(typeof(Søgeside));
-                    break;
-                }
+        //    Type pageType;
+        //    if (  == Kort_Side)
+        //    {
+        //        pageType = typeof(MainPage);
+        //    }
 
-                if (item is NavigationViewItem && item.Tag.ToString() == "Udstillings_Side")
-                {
-                    this.Frame.Navigate(typeof(Udstillingstemplate));
-                    break;
-                }
+        //    ContentFrame.NavigateToType(pageType, null, navOptions);
+        //}
 
-            }
-        }
     }
 }
+
+
+//private void NavigationView_OnLoaded(object sender, RoutedEventArgs e)
+//{
+//    foreach (NavigationViewItemBase item in NavigationView.MenuItems)
+//    {
+//        if (item is NavigationViewItem && item.Tag.ToString() == "Kort_Side")
+//        {
+//            NavigationView.SelectedItem = item;
+//            break;
+//        }
+
+//        if (item is NavigationViewItem && item.Tag.ToString() == "Søge_Side")
+//        {
+//            this.Frame.Navigate(typeof(Søgeside));
+//            break;
+//        }
+
+//        if (item is NavigationViewItem && item.Tag.ToString() == "Udstillings_Side")
+//        {
+//            this.Frame.Navigate(typeof(Udstillingstemplate));
+//            break;
+//        }
+
+//    }
+//}
+
+
 //            this.Frame.Navigate(typeof(MainPage));
 //        }
 //        }
