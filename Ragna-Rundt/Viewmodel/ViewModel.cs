@@ -16,8 +16,6 @@ namespace Ragna_Rundt.Viewmodel
         public DataKatalog Catalog = new DataKatalog();
 
         private int _key = 1;
-      
- 
 
        public int Key
        {
@@ -29,8 +27,6 @@ namespace Ragna_Rundt.Viewmodel
                OnPropertyChanged(nameof(Name));
                OnPropertyChanged(nameof(VideoLink));
                OnPropertyChanged(nameof(Description));
-
-
            }
        }
     
