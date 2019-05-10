@@ -119,15 +119,19 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\DataKatalog.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Model\UdstillingsElement.cs" />
-    <Compile Include="Viewmodel\ViewModel.cs" />
-    <Compile Include="View\BurgerMenu1.xaml.cs">
+    <Compile Include="Shitsonfireyo\BurgerMenu1.xaml.cs">
       <DependentUpon>BurgerMenu1.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UdstillingsElementer.cs" />
+    <Compile Include="Shitsonfireyo\Navigation_Splitview.xaml.cs">
+      <DependentUpon>Navigation_Splitview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Søgeside.xaml.cs">
+      <DependentUpon>Søgeside.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Udstillingstemplate.xaml.cs">
       <DependentUpon>Udstillingstemplate.xaml</DependentUpon>
@@ -140,6 +144,8 @@
     <None Include="Ragna-Rundt_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Capture.PNG" />
+    <Content Include="Assets\grundplan, ragnarock.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -154,25 +160,39 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="View\BurgerMenu1.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Shitsonfireyo\BurgerMenu1.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\Udstillingstemplate.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Shitsonfireyo\Navigation_Splitview.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Søgeside.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Udstillingstemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.8</Version>
     </PackageReference>
+    <PackageReference Include="Microsoft.UI.Xaml">
+      <Version>2.1.190405004.2</Version>
+    </PackageReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Model\" />
+    <Folder Include="Viewmodel\" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

@@ -49,5 +49,32 @@ namespace Ragna_Rundt.View
         {
             VideoLink.NavigateToString($"<iframe height=\"768\" width=\"1024\" src=" + $"{viewModel.Catalog.VideoLink(viewModel.Key)}" + "frameborder=\"0\" allow=\"accelerometer; encrypted-media; gyroscope; picture-in-picture\"></iframe>");
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (SplitviewMenu.IsPaneOpen == false)
+            {
+                SplitviewMenu.IsPaneOpen = true;
+            }
+            else if (SplitviewMenu.IsPaneOpen == true)
+            {
+                SplitviewMenu.IsPaneOpen = false;
+            }
+        }
+
+        private void Kort_Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void Søg_Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Søgeside));
+        }
+
+        private void Udstilling_Button_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

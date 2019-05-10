@@ -8,36 +8,38 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid Background="GreenYellow">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="5*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <NavigationView PaneDisplayMode="Left" Background="LightGoldenrodYellow" Grid.ColumnSpan="2" Margin="0,0,308.4,0" VerticalAlignment="Stretch">
 
-                 <!--Nedenfor: Burgermenu-->
+
+        <!--Nedenfor: Burgermenu-->
+        <NavigationView x:Name="NavigationView"  IsBackButtonVisible="Collapsed" IsSettingsVisible="False" PaneDisplayMode="Left" Background="GreenYellow" Grid.ColumnSpan="2" Margin="0,0,308.4,0" VerticalAlignment="Stretch">
+
             <NavigationView.MenuItems>
-                <NavigationViewItem Content="Kort" x:Name="Kort"  Background="Blue">
+                <NavigationViewItem Content="Kort" x:Name="Kort_Side" Background="Blue" Tag="Kort_Side">
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE909;"></FontIcon>
 
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-    <NavigationViewItem Content="Søg" x:Name="Søg"  Background="Red">
-        <NavigationViewItem.Icon>
-            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE721;"></FontIcon>
-
-        </NavigationViewItem.Icon>
-    </NavigationViewItem>
-                <NavigationViewItem Content="Udstilling" x:Name="Udstilling"  Background="Orange">
+                <NavigationViewItem Content="Søg" x:Name="Søg"  Background="Red" Tag="Søge_Side">
                     <NavigationViewItem.Icon>
-            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE8A2;"></FontIcon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE721;"></FontIcon>
 
-        </NavigationViewItem.Icon>
-    </NavigationViewItem>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Udstilling" x:Name="Udstilling"  Background="Orange" Tag="Udstillings_Side">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE8A2;"></FontIcon>
+
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
             </NavigationView.MenuItems>
-            
+          <Frame x:Name="ContentFrame"></Frame>
         </NavigationView>
         <StackPanel Grid.Column="1" Background="GreenYellow">
             <TextBlock Text="Ragna-Rundt" TextAlignment="Center" FontWeight="Bold" FontSize="30"></TextBlock>

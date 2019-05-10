@@ -5,7 +5,6 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using Windows.Security.Cryptography.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -13,21 +12,19 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using Ragna_Rundt.View;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace Ragna_Rundt
+namespace Ragna_Rundt.View
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class Søgeside : Page
     {
-        public MainPage()
+        public Søgeside()
         {
             this.InitializeComponent();
-           
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -44,34 +41,19 @@ namespace Ragna_Rundt
 
         private void Kort_Button_Click(object sender, RoutedEventArgs e)
         {
-            
+            this.Frame.Navigate(typeof(MainPage));
         }
 
         private void Søg_Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Søgeside));
+            
         }
 
         private void Udstilling_Button_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Udstillingstemplate));
         }
-        //private void NavView_Navigate(NavigationViewItem item)
-        //{
-        //    switch (item.Tag)
-        //    {
-        //        case "Søg":
-        //            this.Frame.Navigate(typeof(Søgeside),null);
-        //            break;
 
-        //        case "Udstilling":
-        //            this.Frame.Navigate(typeof(Udstillingstemplate));
-        //            break;
-        //        case "Kort":
-        //            this.Frame.Navigate(typeof(MainPage),null);
-        //            break;
-        //    }
-        //}
+        
     }
-
 }

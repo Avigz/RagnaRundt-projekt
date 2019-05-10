@@ -20,13 +20,40 @@ namespace Ragna_Rundt.View
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class BurgerMenu1 : Page
+    public sealed partial class Navigation_Splitview : Page
     {
-        public BurgerMenu1()
+        public Navigation_Splitview()
         {
             this.InitializeComponent();
             
             
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (SplitviewMenu.IsPaneOpen == false)
+            {
+                SplitviewMenu.IsPaneOpen = true;
+            }
+            else if (SplitviewMenu.IsPaneOpen == true)
+            {
+                SplitviewMenu.IsPaneOpen = false;
+            }
+        }
+
+        private void Kort_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Søg_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Udstilling_Button_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }
