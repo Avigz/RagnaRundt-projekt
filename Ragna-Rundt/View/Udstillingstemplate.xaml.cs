@@ -27,17 +27,27 @@ namespace Ragna_Rundt.View
     /// </summary>
     public sealed partial class Udstillingstemplate : Page
     {
+        ViewModel viewModel = new ViewModel();
+        
         public Udstillingstemplate()
         {
             
             this.InitializeComponent();
-            ViewModel viewModel = new ViewModel();
             DataContext = viewModel;
-            
-            VideoLink.NavigateToString($"<iframe height=\"768\" width=\"1024\" src="+$"{viewModel.Catalog.VideoLink(viewModel.Key)}"+ "frameborder=\"0\" allow=\"accelerometer; encrypted-media; gyroscope; picture-in-picture\"></iframe>");
-            
+            VideoLink.NavigateToString($"<iframe height=\"768\" width=\"1024\" src=" + $"{viewModel.Catalog.VideoLink(viewModel.Key)}" + "frameborder=\"0\" allow=\"accelerometer; encrypted-media; gyroscope; picture-in-picture\"></iframe>");
+
            
 
+        }
+
+        //public void ClickButton(object sender, RoutedEventArgs e)
+        //{
+        //    VideoLink.NavigateToString($"<iframe height=\"768\" width=\"1024\" src=" + $"{viewModel.Catalog.VideoLink(viewModel.Key)}" + "frameborder=\"0\" allow=\"accelerometer; encrypted-media; gyroscope; picture-in-picture\"></iframe>");
+        //}
+
+        private void Slider_OnValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            VideoLink.NavigateToString($"<iframe height=\"768\" width=\"1024\" src=" + $"{viewModel.Catalog.VideoLink(viewModel.Key)}" + "frameborder=\"0\" allow=\"accelerometer; encrypted-media; gyroscope; picture-in-picture\"></iframe>");
         }
     }
 }

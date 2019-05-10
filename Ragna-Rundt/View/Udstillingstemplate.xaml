@@ -22,8 +22,8 @@
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="1" Background="MediumVioletRed">
             <TextBlock Text="{Binding Name, Mode=OneWay}" TextAlignment="Center" FontWeight="Bold" FontSize="30"></TextBlock>
-            <Slider x:Name="Slider" Margin="0,50" Maximum="3" TickPlacement="BottomRight" TickFrequency="1" SnapsTo="Ticks" Value="{Binding Key, Mode=TwoWay}"></Slider>
-            <WebView x:Name="VideoLink" HorizontalAlignment="Stretch" Height="748" Margin="0,0,0.33,0" VerticalAlignment="Stretch" ></WebView>
+            <Slider x:Name="Slider" Margin="0,50" Maximum="3" TickPlacement="BottomRight" TickFrequency="1" SnapsTo="Ticks" Value="{Binding Key, Mode=TwoWay}" ValueChanged="Slider_OnValueChanged"></Slider>
+            <WebView x:Name="VideoLink" HorizontalAlignment="Stretch" Height="748" Margin="0,0,0.33,0" VerticalAlignment="Stretch"></WebView>
             
         </StackPanel>
         <StackPanel Grid.Column="0" Background="blue" Orientation="Vertical">
