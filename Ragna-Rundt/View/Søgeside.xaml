@@ -50,7 +50,32 @@
         <StackPanel Grid.Column="1" Background="GreenYellow">
             <TextBlock Text="Ragna-Rundt" TextAlignment="Center" FontWeight="Bold" FontSize="30"></TextBlock>
             <StackPanel>
-                
+
+                <!--Kode under til funktionaliteten for searchbar-->
+
+                <!--TextChanged="Søgeside_TextChanged" QuerySubmitted="Søgeside_Querysubmitted" SuggestionChosen="Søgeside_Suggestion"-->
+                <AutoSuggestBox PlaceholderText="Search" QueryIcon="Find" Margin="0,10,0,0" >
+
+                </AutoSuggestBox>
+            </StackPanel>
+            <StackPanel Background="DeepPink" Height="696" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+                <StackPanel Background="Bisque" Height="60" Margin="0,10,0,0">
+                    <GridView>
+                        <GridView.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapGrid x:Name="WrapGridTags" Height="60" Orientation="Horizontal">
+
+                                </WrapGrid>
+                            </ItemsPanelTemplate>
+                        </GridView.ItemsPanel>
+                    </GridView>
+                </StackPanel>
+                <StackPanel Background="Blue" Margin="0,40,0,0" Height="637" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <ListView x:Name="UdstillingsElementerList" SelectionMode="Single" Height="575" Background="Aqua" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+
+
+                    </ListView>
+                </StackPanel>
             </StackPanel>
         </StackPanel>
 
