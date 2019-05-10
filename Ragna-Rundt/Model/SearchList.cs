@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
-namespace Rag.Domain
+namespace Ragna_Rundt.Model
 {
     class SearchList
     {
@@ -13,9 +13,10 @@ namespace Rag.Domain
         private AreaCatalog _allAreas;
         private TagCatalog _allTags;
 
-        private List<Element> _currentList;
+        private Dictionary<int,Element> _currentList;
         private Area _area;
         private List<Tag> _filters;
+        private List<Tag> _allFilters;
         private string _searchWord;
 
         private static SearchList _instance;
@@ -25,6 +26,12 @@ namespace Rag.Domain
             _allElements = ElementCatalog.Instance;
             _currentList = _allElements.Elements;
             _searchWord = "";
+            _allFilters = new List<Tag>();
+            foreach (var tag in _allTags.Tags)
+            {
+                _allFilters.Add(tag.Value);
+            }
+   
 
         }
         public static SearchList Instance
@@ -35,7 +42,7 @@ namespace Rag.Domain
                 return _instance;
             }
         }
-        public List<Element> CurrentList
+        public Dictionary<int,Element> CurrentList
         {
             get { return _currentList; }
             set { _currentList = value; }
@@ -51,40 +58,55 @@ namespace Rag.Domain
             set { _searchWord = value; }
         }
 
+        public List<Tag> AllFilters
+        {
+            get { return _allFilters; }
+        }
+
         //filter
         public void Filter(List<Tag> filters)
         {
-            List<Element> filterList = new List<Element>();
-            foreach(Element element in _currentList)
+            Dictionary<int,Element> filterList = new Dictionary<int, Element>();
+            foreach(var element in _currentList)
             {
                 bool exists = false;
-                foreach(Tag tag in element.Tags)
+                foreach(Tag tag in element.Value.Tags)
                 {
                     if (filters.Exists(x=>x.Id==tag.Id)) exists = true;
                 }
-                if (!exists) filterList.Add(element);
+                if (!exists) filterList.Add(element.Key,element.Value);
             }
             _currentList = filterList;
         }
         public void AddFilter(Tag tag)
         {
-            if(!_filters.Exists(x => x.Id == tag.Id)) _filters.Add(tag);
+            if (!_filters.Exists(x => x.Id == tag.Id))
+            {
+                _filters.Add(tag);
+                _allFilters.Remove(tag);
+
+            }
         }
         public void RemoveFilter(Tag tag)
         {
             _filters.Remove(tag);
+            _allFilters.Add(tag);
         }
         public void ClearFilters()
         {
+            foreach (Tag filter in _filters)
+            {
+                _allFilters.Add(filter);
+            }
             _filters.Clear();
         }
         //areafilter
         public void AreaFilter()
         {
-            List<Element> returnList = new List<Element>();
-            foreach(Element element in _currentList)
+            Dictionary<int,Element> returnList = new Dictionary<int, Element>();
+            foreach(var element in _currentList)
             {
-                if (_area == element.Area) returnList.Add(element);
+                if (_area == element.Value.Area) returnList.Add(element.Key,element.Value);
             }
             _currentList = returnList;
         }
@@ -93,7 +115,7 @@ namespace Rag.Domain
         {
             string word = _searchWord.Replace(" ", ".*");
             word = ".*" + word + ".*";
-            List<Element> returnList = new List<Element>();
+            Dictionary<int,Element> returnList = new Dictionary<int, Element>();
 
             List<Tag> tagMatches = new List<Tag>();
             List<Area> areas = new List<Area>(); ;
@@ -113,17 +135,17 @@ namespace Rag.Domain
                 }
             }
 
-            foreach (Element element in _currentList)
+            foreach (var element in _currentList)
             {
-                if (Regex.Match(element.Name, word).Success||(areas.Count>0&&areas.Exists(x=>x.Id==element.Area.Id))) returnList.Add(element);
+                if (Regex.Match(element.Value.Name, word).Success||(areas.Count>0&&areas.Exists(x=>x.Id==element.Value.Area.Id))) returnList.Add(element.Key,element.Value);
                 else if (tagMatches.Count > 0)
                 {
                     bool exists = false;
-                    foreach(Tag tag in element.Tags)
+                    foreach(Tag tag in element.Value.Tags)
                     {
                         if (tagMatches.Exists(x => x.Id == tag.Id)) exists = true;
                     }
-                    if (exists) returnList.Add(element);
+                    if (exists) returnList.Add(element.Key, element.Value);
                 }
             }
           

@@ -13,7 +13,9 @@ namespace Ragna_Rundt.Viewmodel
 {
     public class ViewModel : INotifyPropertyChanged
     {
-        public DataKatalog Catalog = new DataKatalog();
+        //public DataKatalog Catalog = new DataKatalog();
+
+      Dictionary<int,Element> Catalog = ElementCatalog.Instance.Elements;
 
         private int _key = 1;
 
@@ -32,17 +34,17 @@ namespace Ragna_Rundt.Viewmodel
     
        public  string VideoLink
        {
-           get {return Catalog.UdstillingsElementer[Key].VideoLink;}
+           get {return Catalog[Key].videoURL;}
        }
 
        public  string Name
        {
-           get{ return Catalog.UdstillingsElementer[Key].Name;}
+           get{ return Catalog[Key].Name;}
        }
 
        public string Description
        {
-           get { return Catalog.UdstillingsElementer[Key].Description; }
+           get { return Catalog[Key].description; }
        }
 
        public event PropertyChangedEventHandler PropertyChanged;

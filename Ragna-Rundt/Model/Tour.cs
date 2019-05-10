@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rag.Domain
+namespace Ragna_Rundt
 {
     class Tour
     {

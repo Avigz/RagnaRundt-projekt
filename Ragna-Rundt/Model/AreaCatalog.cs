@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rag.Domain
+namespace Ragna_Rundt.Model
 {
     class AreaCatalog
     {
@@ -14,7 +14,7 @@ namespace Rag.Domain
         private AreaCatalog()
         {
             _areas = new Dictionary<string, Area>();
-            _areas.Add("Pladespilleren",  new Area("Pladespillerrummet", "beskrivelse", 1, 1));
+            _areas.Add("Pladespillerrummet",  new Area("Pladespillerrummet", "beskrivelse", 1, 1));
             _areas.Add("Disco fever", new Area("Disco fever", "beskrivelse2", 2, 2));
             _areas.Add("Væg of doom", new Area("Væg of doom", "beskrivelse3", 3, 3));
         }
