@@ -13,22 +13,22 @@
             <ImageBrush ImageSource="../Assets/Capture.PNG"></ImageBrush>
         </Grid.Background>
 
-        <Grid.ColumnDefinitions>
+
+<Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="5*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <SplitView x:Name="SplitviewMenu" Opacity="1" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="50" OpenPaneLength="150" Margin="0,0,0,0">
-            <SplitView.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="1"/>
-                    <GradientStop Color="Transparent" Offset="0"/>
-                </LinearGradientBrush>
-            </SplitView.Background>
+
+
+        <Button FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,100,0" VerticalAlignment="Top" Click="Button_Click" BorderThickness="0,0,0,0"></Button>
+       
+      
+        <SplitView x:Name="SplitviewMenu" Opacity="1" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="150" Margin="0,0,0,0">
             <SplitView.Pane>
                 <StackPanel>
 
-                    <Button FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,100,0" VerticalAlignment="Center" Click="Button_Click" BorderThickness="0,0,0,0"></Button>
+                    <Button FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,100,0" VerticalAlignment="Top" Click="Button_Click" BorderThickness="0,0,0,0"></Button>
 
                     <Button Background="Transparent" Name="Kort_Button" Click="Kort_Button_Click" BorderThickness="0,0,0,0" Width="150">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-25.2,0,0,0" VerticalAlignment="Stretch" Width="105">
@@ -44,7 +44,7 @@
                         </StackPanel>
                     </Button>
 
-                    <Button Background="Gray" Name="Udstilling_Button" Click="Udstilling_Button_Click" BorderThickness="0,0,0,0" Width="150">
+                    <Button Background="Gray"  Name="Udstilling_Button" Click="Udstilling_Button_Click" BorderThickness="0,0,0,0" Width="150">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-5.2,0,0,0" VerticalAlignment="Stretch" Width="125">
                             <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE8A2;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
                             <TextBlock IsTextSelectionEnabled="False" Text="Udstilling" FontSize="16" HorizontalAlignment="Left"></TextBlock>
