@@ -17,15 +17,11 @@
                     <ImageBrush ImageSource="../Assets/Capture.PNG"></ImageBrush>
                 </Grid.Background>
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="5*"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-
                 <Button FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,100,0" VerticalAlignment="Top" Click="Button_Click" BorderThickness="0,0,0,0"></Button>
 
-                <SplitView x:Name="SplitviewMenu" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="150" Margin="0,0,0,0">
+
+
+                <SplitView x:Name="SplitviewMenu" DisplayMode="CompactInline" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="150" Margin="0,0,0,0">
                     <SplitView.Pane>
                         <StackPanel>
 
@@ -62,21 +58,20 @@
                         </StackPanel>
                     </SplitView.Pane>
                 </SplitView>
-                <StackPanel Grid.Column="1" Background="GreenYellow">
-                    <TextBlock Text="Ragna-Rundt" TextAlignment="Center" FontWeight="Bold" FontSize="30"></TextBlock>
-                </StackPanel>
 
 
-                <StackPanel Grid.Column="1" Background="Aqua">
-                    <TextBlock Text="Ragna-Rundt" TextAlignment="Center" FontWeight="Bold" FontSize="30"></TextBlock>
+
+                <StackPanel >
+ 
+                    <TextBlock Text="Ragna-Rundt" Width="500" TextAlignment="Center" FontWeight="Bold" FontSize="30"></TextBlock>
 
                     <!--<Slider Margin="0,50" Maximum="3" TickPlacement="BottomRight" TickFrequency="1" SnapsTo="Ticks" Value="0">
 
-            </Slider>-->
+                        </Slider>-->
                     <FlipView MaxWidth="300"  Margin="0,40,0,0" Height="180" >
                         <StackPanel>
                             <Image Height="120" Source="../Assets/grundplan, ragnarock.jpg" VerticalAlignment="Top"></Image>
-                            <Border Background="Purple" Height="60" Width="300" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                            <Border Background="Purple" Height="60" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Bottom">
                                 <TextBlock Text="Brugbar info" HorizontalAlignment="Center">
                                 </TextBlock>
                             </Border>
