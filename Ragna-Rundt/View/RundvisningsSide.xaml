@@ -31,28 +31,28 @@
 
                     <Button FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,100,0" VerticalAlignment="Top" Click="Button_Click" BorderThickness="0,0,0,0"></Button>
 
-                    <Button Background="Gray" x:Name="Kort_Button" Click="Kort_Button_Click" BorderThickness="0,0,0,0" Width="150">
+                    <Button Background="Transparent" x:Name="Kort_Button" Click="Kort_Button_Click" BorderThickness="0,0,0,0" Width="150">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-25.2,0,0,0" VerticalAlignment="Stretch" Width="105">
                             <TextBlock Margin="0,0,0,0" IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE909;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
                             <TextBlock IsTextSelectionEnabled="False" Text="Kort" FontSize="16" HorizontalAlignment="Left"/>
                         </StackPanel>
                     </Button>
 
-                    <Button Background="Gray" x:Name="Søg_Button" Click="Søg_Button_Click" BorderThickness="0,0,0,0" Width="150">
+                    <Button Background="Transparent" x:Name="Søg_Button" Click="Søg_Button_Click" BorderThickness="0,0,0,0" Width="150">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-25.2,0,0,0" VerticalAlignment="Stretch" Width="105">
                             <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE721;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
                             <TextBlock IsTextSelectionEnabled="False"  Text="Søg" FontSize="16" HorizontalAlignment="Left"/>
                         </StackPanel>
                     </Button>
 
-                    <Button Background="Transparent"  x:Name="Rundvisnings_Button" Click="Rundvisnings_Button_OnClick" BorderThickness="0,0,0,0" Width="150">
+                    <Button Background="Gray"  x:Name="Rundvisnings_Button" Click="Rundvisnings_Button_OnClick" BorderThickness="0,0,0,0" Width="150">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-5.2,0,0,0" VerticalAlignment="Stretch" Width="125">
                             <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE8A;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
                             <TextBlock IsTextSelectionEnabled="False" Text="Rundvisning" FontSize="16" HorizontalAlignment="Left"></TextBlock>
                         </StackPanel>
                     </Button>
 
-                    <Button Background="Gray"  x:Name="Udstilling_Button" Click="Udstilling_Button_Click" BorderThickness="0,0,0,0" Width="150">
+                    <Button Background="Transparent"  x:Name="Udstilling_Button" Click="Udstilling_Button_Click" BorderThickness="0,0,0,0" Width="150">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-5.2,0,0,0" VerticalAlignment="Stretch" Width="125">
                             <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE8A2;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
                             <TextBlock IsTextSelectionEnabled="False" Text="Udstilling" FontSize="16" HorizontalAlignment="Left"></TextBlock>
@@ -68,8 +68,15 @@
 
 
         <StackPanel Grid.Column="1">
+            <TextBlock Width="309" Height="60" Text="Rundvisnings-Side" FontFamily="Helvetica" Foreground="BlanchedAlmond" FontSize="24" TextAlignment="Center"></TextBlock>
             <TextBlock Width="309" Height="auto" VerticalAlignment="Center" Margin="0,80,0,0" HorizontalAlignment="Center" FontSize="12" TextWrapping="WrapWholeWords" Foreground="BlanchedAlmond" FontFamily="Matura MT Script Capitals">Beskrivelse Beskrivelse Beskrivelse Beskrivelse<LineBreak></LineBreak>Beskrivelse Beskrivelse Beskrivelse Beskrivelse<LineBreak></LineBreak>Beskrivelse Beskrivelse Beskrivelse Beskrivelse<LineBreak></LineBreak>Beskrivelse Beskrivelse Beskrivelse Beskrivelse<LineBreak></LineBreak>Beskrivelse Beskrivelse Beskrivelse Beskrivelse<LineBreak></LineBreak>Beskrivelse Beskrivelse Beskrivelse Beskrivelse<LineBreak></LineBreak>Beskrivelse Beskrivelse Beskrivelse Beskrivelse<LineBreak></LineBreak>Beskrivelse Beskrivelse Beskrivelse Beskrivelse<LineBreak></LineBreak>Beskrivelse Beskrivelse Beskrivelse Beskrivelse<LineBreak></LineBreak>Beskrivelse Beskrivelse Beskrivelse Beskrivelse</TextBlock>
-            <ListView x:Name="ListView_RundvisningsSide" Height="300" Width="309" Margin="0,20,0,0" SelectionMode="Single"></ListView>
+            <ListView x:Name="ListView_RundvisningsSide" Height="300" Width="309" Margin="0,20,0,0" SelectionMode="Single" FontSize="12" FontFamily="Arial">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock></TextBlock>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackPanel>
     </Grid>
 </Page>
