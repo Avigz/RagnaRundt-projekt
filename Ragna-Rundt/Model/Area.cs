@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Ragna_Rundt.Model
 {
-    class Area:Tag
+   public class Area:Tag
     {
         private string _description;
         private int _mapX;

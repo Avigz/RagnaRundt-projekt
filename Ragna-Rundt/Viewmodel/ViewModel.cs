@@ -6,6 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Contacts;
+using Windows.ApplicationModel.Store.Preview.InstallControl;
 using Windows.UI.ViewManagement;
 using Ragna_Rundt.Model;
 
@@ -16,10 +17,12 @@ namespace Ragna_Rundt.Viewmodel
      
 
       Dictionary<int,Element> Catalog = ElementCatalog.Instance.Elements;
+    
+      private  int _key = 1;
 
-        private int _key = 1;
+      
 
-       public int Key
+       public  int Key
        {
            get { return _key; }
            set
@@ -47,7 +50,28 @@ namespace Ragna_Rundt.Viewmodel
            get { return Catalog[Key].description; }
        }
 
-       public event PropertyChangedEventHandler PropertyChanged;
+       public Dictionary<int, Element> CurrentList
+       {
+           get { return SearchList.Instance.CurrentList; }
+       }
+
+       public List<Tag> Filters
+       {
+           get { return SearchList.Instance.Filters; }
+       }
+
+       public List<Tag> AllFilters
+       {
+           get { return SearchList.Instance.AllFilters; }
+       }
+
+       public string SearchWord
+       {
+           get { return SearchList.Instance.SearchWord; }
+       }
+
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         { PropertyChanged?.Invoke(this,new  PropertyChangedEventArgs(propertyName));}
