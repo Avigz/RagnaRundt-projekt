@@ -13,7 +13,7 @@ namespace Ragna_Rundt.Viewmodel
 {
     public class ViewModel : INotifyPropertyChanged
     {
-        //public DataKatalog Catalog = new DataKatalog();
+     
 
       Dictionary<int,Element> Catalog = ElementCatalog.Instance.Elements;
 
