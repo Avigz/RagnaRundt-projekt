@@ -29,12 +29,12 @@ namespace Ragna_Rundt.View
     {
         ViewModel viewModel = new ViewModel();
         
-        public Udstillingstemplate(int key)
+        public Udstillingstemplate()
         {
             
             this.InitializeComponent();
             DataContext = viewModel;
-            viewModel.Key = key;
+          
             VideoLink.NavigateToString($"<iframe height=\"768\" width=\"1024\" src=" + $"{ElementCatalog.Instance.Elements[(viewModel.Key)].videoURL}" + "frameborder=\"0\" allow=\"accelerometer; encrypted-media; gyroscope; picture-in-picture\"></iframe>");
             
 

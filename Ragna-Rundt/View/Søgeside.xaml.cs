@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Ragna_Rundt.Model;
 using Ragna_Rundt.Viewmodel;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
@@ -24,6 +25,9 @@ namespace Ragna_Rundt.View
     
     public sealed partial class Søgeside : Page
     {
+     
+        public int ElementKey;
+
         public Søgeside()
         {
             this.InitializeComponent();
@@ -56,10 +60,15 @@ namespace Ragna_Rundt.View
             this.Frame.Navigate(typeof(Udstillingstemplate));
         }
 
+       
 
-        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        public void ListButton_OnClick(object sender, RoutedEventArgs e)
         {
-           
+            var myValue = ((Button)sender).Tag;
+            
+
+            ViewModel.StaticKey = Convert.ToInt16(myValue);
+          
             this.Frame.Navigate(typeof(Udstillingstemplate));
         }
     }

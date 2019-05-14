@@ -12,22 +12,22 @@ using Ragna_Rundt.Model;
 
 namespace Ragna_Rundt.Viewmodel
 {
-    public class ViewModel : INotifyPropertyChanged
+    public  class ViewModel : INotifyPropertyChanged
     {
      
 
       Dictionary<int,Element> Catalog = ElementCatalog.Instance.Elements;
     
-      private  int _key = 1;
+      public static int StaticKey = 1;
 
-      
+    
 
-       public  int Key
+       public int Key
        {
-           get { return _key; }
+           get { return StaticKey; }
            set
            {
-               _key = value;
+               StaticKey = value;
                OnPropertyChanged();
                OnPropertyChanged(nameof(Name));
                OnPropertyChanged(nameof(VideoLink));
