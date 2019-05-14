@@ -10,89 +10,93 @@
 
     <Grid>
 
-        <Grid.Background>
-            <ImageBrush ImageSource="../Assets/Capture.PNG"></ImageBrush>
-        </Grid.Background>
+        <Viewbox>
+            <Grid Height="1920px" Width="1080px">
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="5*"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <Button FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,100,0" VerticalAlignment="0" Click="Button_Click" BorderThickness="0,0,0,0"></Button>
 
-        <SplitView x:Name="SplitviewMenu" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="150">
-            <SplitView.Pane>
-                <StackPanel>
+                <Grid.Background>
+                    <ImageBrush ImageSource="../Assets/Capture.PNG"></ImageBrush>
+                </Grid.Background>
 
-                    <Button FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,100,0" VerticalAlignment="Center" Click="Button_Click" BorderThickness="0,0,0,0"></Button>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="5*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,100,0" VerticalAlignment="0" Click="Button_Click" BorderThickness="0,0,0,0"></Button>
 
-                    <Button Background="Transparent" x:Name="Kort_Button" Click="Kort_Button_Click" BorderThickness="0,0,0,0" Width="150">
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-25.2,0,0,0" VerticalAlignment="Stretch" Width="105">
-                            <TextBlock Margin="0,0,0,0" IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE909;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-                            <TextBlock IsTextSelectionEnabled="False" Text="Kort" FontSize="16" HorizontalAlignment="Left"/>
+                <SplitView x:Name="SplitviewMenu" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="150">
+                    <SplitView.Pane>
+                        <StackPanel>
+
+                            <Button FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,100,0" VerticalAlignment="Center" Click="Button_Click" BorderThickness="0,0,0,0"></Button>
+
+                            <Button Background="Transparent" x:Name="Kort_Button" Click="Kort_Button_Click" BorderThickness="0,0,0,0" Width="150">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-25.2,0,0,0" VerticalAlignment="Stretch" Width="105">
+                                    <TextBlock Margin="0,0,0,0" IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE909;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+                                    <TextBlock IsTextSelectionEnabled="False" Text="Kort" FontSize="16" HorizontalAlignment="Left"/>
+                                </StackPanel>
+                            </Button>
+
+                            <Button Background="Gray" x:Name="Søg_Button" Click="Søg_Button_Click" BorderThickness="0,0,0,0" Width="150">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-25.2,0,0,0" VerticalAlignment="Stretch" Width="105">
+                                    <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE721;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+                                    <TextBlock IsTextSelectionEnabled="False"  Text="Søg" FontSize="16" HorizontalAlignment="Left"/>
+                                </StackPanel>
+                            </Button>
+
+                            <Button Background="Transparent"  Name="Rundvisnings_Button" Click="Rundvisnings_Button_OnClick" BorderThickness="0,0,0,0" Width="150">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-5.2,0,0,0" VerticalAlignment="Stretch" Width="125">
+                                    <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE8A;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+                                    <TextBlock IsTextSelectionEnabled="False" Text="Rundvisning" FontSize="16" HorizontalAlignment="Left"></TextBlock>
+                                </StackPanel>
+                            </Button>
+
+                            <Button Background="Transparent"  Name="Udstilling_Button" Click="Udstilling_Button_Click" BorderThickness="0,0,0,0" Width="150">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-5.2,0,0,0" VerticalAlignment="Stretch" Width="125">
+                                    <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE8A2;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+                                    <TextBlock IsTextSelectionEnabled="False" Text="Udstilling" FontSize="16" HorizontalAlignment="Left"></TextBlock>
+                                </StackPanel>
+                            </Button>
+
                         </StackPanel>
-                    </Button>
+                    </SplitView.Pane>
+                </SplitView>
 
-                    <Button Background="Gray" x:Name="Søg_Button" Click="Søg_Button_Click" BorderThickness="0,0,0,0" Width="150">
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-25.2,0,0,0" VerticalAlignment="Stretch" Width="105">
-                            <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE721;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-                            <TextBlock IsTextSelectionEnabled="False"  Text="Søg" FontSize="16" HorizontalAlignment="Left"/>
+                <StackPanel Grid.Column="1" Background="GreenYellow">
+                    <TextBlock Text="Ragna-Rundt" TextAlignment="Center" FontWeight="Bold" FontSize="30"></TextBlock>
+                    <StackPanel>
+
+                        <!--Kode under til funktionaliteten for searchbar-->
+
+                        <!--TextChanged="Søgeside_TextChanged" QuerySubmitted="Søgeside_Querysubmitted" SuggestionChosen="Søgeside_Suggestion"-->
+                        <AutoSuggestBox PlaceholderText="Search" QueryIcon="Find" Margin="0,10,0,0" >
+
+                        </AutoSuggestBox>
+                    </StackPanel>
+                    <StackPanel Background="DeepPink" Height="696" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+                        <StackPanel Background="Bisque" Height="60" Margin="0,10,0,0">
+                            <GridView>
+                                <GridView.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <WrapGrid x:Name="WrapGridTags" Height="60" Orientation="Horizontal">
+
+                                        </WrapGrid>
+                                    </ItemsPanelTemplate>
+                                </GridView.ItemsPanel>
+                            </GridView>
                         </StackPanel>
-                    </Button>
+                        <StackPanel Background="Blue" Margin="0,40,0,0" Height="637" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <ListView x:Name="UdstillingsElementerList" SelectionMode="Single" Height="575" Background="Aqua" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
 
-                    <Button Background="Transparent"  Name="Rundvisnings_Button" Click="Rundvisnings_Button_OnClick" BorderThickness="0,0,0,0" Width="150">
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-5.2,0,0,0" VerticalAlignment="Stretch" Width="125">
-                            <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE8A;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-                            <TextBlock IsTextSelectionEnabled="False" Text="Rundvisning" FontSize="16" HorizontalAlignment="Left"></TextBlock>
+
+                            </ListView>
                         </StackPanel>
-                    </Button>
-
-                    <Button Background="Transparent"  Name="Udstilling_Button" Click="Udstilling_Button_Click" BorderThickness="0,0,0,0" Width="150">
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-5.2,0,0,0" VerticalAlignment="Stretch" Width="125">
-                            <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE8A2;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-                            <TextBlock IsTextSelectionEnabled="False" Text="Udstilling" FontSize="16" HorizontalAlignment="Left"></TextBlock>
-                        </StackPanel>
-                    </Button>
-
+                    </StackPanel>
                 </StackPanel>
-            </SplitView.Pane>
-        </SplitView>
 
-        <StackPanel Grid.Column="1" Background="GreenYellow">
-            <TextBlock Text="Ragna-Rundt" TextAlignment="Center" FontWeight="Bold" FontSize="30"></TextBlock>
-            <StackPanel>
-
-                <!--Kode under til funktionaliteten for searchbar-->
-
-                <!--TextChanged="Søgeside_TextChanged" QuerySubmitted="Søgeside_Querysubmitted" SuggestionChosen="Søgeside_Suggestion"-->
-                <AutoSuggestBox PlaceholderText="Search" QueryIcon="Find" Margin="0,10,0,0" >
-
-                </AutoSuggestBox>
-            </StackPanel>
-            <StackPanel Background="DeepPink" Height="696" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
-                <StackPanel Background="Bisque" Height="60" Margin="0,10,0,0">
-                    <GridView>
-                        <GridView.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <WrapGrid x:Name="WrapGridTags" Height="60" Orientation="Horizontal">
-
-                                </WrapGrid>
-                            </ItemsPanelTemplate>
-                        </GridView.ItemsPanel>
-                    </GridView>
-                </StackPanel>
-                <StackPanel Background="Blue" Margin="0,40,0,0" Height="637" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                    <ListView x:Name="UdstillingsElementerList" SelectionMode="Single" Height="575" Background="Aqua" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
-
-
-                    </ListView>
-                </StackPanel>
-            </StackPanel>
-        </StackPanel>
-
-
-
+            </Grid>
+        </Viewbox>
     </Grid>
 </Page>
 
