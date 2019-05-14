@@ -119,8 +119,16 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\DataKatalog.cs" />
-    <Compile Include="Model\UdstillingsElement.cs" />
+    <Compile Include="Model\Area.cs" />
+    <Compile Include="Model\AreaCatalog.cs" />
+    <Compile Include="Shitsonfireyo\DataKatalog.cs" />
+    <Compile Include="Model\Element.cs" />
+    <Compile Include="Model\ElementCatalog.cs" />
+    <Compile Include="Model\SearchList.cs" />
+    <Compile Include="Model\Tag.cs" />
+    <Compile Include="Model\TagCatalog.cs" />
+    <Compile Include="Model\Tour.cs" />
+    <Compile Include="Shitsonfireyo\UdstillingsElement.cs" />
     <Compile Include="Shitsonfireyo\BurgerMenu1.xaml.cs">
       <DependentUpon>BurgerMenu1.xaml</DependentUpon>
     </Compile>

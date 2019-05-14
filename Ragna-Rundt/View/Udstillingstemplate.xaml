@@ -18,7 +18,7 @@
         </Grid.Background>
 
 
-<Grid.ColumnDefinitions>
+        <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="5*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -26,8 +26,8 @@
 
 
         <Button FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,100,0" VerticalAlignment="Top" Click="Button_Click" BorderThickness="0,0,0,0"></Button>
-       
-      
+
+
         <SplitView x:Name="SplitviewMenu" Opacity="1" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="150" Margin="0,0,0,0">
             <SplitView.Pane>
                 <StackPanel>
@@ -59,15 +59,15 @@
             </SplitView.Pane>
         </SplitView>
         <StackPanel Opacity="0.55" Background="DeepPink" Grid.Column="1">
-            <TextBlock Text="{Binding Name, Mode=OneWay}" TextAlignment="Center" FontWeight="Bold" FontSize="30"></TextBlock>
+            <TextBlock Text="" TextAlignment="Center" FontWeight="Bold" FontSize="30"></TextBlock>
         </StackPanel>
 
 
         <StackPanel Grid.Column="1">
             <TextBlock Text="{Binding Name, Mode=OneWay}" TextAlignment="Center" FontWeight="Bold" FontSize="30"></TextBlock>
             <Slider Margin="0,50" Maximum="3" TickPlacement="BottomRight" TickFrequency="1" SnapsTo="Ticks" Value="{Binding Key, Mode=TwoWay}" ValueChanged="Slider_OnValueChanged"></Slider>
-            <WebView  x:Name="VideoLink"  Height="200" ></WebView>
-            <TextBlock Width="309" Height="150" VerticalAlignment="Center" Margin="0,0,0,0" HorizontalAlignment="Center" Text="{Binding Description, Mode=OneWay}" ></TextBlock>
+            <WebView  x:Name="VideoLink" Margin="0,0,0.33,0" Height="720"/>
+            <TextBlock x:Name="Description" Height="183" Width="542" VerticalAlignment="Center" Margin="0,0,0,0" HorizontalAlignment="Center" Text="{Binding Description, Mode=OneWay}" OpticalMarginAlignment="TrimSideBearings" TextAlignment="Left" TextLineBounds="TrimToBaseline" TextTrimming="None" TextWrapping="WrapWholeWords" FontSize="45" />
             <Image Height="200" Width="309" Source="../Assets/grundplan, ragnarock.jpg"  Margin="0,0,0,0"></Image>
 
         </StackPanel>
@@ -77,7 +77,7 @@
 <!--<NavigationView IsBackButtonVisible="Collapsed" IsSettingsVisible="False" PaneDisplayMode="Left" Background="MediumVioletRed" Grid.ColumnSpan="2" Margin="0,0,308.4,0" VerticalAlignment="Stretch">
 
     <NavigationView.MenuItems>
-        <NavigationViewItem Content="Kort" x:Name="Kort"  Background="Blue">
+        <NavigationViewItem Content="Kort" x:Name="Kort"  Background="Blue">\=
             <NavigationViewItem.Icon>
                 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE909;"></FontIcon>
 
