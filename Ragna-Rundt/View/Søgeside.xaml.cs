@@ -54,6 +54,11 @@ namespace Ragna_Rundt.View
             this.Frame.Navigate(typeof(Udstillingstemplate));
         }
 
-        
+        private void Rundvisnings_Button_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(RundvisningsSide));
+        }
+
+
     }
 }
