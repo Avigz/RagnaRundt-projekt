@@ -59,7 +59,7 @@ namespace Ragna_Rundt.View
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
-            
+           
             this.Frame.Navigate(typeof(Udstillingstemplate));
         }
     }
