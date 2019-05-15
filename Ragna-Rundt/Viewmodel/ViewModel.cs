@@ -6,25 +6,29 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Contacts;
+using Windows.ApplicationModel.Store.Preview.InstallControl;
 using Windows.UI.ViewManagement;
 using Ragna_Rundt.Model;
 
 namespace Ragna_Rundt.Viewmodel
 {
-    public class ViewModel : INotifyPropertyChanged
+    public  class ViewModel : INotifyPropertyChanged
     {
      
 
       Dictionary<int,Element> Catalog = ElementCatalog.Instance.Elements;
+      public SearchList searchList = SearchList.Instance;
 
-        private int _key = 1;
+        public static int StaticKey = 1;
+     
+    
 
        public int Key
        {
-           get { return _key; }
+           get { return StaticKey; }
            set
            {
-               _key = value;
+               StaticKey = value;
                OnPropertyChanged();
                OnPropertyChanged(nameof(Name));
                OnPropertyChanged(nameof(VideoLink));
@@ -47,7 +51,28 @@ namespace Ragna_Rundt.Viewmodel
            get { return Catalog[Key].description; }
        }
 
-       public event PropertyChangedEventHandler PropertyChanged;
+       public Dictionary<int, Element> CurrentList
+       {
+           get { return SearchList.Instance.CurrentList; }
+       }
+
+       public List<Tag> Filters
+       {
+           get { return SearchList.Instance.Filters; }
+       }
+
+       public List<Tag> AllFilters
+       {
+           get { return SearchList.Instance.AllFilters; }
+       }
+
+       public string SearchWord
+       {
+           get { return SearchList.Instance.SearchWord; }
+       }
+
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         { PropertyChanged?.Invoke(this,new  PropertyChangedEventArgs(propertyName));}

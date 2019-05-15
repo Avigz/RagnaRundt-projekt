@@ -18,18 +18,18 @@ namespace Ragna_Rundt.Model
         {
             
             _tempElements = new List<Element>();
-            _tempElements.Add(new Element("DAD Bass", "Beskrivelse", "https://www.youtube.com/embed/kz7JELU29wc", AreaCatalog.Instance.Areas["Væg of doom"]));
+            _tempElements.Add(new Element("DAD Bass", "Beskrivelse", "https://www.youtube.com/embed/q6EoRBvdVPQ?Autoplay=1", AreaCatalog.Instance.Areas["Væg of doom"]));
             _tempElements[0].AddTag(TagCatalog.Instance.Tags["DAD"]);
             _tempElements[0].AddTag(TagCatalog.Instance.Tags["Rock"]);
 
-            _tempElements.Add(new Element("Kim Larsens sko", "Beskrivelse2", "https://www.youtube.com/embed/kz7JELU29wc", AreaCatalog.Instance.Areas["Væg of doom"]));
+            _tempElements.Add(new Element("Kim Larsens sko", "Beskrivelse2", "https://www.youtube.com/embed/6bnanI9jXps?Autoplay=1", AreaCatalog.Instance.Areas["Væg of doom"]));
             _tempElements[1].AddTag(TagCatalog.Instance.Tags["Kim Larsen"]);
 
-            _tempElements.Add(new Element("Lars Ulrichs trommesæt", "Beskrivelse3", "https://www.youtube.com/embed/kz7JELU29wc", AreaCatalog.Instance.Areas["Væg of doom"]));
+            _tempElements.Add(new Element("Lars Ulrichs trommesæt", "Beskrivelse3", "https://www.youtube.com/embed/8YWl7tDGUPA?Autoplay=1", AreaCatalog.Instance.Areas["Væg of doom"]));
             _tempElements[2].AddTag(TagCatalog.Instance.Tags["Metallica"]);
             _tempElements[2].AddTag(TagCatalog.Instance.Tags["Metal"]);
 
-            _tempElements.Add(new Element("Important Disco stuff", "Beskrivelse4", "https://www.youtube.com/embed/kz7JELU29wc", AreaCatalog.Instance.Areas["Disco fever"]));
+            _tempElements.Add(new Element("Important Disco stuff", "Beskrivelse4", "https://www.youtube.com/embed/SBeYzoQPbu8?Autoplay=1", AreaCatalog.Instance.Areas["Disco fever"]));
             _tempElements[3].AddTag(TagCatalog.Instance.Tags["Lys Show"]);
 
             _tempElements.Add(new Element("Pladespiller", "Beskrivelse5", "https://www.youtube.com/embed/kz7JELU29wc", AreaCatalog.Instance.Areas["Pladespillerrummet"]));

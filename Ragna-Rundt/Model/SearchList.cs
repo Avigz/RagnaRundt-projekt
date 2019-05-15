@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 
 namespace Ragna_Rundt.Model
 {
-    class SearchList
+   public class SearchList
     {
         private ElementCatalog _allElements;
         private AreaCatalog _allAreas;
@@ -26,7 +26,9 @@ namespace Ragna_Rundt.Model
             _allElements = ElementCatalog.Instance;
             _currentList = _allElements.Elements;
             _searchWord = "";
+            _allTags = TagCatalog.Instance;
             _allFilters = new List<Tag>();
+
             foreach (var tag in _allTags.Tags)
             {
                 _allFilters.Add(tag.Value);
@@ -57,7 +59,10 @@ namespace Ragna_Rundt.Model
             get { return _searchWord; }
             set { _searchWord = value; }
         }
-
+        public List<Tag> Filters
+        {
+            get { return _filters; }
+        }
         public List<Tag> AllFilters
         {
             get { return _allFilters; }
@@ -84,6 +89,7 @@ namespace Ragna_Rundt.Model
             {
                 _filters.Add(tag);
                 _allFilters.Remove(tag);
+                Update();
 
             }
         }
@@ -91,6 +97,7 @@ namespace Ragna_Rundt.Model
         {
             _filters.Remove(tag);
             _allFilters.Add(tag);
+            Update();
         }
         public void ClearFilters()
         {
@@ -99,6 +106,7 @@ namespace Ragna_Rundt.Model
                 _allFilters.Add(filter);
             }
             _filters.Clear();
+            Update();
         }
         //areafilter
         public void AreaFilter()

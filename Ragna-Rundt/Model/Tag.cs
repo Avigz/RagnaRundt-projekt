@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ragna_Rundt.Model
 {
-    class Tag
+   public class Tag
     {
         private int _id;
         private string _name;
