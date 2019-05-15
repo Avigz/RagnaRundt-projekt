@@ -8,75 +8,85 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Background="Aqua">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="5*"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
+    <Grid>
+        <Viewbox>
+            <Grid Height="1920px" Width="1080px">
 
-        <Button FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,100,0" VerticalAlignment="Top" Click="Button_Click" BorderThickness="0,0,0,0"></Button>
 
-        <SplitView x:Name="SplitviewMenu" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="150" Margin="0,0,0,0">
-            <SplitView.Pane>
-                <StackPanel>
+                <Grid.Background>
+                    <ImageBrush ImageSource="../Assets/Capture.PNG"></ImageBrush>
+                </Grid.Background>
+                <RelativePanel>
 
-                    <Button FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,100,0" VerticalAlignment="Center" Click="Button_Click" BorderThickness="0,0,0,0"></Button>
+                    <Button FontFamily="Segoe MDL2 Assets" Height="150" Width="150" FontSize="55" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Click="Button_Click" BorderThickness="0,0,0,0"></Button>
 
-                    <Button Background="Gray" Name="Kort_Button" Click="Kort_Button_Click" BorderThickness="0,0,0,0" Width="150">
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-25.2,0,0,0" VerticalAlignment="Stretch" Width="105">
-                            <TextBlock Margin="0,0,0,0" IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE909;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-                            <TextBlock IsTextSelectionEnabled="False" Text="Kort" FontSize="16" HorizontalAlignment="Left"/>
+
+
+                    <!--<StackPanel Name="StackPanelFlipview">-->
+
+                    <TextBlock Name="TextBlockRagnaRundt" RelativePanel.AlignHorizontalCenterWithPanel="True" Text="Ragna-Rundt" Width="500" TextAlignment="Center" FontWeight="Bold" FontSize="70"></TextBlock>
+
+                    <!--<Slider Margin="0,50" Maximum="3" TickPlacement="BottomRight" TickFrequency="1" SnapsTo="Ticks" Value="0">
+
+                        </Slider>-->
+                    <FlipView RelativePanel.Below="TextBlockRagnaRundt" Name="FlipView" MaxWidth="300"  Margin="-4.4,50,78.4,440.2" RelativePanel.AlignHorizontalCenterWithPanel="true" SelectionChanged="FlipView_SelectionChanged" >
+                        <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <Image Height="auto" Source="../Assets/grundplan, ragnarock.jpg" VerticalAlignment="Center" Margin="-62,0,209,0"/>
+                            <Border Background="Purple" Height="60" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                                <TextBlock Text="Brugbar info" Margin="0,0,0,0" Width="309"/>
+                            </Border>
                         </StackPanel>
-                    </Button>
-
-                    <Button Background="Transparent" x:Name="Søg_Button" Click="Søg_Button_Click" BorderThickness="0,0,0,0" Width="150">
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-25.2,0,0,0" VerticalAlignment="Stretch" Width="105">
-                            <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE721;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-                            <TextBlock IsTextSelectionEnabled="False"  Text="Søg" FontSize="16" HorizontalAlignment="Left"/>
+                        <StackPanel>
+                            <Image Height="auto" Source="../Assets/Capture.PNG" VerticalAlignment="Top"></Image>
+                            <Border Background="Red" Height="60" Width="300" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                                <TextBlock Text="Brugbar info" HorizontalAlignment="Center">
+                                </TextBlock>
+                            </Border>
                         </StackPanel>
-                    </Button>
+                    </FlipView>
 
-                    <Button Background="Transparent" Name="Udstilling_Button" Click="Udstilling_Button_Click" BorderThickness="0,0,0,0" Width="150">
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-5.2,0,0,0" VerticalAlignment="Stretch" Width="125">
-                            <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE8A2;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-                            <TextBlock IsTextSelectionEnabled="False" Text="Udstilling" FontSize="16" HorizontalAlignment="Left"></TextBlock>
-                        </StackPanel>
-                    </Button>
+                    <Image Name="KortImage" Source="../Assets/grundplan, ragnarock.jpg" Margin="0,-0.2,-809.6,0" RelativePanel.Below="SplitviewMenu"/>
+                    <SplitView  x:Name="SplitviewMenu" DisplayMode="CompactInline" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="350" Margin="0,0,0,0">
+                        <SplitView.Pane>
+                            <StackPanel>
 
-                </StackPanel>
-            </SplitView.Pane>
-        </SplitView>
-        <StackPanel Grid.Column="1" Background="GreenYellow">
-            <TextBlock Text="Ragna-Rundt" TextAlignment="Center" FontWeight="Bold" FontSize="30"></TextBlock>
-        </StackPanel>
+                                <Button FontFamily="Segoe MDL2 Assets" Height="150" Width="150" FontSize="55" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" Click="Button_Click" BorderThickness="0,0,0,0"/>
 
+                                <Button Background="Gray" x:Name="Kort_Button" Click="Kort_Button_Click" BorderThickness="0,0,0,0" Width="150">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="250">
+                                        <TextBlock Margin="0,0,0,0" IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="150" Width="150" FontSize="55" Text="&#xE909;" HorizontalAlignment="Center"/>
+                                        <TextBlock IsTextSelectionEnabled="False" Text="Kort" FontSize="26" HorizontalAlignment="Left"/>
+                                    </StackPanel>
+                                </Button>
 
-        <StackPanel Grid.Column="1" Background="Aqua">
-            <TextBlock Text="Ragna-Rundt" TextAlignment="Center" FontWeight="Bold" FontSize="30"></TextBlock>
+                                <Button Background="Transparent" x:Name="Søg_Button" Click="Søg_Button_Click" BorderThickness="0,0,0,0" Width="150">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-25.2,0,0,0" VerticalAlignment="Stretch" Width="105">
+                                        <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE721;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+                                        <TextBlock IsTextSelectionEnabled="False"  Text="Søg" FontSize="16" HorizontalAlignment="Left"/>
+                                    </StackPanel>
+                                </Button>
 
-            <!--<Slider Margin="0,50" Maximum="3" TickPlacement="BottomRight" TickFrequency="1" SnapsTo="Ticks" Value="0">
+                                <Button Background="Transparent"  x:Name="Rundvisnings_Button" Click="Rundvisnings_Button_OnClick" BorderThickness="0,0,0,0" Width="150">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-5.2,0,0,0" VerticalAlignment="Stretch" Width="125">
+                                        <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="ຊ" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+                                        <TextBlock IsTextSelectionEnabled="False" Text="Rundvisning" FontSize="16" HorizontalAlignment="Left"/>
+                                    </StackPanel>
+                                </Button>
 
-            </Slider>-->
-            <FlipView MaxWidth="300"  Margin="0,40,0,0" Height="180" >
-                <StackPanel>
-                    <Image Height="120" Source="../Assets/grundplan, ragnarock.jpg" VerticalAlignment="Top"></Image>
-                    <Border Background="Purple" Height="60" Width="300" HorizontalAlignment="Left" VerticalAlignment="Bottom">
-                        <TextBlock Text="Brugbar info" HorizontalAlignment="Center">
-                        </TextBlock>
-                    </Border>
-                </StackPanel>
-                <StackPanel>
-                    <Image Height="120" Source="../Assets/Capture.PNG" VerticalAlignment="Top"></Image>
-                    <Border Background="Red" Height="60" Width="300" HorizontalAlignment="Left" VerticalAlignment="Bottom">
-                        <TextBlock Text="Brugbar info" HorizontalAlignment="Center">
-                        </TextBlock>
-                    </Border>
-                </StackPanel>
-            </FlipView>
+                                <Button Background="Transparent"  x:Name="Udstilling_Button" Click="Udstilling_Button_Click" BorderThickness="0,0,0,0" Width="150">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-5.2,0,0,0" VerticalAlignment="Stretch" Width="125">
+                                        <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE8A2;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+                                        <TextBlock IsTextSelectionEnabled="False" Text="Udstilling" FontSize="16" HorizontalAlignment="Left"/>
+                                    </StackPanel>
+                                </Button>
 
-            <Image Source="../Assets/grundplan, ragnarock.jpg" Margin="0,110,0,60"></Image>
-        </StackPanel>
+                            </StackPanel>
+                        </SplitView.Pane>
+                    </SplitView>
+                    <!--</StackPanel>-->
+                </RelativePanel>
+            </Grid>
+        </Viewbox>
     </Grid>
 </Page>
 <!--<NavigationView IsBackButtonVisible="Collapsed" IsSettingsVisible="False" PaneDisplayMode="Left" Background="Aqua" Grid.ColumnSpan="2" Margin="0,0,308.4,0" VerticalAlignment="Stretch">
