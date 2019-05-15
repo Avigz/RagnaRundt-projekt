@@ -29,11 +29,11 @@
                     <!--<Slider Margin="0,50" Maximum="3" TickPlacement="BottomRight" TickFrequency="1" SnapsTo="Ticks" Value="0">
 
                         </Slider>-->
-                    <FlipView RelativePanel.Below="TextBlockRagnaRundt" Name="FlipView" MaxWidth="300"  Margin="-4.4,50,78.4,440.2" RelativePanel.AlignHorizontalCenterWithPanel="true" SelectionChanged="FlipView_SelectionChanged" >
-                        <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                            <Image RelativePanel. Height="auto" Source="../Assets/grundplan, ragnarock.jpg" VerticalAlignment="Center" Margin="-62,0,209,0"/>
-                            <Border Background="Purple" Height="60" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Bottom">
-                                <TextBlock Text="Brugbar info" Margin="0,0,0,0" Width="309"/>
+                    <FlipView RelativePanel.Below="TextBlockRagnaRundt" Name="FlipView" MaxWidth="300" MaxHeight="300" Margin="-4.4,50,78.4,440.2" RelativePanel.AlignHorizontalCenterWithPanel="true" SelectionChanged="FlipView_SelectionChanged" >
+                        <StackPanel Name="StackPanelFlipView" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Image RelativePanel.AlignBottomWith="BorderInfoBox" MaxHeight="300" MaxWidth="250" Source="../Assets/grundplan, ragnarock.jpg" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                            <Border Name="BorderInfoBox" Background="Purple" Height="60" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                                <TextBlock Text="Brugbar info" TextAlignment="Center" Margin="0,0,0,0" Height="auto" Width="300"/>
                             </Border>
                         </StackPanel>
                         <StackPanel>
@@ -45,10 +45,10 @@
                         </StackPanel>
                     </FlipView>
 
-                    <Image Name="KortImage" Source="../Assets/grundplan, ragnarock.jpg" Margin="0,-0.2,-809.6,0" RelativePanel.Below="SplitviewMenu"/>
+                    <Image Name="KortImage" Source="../Assets/grundplan, ragnarock.jpg" RelativePanel.AlignBottomWithPanel="True" Width="1080" Height="Auto" MaxHeight="1300" MaxWidth="1080" Margin="0,200,0,0" RelativePanel.Below="SplitviewMenu"/>
                     <SplitView  x:Name="SplitviewMenu" DisplayMode="CompactInline" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="350" Margin="0,0,0,0">
                         <SplitView.Pane>
-                            <StackPanel>
+                            <StackPanel HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
 
                                 <Button FontFamily="Segoe MDL2 Assets" Height="150" Width="150" FontSize="55" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" Click="Button_Click" BorderThickness="0,0,0,0"/>
 
