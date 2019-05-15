@@ -23,7 +23,7 @@
                     <ColumnDefinition Width="5*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Button FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,100,0" VerticalAlignment="0" Click="Button_Click" BorderThickness="0,0,0,0"></Button>
+                <Button FontFamily="Segoe MDL2 Assets" Foreground="White" Height="50" Width="50" FontSize="25" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,100,0" VerticalAlignment="0" Click="Button_Click" BorderThickness="0,0,0,0"></Button>
 
                 <SplitView x:Name="SplitviewMenu" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="150">
                     <SplitView.Pane>
