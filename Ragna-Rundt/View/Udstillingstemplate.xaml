@@ -65,7 +65,6 @@
 
         <StackPanel Grid.Column="1">
             <TextBlock Text="{Binding Name, Mode=OneWay}" TextAlignment="Center" FontWeight="Bold" FontSize="30"></TextBlock>
-            <Slider Margin="0,50" Maximum="3" TickPlacement="BottomRight" TickFrequency="1" SnapsTo="Ticks" Value="{Binding Key, Mode=TwoWay}" ValueChanged="Slider_OnValueChanged"></Slider>
             <WebView  x:Name="VideoLink" Margin="0,0,0.33,0" Height="720"/>
             <TextBlock x:Name="Description" Height="183" Width="542" VerticalAlignment="Center" Margin="0,0,0,0" HorizontalAlignment="Center" Text="{Binding Description, Mode=OneWay}" OpticalMarginAlignment="TrimSideBearings" TextAlignment="Left" TextLineBounds="TrimToBaseline" TextTrimming="None" TextWrapping="WrapWholeWords" FontSize="45" />
             <Image Height="200" Width="309" Source="../Assets/grundplan, ragnarock.jpg"  Margin="0,0,0,0"></Image>
@@ -74,27 +73,3 @@
     </Grid>
 </Page>
 
-<!--<NavigationView IsBackButtonVisible="Collapsed" IsSettingsVisible="False" PaneDisplayMode="Left" Background="MediumVioletRed" Grid.ColumnSpan="2" Margin="0,0,308.4,0" VerticalAlignment="Stretch">
-
-    <NavigationView.MenuItems>
-        <NavigationViewItem Content="Kort" x:Name="Kort"  Background="Blue">\=
-            <NavigationViewItem.Icon>
-                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE909;"></FontIcon>
-
-            </NavigationViewItem.Icon>
-        </NavigationViewItem>
-        <NavigationViewItem Content="Søg" x:Name="Søg"  Background="Red">
-            <NavigationViewItem.Icon>
-                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE721;"></FontIcon>
-
-            </NavigationViewItem.Icon>
-        </NavigationViewItem>
-        <NavigationViewItem Content="Udstilling" x:Name="Udstilling"  Background="Orange">
-            <NavigationViewItem.Icon>
-                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE8A2;"></FontIcon>
-
-            </NavigationViewItem.Icon>
-        </NavigationViewItem>
-    </NavigationView.MenuItems>
-
-</NavigationView>-->

@@ -17,9 +17,10 @@ namespace Ragna_Rundt.Viewmodel
      
 
       Dictionary<int,Element> Catalog = ElementCatalog.Instance.Elements;
-    
-      public static int StaticKey = 1;
+      public SearchList searchList = SearchList.Instance;
 
+        public static int StaticKey = 1;
+     
     
 
        public int Key

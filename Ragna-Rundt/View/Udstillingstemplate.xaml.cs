@@ -35,7 +35,7 @@ namespace Ragna_Rundt.View
             this.InitializeComponent();
             DataContext = viewModel;
           
-            VideoLink.NavigateToString($"<iframe height=\"768\" width=\"1024\" src=" + $"{ElementCatalog.Instance.Elements[(viewModel.Key)].videoURL}" + "frameborder=\"0\" allow=\"accelerometer; encrypted-media; gyroscope; picture-in-picture\"></iframe>");
+            VideoLink.NavigateToString($"<iframe height=\"${}\" width=\"1024\" src=" + $"{ElementCatalog.Instance.Elements[(viewModel.Key)].videoURL}" + "frameborder=\"0\" allow=\"accelerometer; encrypted-media; gyroscope; picture-in-picture\"></iframe>");
             
 
 
@@ -46,10 +46,7 @@ namespace Ragna_Rundt.View
         //    VideoLink.NavigateToString($"<iframe height=\"768\" width=\"1024\" src=" + $"{viewModel.Catalog.VideoLink(viewModel.Key)}" + "frameborder=\"0\" allow=\"accelerometer; encrypted-media; gyroscope; picture-in-picture\"></iframe>");
         //}
 
-        private void Slider_OnValueChanged(object sender, RangeBaseValueChangedEventArgs e)
-        {
-            VideoLink.NavigateToString($"<iframe height=\"768\" width=\"1024\" src=" + $"{ElementCatalog.Instance.Elements[(viewModel.Key)].videoURL}" + "frameborder=\"0\" allow=\"accelerometer; encrypted-media; gyroscope; picture-in-picture\"></iframe>");
-        }
+        
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {

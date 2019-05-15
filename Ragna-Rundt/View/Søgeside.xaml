@@ -58,7 +58,9 @@
                 <!--Kode under til funktionaliteten for searchbar-->
 
                 <!--TextChanged="Søgeside_TextChanged" QuerySubmitted="Søgeside_Querysubmitted" SuggestionChosen="Søgeside_Suggestion"-->
-                <AutoSuggestBox PlaceholderText="Search" QueryIcon="Find" Margin="0,10,0,0" Text="{Binding SearchWord, Mode=TwoWay}">
+                <AutoSuggestBox PlaceholderText="Search" QueryIcon="Find" Margin="0,10,0,0" Text="{Binding SearchWord, Mode=TwoWay}"  TextChanged="AutoSuggestBox_TextChanged"
+                                QuerySubmitted="AutoSuggestBox_QuerySubmitted"
+                                SuggestionChosen="AutoSuggestBox_SuggestionChosen">
 
                 </AutoSuggestBox>
             </StackPanel>
