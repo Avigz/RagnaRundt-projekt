@@ -60,14 +60,18 @@ namespace Ragna_Rundt.View
             this.Frame.Navigate(typeof(Udstillingstemplate));
         }
 
-       
+       // Listview knapfunktioner til navigering til underside m. indhold der matcher titlen på den aktiverede knap.
+       // Disse fungerer ved at have binded elementets Key til *Tag* parameteren i Button elementet.
+       // Tag elementet returnere et objekt med vores Key i, hvilken vi ekstrahere ved at konvertere objectet til en int. 
+       // For at videregive den ønskede indholdsstyringsKey til ViewModellen, lægger vi den over i den statiske Key variable StaticKey.
+       //efter dette kalder vi frame.Navigate og videredirigere til udstillingstemplaten, hvilkens indhold er opdateret efter StaticKey.
 
         public void ListButton_OnClick(object sender, RoutedEventArgs e)
         {
-            var myValue = ((Button)sender).Tag;
+            var Key = ((Button)sender).Tag;
             
 
-            ViewModel.StaticKey = Convert.ToInt16(myValue);
+            ViewModel.StaticKey = Convert.ToInt16(Key);
           
             this.Frame.Navigate(typeof(Udstillingstemplate));
         }
