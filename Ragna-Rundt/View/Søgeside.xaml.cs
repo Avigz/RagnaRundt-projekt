@@ -56,6 +56,11 @@ namespace Ragna_Rundt.View
             
         }
 
+        private void Rundvisnings_Button_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(RundvisningsSide));
+        }
+
         private void Udstilling_Button_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Udstillingstemplate));
@@ -112,5 +117,7 @@ namespace Ragna_Rundt.View
                 viewModel.searchList.Update();
             }
         }
+
+        
     }
 }

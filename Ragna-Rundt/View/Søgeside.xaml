@@ -73,8 +73,8 @@
 
                         <!--Kode under til funktionaliteten for searchbar-->
 
-                <!--TextChanged="Søgeside_TextChanged" QuerySubmitted="Søgeside_Querysubmitted" SuggestionChosen="Søgeside_Suggestion"-->
-                <AutoSuggestBox PlaceholderText="Search" QueryIcon="Find" Margin="0,10,0,0" Text="{Binding SearchWord, Mode=TwoWay}"  TextChanged="AutoSuggestBox_TextChanged"
+                        <!--TextChanged="Søgeside_TextChanged" QuerySubmitted="Søgeside_Querysubmitted" SuggestionChosen="Søgeside_Suggestion"-->
+                        <AutoSuggestBox PlaceholderText="Search" QueryIcon="Find" Margin="0,10,0,0" Text="{Binding SearchWord, Mode=TwoWay}"  TextChanged="AutoSuggestBox_TextChanged"
                                 QuerySubmitted="AutoSuggestBox_QuerySubmitted"
                                 SuggestionChosen="AutoSuggestBox_SuggestionChosen">
 
@@ -87,20 +87,28 @@
                                     <ItemsPanelTemplate>
                                         <WrapGrid x:Name="WrapGridTags" Height="60" Orientation="Horizontal">
 
-                                </WrapGrid>
-                            </ItemsPanelTemplate>
-                        </GridView.ItemsPanel>
-                    </GridView>
-                </StackPanel>
-                <StackPanel Background="Blue" Margin="0,40,0,0" Height="637" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                    <ListView x:Name="UdstillingsElementerList" SelectionMode="Single" Height="575" Background="Aqua" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+                                        </WrapGrid>
+                                    </ItemsPanelTemplate>
+                                </GridView.ItemsPanel>
+                            </GridView>
+                        </StackPanel>
+                        <StackPanel Background="Blue" Margin="0,40,0,0" Height="637" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
 
-                    </ListView>-->
+                            <ListView x:Name="UdstillingsElementerList" ItemsSource="{Binding CurrentList}" SelectionMode="Single">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel>
+                                            <Button Content="{Binding Value.Name }" Tag="{Binding Value.Id}" Click="ListButton_OnClick" ></Button>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                                    <!--<ListView  SelectionMode="Single" Height="575" Background="Aqua" Margin="0,0,-0.333,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  DataContext="{Binding CurrentList}">
 
-                    </ListView>
+                                    </ListView>-->
+                        </StackPanel>
+                    </StackPanel>
                 </StackPanel>
-            </StackPanel>
-        </StackPanel>
 
             </Grid>
         </Viewbox>

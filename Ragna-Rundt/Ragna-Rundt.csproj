@@ -129,9 +129,6 @@
     <Compile Include="Model\TagCatalog.cs" />
     <Compile Include="Model\Tour.cs" />
     <Compile Include="Shitsonfireyo\UdstillingsElement.cs" />
-    <Compile Include="Shitsonfireyo\BurgerMenu1.xaml.cs">
-      <DependentUpon>BurgerMenu1.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Viewmodel\ViewModel.cs" />
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -173,10 +170,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Shitsonfireyo\BurgerMenu1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
