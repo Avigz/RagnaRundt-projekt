@@ -31,7 +31,7 @@
                         </Slider>-->
                     <FlipView RelativePanel.Below="TextBlockRagnaRundt" Name="FlipView" MaxWidth="300" MaxHeight="300" Margin="-4.4,50,78.4,440.2" RelativePanel.AlignHorizontalCenterWithPanel="true" SelectionChanged="FlipView_SelectionChanged" >
                         <StackPanel Name="StackPanelFlipView" HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <Image RelativePanel.AlignBottomWith="BorderInfoBox" MaxHeight="300" MaxWidth="250" Source="../Assets/grundplan, ragnarock.jpg" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                            <Image RelativePanel.AlignBottomWith="BorderInfoBox" MaxHeight="500" MaxWidth="600" Source="../Assets/grundplan, ragnarock.jpg" VerticalAlignment="Center" Margin="0,0,0,0"/>
                             <Border Name="BorderInfoBox" Background="Purple" Height="60" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Bottom">
                                 <TextBlock Text="Brugbar info" TextAlignment="Center" Margin="0,0,0,0" Height="auto" Width="300"/>
                             </Border>
