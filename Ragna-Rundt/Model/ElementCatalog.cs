@@ -35,7 +35,7 @@ namespace Ragna_Rundt.Model
             _tempElements.Add(new Element("Pladespiller", "Beskrivelse5", "https://www.youtube.com/embed/kz7JELU29wc", AreaCatalog.Instance.Areas["Pladespillerrummet"]));
             _tempElements[4].AddTag(TagCatalog.Instance.Tags["Rock"]);
 
-            _tempElements.Add(new Element("Skelv", "Beskrivelse6 + Hjerte", "https://www.youtube.com/embed/kz7JELU29wc", AreaCatalog.Instance.Areas["Pladespillerrummet"]));
+            _tempElements.Add(new Element("Skelv", "Beskrivelse6 ", "https://www.youtube.com/embed/kz7JELU29wc", AreaCatalog.Instance.Areas["Pladespillerrummet"]));
             _tempElements[5].AddTag(TagCatalog.Instance.Tags["Rock"]);
 
             _tempElements.Add(new Element("LysShow", "Beskrivelse7", "https://www.youtube.com/embed/kz7JELU29wc", AreaCatalog.Instance.Areas["Pladespillerrummet"]));
