@@ -29,18 +29,24 @@
                     <!--<Slider Margin="0,50" Maximum="3" TickPlacement="BottomRight" TickFrequency="1" SnapsTo="Ticks" Value="0">
 
                         </Slider>-->
-                    <FlipView RelativePanel.Below="TextBlockRagnaRundt" Name="FlipView" MaxWidth="300" MaxHeight="300" Margin="-4.4,50,78.4,440.2" RelativePanel.AlignHorizontalCenterWithPanel="true" SelectionChanged="FlipView_SelectionChanged" >
-                        <StackPanel Name="StackPanelFlipView" HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <Image RelativePanel.AlignBottomWith="BorderInfoBox" MaxHeight="500" MaxWidth="600" Source="../Assets/grundplan, ragnarock.jpg" VerticalAlignment="Center" Margin="0,0,0,0"/>
-                            <Border Name="BorderInfoBox" Background="Purple" Height="60" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Bottom">
-                                <TextBlock Text="Brugbar info" TextAlignment="Center" Margin="0,0,0,0" Height="auto" Width="300"/>
+                    <FlipView RelativePanel.Below="TextBlockRagnaRundt" Name="FlipView" MaxWidth="590" MaxHeight="550" Margin="-4.4,70,78.4,440.2" RelativePanel.AlignHorizontalCenterWithPanel="true" SelectionChanged="FlipView_SelectionChanged" >
+                       
+                        <StackPanel Name="StackPanelFlipView" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="590" MaxHeight="550" Width="auto" Height="750">
+                            <Image RelativePanel.AlignBottomWith="BorderInfoBox" Height="auto" Width="auto" Stretch="UniformToFill" Source="../Assets/pop_rock_og-ungdomskultur_Rundvisning-på-RAGNAROCK.-Kredit-RAGNAROCK.jpg" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                            <Border Name="BorderInfoBox" Background="Purple" Height="auto" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                                <TextBlock Text="Brugbar info" TextAlignment="Center" FontSize="32" Margin="0,0,0,0" Height="60" Width="300"/>
                             </Border>
                         </StackPanel>
-                        <StackPanel>
-                            <Image Height="auto" Source="../Assets/Capture.PNG" VerticalAlignment="Top"></Image>
-                            <Border Background="Red" Height="60" Width="300" HorizontalAlignment="Left" VerticalAlignment="Bottom">
-                                <TextBlock Text="Brugbar info" HorizontalAlignment="Center">
-                                </TextBlock>
+                        <StackPanel Name="StackPanelFlipView2" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="1080" MaxHeight="550" Width="auto" Height="750">
+                            <Image RelativePanel.AlignBottomWith="BorderInfoBox2" Height="auto" Width="auto" Stretch="UniformToFill" Source="../Assets/Syklub-fra-helvede-768x432.jpg" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                            <Border Name="BorderInfoBox2" Background="Red" Height="auto" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                                <TextBlock Text="Brugbar info" TextAlignment="Center" FontSize="32" Margin="0,0,0,0" Height="60" Width="300"/>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Name="StackPanelFlipView3" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="1080" MaxHeight="550" Width="auto" Height="750">
+                            <Image RelativePanel.AlignBottomWith="BorderInfoBox2" Height="auto" Width="auto" Stretch="UniformToFill" Source="../Assets/Rend-mig.jpg" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                            <Border Name="BorderInfoBox3" Background="White" Height="auto" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                                <TextBlock Text="Brugbar info" TextAlignment="Center" FontSize="32" Margin="0,0,0,0" Height="60" Width="300"/>
                             </Border>
                         </StackPanel>
                     </FlipView>

@@ -28,7 +28,7 @@
                 <Button FontFamily="Segoe MDL2 Assets" Foreground="White" Height="50" Width="50" FontSize="25" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,100,0" VerticalAlignment="Top" Click="Button_Click" BorderThickness="0,0,0,0"></Button>
 
 
-                <SplitView x:Name="SplitviewMenu" Opacity="1" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="150" Margin="0,0,0,0">
+                <SplitView Grid.Column="0" x:Name="SplitviewMenu" Opacity="1" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="150" Margin="0,0,0,0">
                     <SplitView.Pane>
                         <StackPanel>
 
@@ -66,14 +66,20 @@
                     </SplitView.Pane>
                 </SplitView>
                 <StackPanel Opacity="0.45" Background="Black" Grid.Column="1">
-                    <TextBlock Text="{Binding Name, Mode=OneWay}" TextAlignment="Center" FontWeight="Bold" FontSize="30"></TextBlock>
+                    <TextBlock Text="{Binding Name, Mode=OneWay}" TextAlignment="Center" FontWeight="Bold" FontSize="30" Foreground="White"></TextBlock>
                 </StackPanel>
 
 
                 <StackPanel Grid.Column="1">
-                    <TextBlock Width="309" Height="60" Text="Rundvisnings-Side" FontFamily="Helvetica" Foreground="BlanchedAlmond" FontSize="24" TextAlignment="Center"></TextBlock>
-                    <TextBlock Width="309" Height="auto" VerticalAlignment="Center" Margin="0,80,0,0" HorizontalAlignment="Center" FontSize="12" TextWrapping="WrapWholeWords" Foreground="BlanchedAlmond" FontFamily="Matura MT Script Capitals">Beskrivelse Beskrivelse Beskrivelse Beskrivelse<LineBreak></LineBreak>Beskrivelse Beskrivelse Beskrivelse Beskrivelse<LineBreak></LineBreak>Beskrivelse Beskrivelse Beskrivelse Beskrivelse<LineBreak></LineBreak>Beskrivelse Beskrivelse Beskrivelse Beskrivelse<LineBreak></LineBreak>Beskrivelse Beskrivelse Beskrivelse Beskrivelse<LineBreak></LineBreak>Beskrivelse Beskrivelse Beskrivelse Beskrivelse<LineBreak></LineBreak>Beskrivelse Beskrivelse Beskrivelse Beskrivelse<LineBreak></LineBreak>Beskrivelse Beskrivelse Beskrivelse Beskrivelse<LineBreak></LineBreak>Beskrivelse Beskrivelse Beskrivelse Beskrivelse<LineBreak></LineBreak>Beskrivelse Beskrivelse Beskrivelse Beskrivelse</TextBlock>
-                    <ListView x:Name="ListView_RundvisningsSide" Height="300" Width="309" Margin="0,20,0,0" SelectionMode="Single" FontSize="12" FontFamily="Arial">
+                    <TextBlock Width="309" Height="60" Text="Rundvisnings-Side" FontFamily="Helvetica" Foreground="White" FontSize="24" TextAlignment="Center"></TextBlock>
+                    <TextBlock Width="600" Height="auto" TextAlignment="Left" VerticalAlignment="Center" Margin="0,70,0,0" HorizontalAlignment="Center" FontSize="24" TextWrapping="WrapWholeWords" Foreground="BlanchedAlmond" FontFamily="Matura MT Script Capitals">Tag med på en medrivende rejse gennem musikkens og ungdomskulturens historie og udvikling fra 1950´erne og frem – en rejse der både engagerer, aktiverer og giver dig sved på panden.
+                        <LineBreak></LineBreak>
+                        <LineBreak></LineBreak>RAGNAROCKs 1200 kvadratmeter store hovedudstilling består af 11 temaer, der præsentere dig for en fortællingen om, hvordan musikken og ungdommen gennem tiden har flyttet grænser og påvirket samfundet
+                        <LineBreak></LineBreak>
+                        <LineBreak></LineBreak>Eksempler på disse temaer er; Når musikken så lyset! – om lyset indvirken på musikken, Fanboys og Fangirls! – fortællingen om den sociale indflydelse Beatles og andre kunstnere har haft på unge fans og ”Kan musik ændre verden?” – et kig på musikken og kunstnernes sociopolitiske påvirkning.
+                        <LineBreak></LineBreak>
+                        <LineBreak></LineBreak>Ud over disse kommer du også tæt på Dans! Musikalske Strømme! Den røde tråd! Elektrisk intimitet! Jagten på den gode lyd!, Demoteket! og Verdens største kor!</TextBlock>
+                    <ListView  Background="AntiqueWhite" x:Name="ListView_RundvisningsSide" Height="1080" Width="700" Margin="0,20,0,0" SelectionMode="Single" FontSize="12" FontFamily="Arial">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <TextBlock></TextBlock>

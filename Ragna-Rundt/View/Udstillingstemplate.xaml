@@ -25,7 +25,10 @@
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="5*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
+                   
                 </Grid.ColumnDefinitions>
+                
+                
 
 
                 <Button FontFamily="Segoe MDL2 Assets" Foreground="White" Height="50" Width="50" FontSize="25" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,100,0" VerticalAlignment="Top" Click="Button_Click" BorderThickness="0,0,0,0"></Button>
@@ -68,19 +71,19 @@
                         </StackPanel>
                     </SplitView.Pane>
                 </SplitView>
+                
+                <StackPanel Grid.Column="1" Background="Black" Opacity="0.45">
+                    <TextBlock Text="{Binding Name, Mode=OneWay}" Height="60" TextAlignment="Center" FontSize="30" FontWeight="Bold" Foreground="White"></TextBlock>
+                </StackPanel>
                 <StackPanel Grid.Column="1">
-                    <TextBlock Text="{Binding Name, Mode=OneWay}" TextAlignment="Center" FontWeight="Bold" FontSize="30" Foreground="White"></TextBlock>
+                    <TextBlock Text="{Binding Name, Mode=OneWay}" Height="60" TextAlignment="Center" FontSize="30" FontWeight="Bold" Foreground="White"></TextBlock>
+                    <WebView x:Name="VideoLink" Height="200"></WebView>
+                    <TextBlock Width="800" Height="400"></TextBlock>
+                    <Image Height="auto" Width="auto" Source="../Assets/RagnarockKort.jpg"></Image>
                 </StackPanel>
 
 
-                <StackPanel Margin="0,50,0,0" Opacity="0.45" Background="Black" Grid.Column="1">
-                    <TextBlock Text="{Binding Description, Mode=OneWay}"  Height="80"  TextAlignment="Center" TextWrapping="Wrap" FontWeight="Bold" FontSize="20" Foreground="BlanchedAlmond"></TextBlock>
-                    <Slider Margin="0,50" Maximum="3" TickPlacement="BottomRight" TickFrequency="1" SnapsTo="Ticks" Value="{Binding Key, Mode=TwoWay}" ValueChanged="Slider_OnValueChanged"></Slider>
-                    <WebView  x:Name="VideoLink"  Height="200" ></WebView>
-                    <TextBlock Width="309" Height="150" VerticalAlignment="Center" Margin="0,0,0,0" HorizontalAlignment="Center" >Prøve tekst Prøve tekst Prøve tekst Prøve tekst <LineBreak></LineBreak>Prøve tekst Prøve tekst Prøve tekst Prøve tekst<LineBreak></LineBreak>Prøve tekst Prøve tekst Prøve tekst Prøve tekst</TextBlock>
-                    <Image Height="200" Width="309" Source="../Assets/grundplan, ragnarock.jpg"  Margin="0,0,0,0"></Image>
-
-                </StackPanel>
+              
             </Grid>
         </Viewbox>
     </Grid>
