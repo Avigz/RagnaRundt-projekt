@@ -103,9 +103,6 @@
                                     </DataTemplate>
                                 </ListView.ItemTemplate>
                             </ListView>
-                                    <!--<ListView  SelectionMode="Single" Height="575" Background="Aqua" Margin="0,0,-0.333,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  DataContext="{Binding CurrentList}">
-
-                                    </ListView>-->
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
