@@ -71,7 +71,7 @@
 
 
                 <StackPanel Grid.Column="1">
-                    <TextBlock Width="309" Height="60" Text="Rundvisnings-Side" FontFamily="Helvetica" Foreground="White" FontSize="24" TextAlignment="Center"></TextBlock>
+                    <TextBlock Width="600" Height="80" Text="Rundvisnings-Side" FontFamily="Helvetica" Foreground="White" FontSize="70" TextAlignment="Center"></TextBlock>
                     <TextBlock Width="600" Height="auto" TextAlignment="Left" VerticalAlignment="Center" Margin="0,70,0,0" HorizontalAlignment="Center" FontSize="24" TextWrapping="WrapWholeWords" Foreground="BlanchedAlmond" FontFamily="Matura MT Script Capitals">Tag med på en medrivende rejse gennem musikkens og ungdomskulturens historie og udvikling fra 1950´erne og frem – en rejse der både engagerer, aktiverer og giver dig sved på panden.
                         <LineBreak></LineBreak>
                         <LineBreak></LineBreak>RAGNAROCKs 1200 kvadratmeter store hovedudstilling består af 11 temaer, der præsentere dig for en fortællingen om, hvordan musikken og ungdommen gennem tiden har flyttet grænser og påvirket samfundet
@@ -79,7 +79,7 @@
                         <LineBreak></LineBreak>Eksempler på disse temaer er; Når musikken så lyset! – om lyset indvirken på musikken, Fanboys og Fangirls! – fortællingen om den sociale indflydelse Beatles og andre kunstnere har haft på unge fans og ”Kan musik ændre verden?” – et kig på musikken og kunstnernes sociopolitiske påvirkning.
                         <LineBreak></LineBreak>
                         <LineBreak></LineBreak>Ud over disse kommer du også tæt på Dans! Musikalske Strømme! Den røde tråd! Elektrisk intimitet! Jagten på den gode lyd!, Demoteket! og Verdens største kor!</TextBlock>
-                    <ListView  Background="AntiqueWhite" x:Name="ListView_RundvisningsSide" Height="1080" Width="700" Margin="0,20,0,0" SelectionMode="Single" FontSize="12" FontFamily="Arial">
+                    <ListView  Background="AntiqueWhite" x:Name="ListView_RundvisningsSide" Height="1080" Margin="0,25,0,0" SelectionMode="Single" FontSize="12" FontFamily="Arial" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <TextBlock></TextBlock>
