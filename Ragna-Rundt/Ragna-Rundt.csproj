@@ -151,6 +151,22 @@
   <ItemGroup>
     <Content Include="Assets\Capture.PNG" />
     <Content Include="Assets\grundplan, ragnarock.jpg" />
+    <Content Include="Assets\KnapBlikfang.png" />
+    <Content Include="Assets\KnapHjerte.png" />
+    <Content Include="Assets\KnapKassetteBaand.png" />
+    <Content Include="Assets\KnapMusikVaag.png" />
+    <Content Include="Assets\KnapPladespiller.png" />
+    <Content Include="Assets\KnapRoedeTraad.png" />
+    <Content Include="Assets\KnapSkaelv.png" />
+    <Content Include="Assets\KnapTelefon.png" />
+    <Content Include="Assets\KnapTromme.png" />
+    <Content Include="Assets\KnapVerden.png" />
+    <Content Include="Assets\ragnarock2akort.jpg" />
+    <Content Include="Assets\ragnarock2kort.jpg" />
+    <Content Include="Assets\Ragnarock3akort.jpg" />
+    <Content Include="Assets\Ragnarock3kort.jpg" />
+    <Content Include="Assets\RagnarockKort.jpg" />
+    <Content Include="Assets\RagnarockKortInvisible.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
