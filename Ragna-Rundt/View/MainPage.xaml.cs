@@ -73,67 +73,67 @@ namespace Ragna_Rundt
 
         private void Blikfang_Click(object sender, RoutedEventArgs e)
         {
-            ViewModel.StaticKey = 1;
+            ViewModel.StaticKey = 2;
             this.Frame.Navigate(typeof(Udstillingstemplate));
         }
 
         private void Hjerte_Click(object sender, RoutedEventArgs e)
         {
-            ViewModel.StaticKey = 10;
+            ViewModel.StaticKey = 11;
             this.Frame.Navigate(typeof(Udstillingstemplate));
         }
 
         private void Lydvaeg_Click(object sender, RoutedEventArgs e)
         {
-            ViewModel.StaticKey = 0;
+            ViewModel.StaticKey = 1;
             this.Frame.Navigate(typeof(Udstillingstemplate));
         }
 
         private void Cirkler_Click(object sender, RoutedEventArgs e)
         {
-            ViewModel.StaticKey = 5;
+            ViewModel.StaticKey = 6;
             this.Frame.Navigate(typeof(Udstillingstemplate));
         }
 
         private void Lysshow_Click(object sender, RoutedEventArgs e)
         {
-            ViewModel.StaticKey = 6;
+            ViewModel.StaticKey = 7;
             this.Frame.Navigate(typeof(Udstillingstemplate));
         }
 
         private void Verden_Click(object sender, RoutedEventArgs e)
         {
-            ViewModel.StaticKey = 3;
+            ViewModel.StaticKey = 4;
             this.Frame.Navigate(typeof(Udstillingstemplate));
         }
 
         private void Kassettebaand_Click(object sender, RoutedEventArgs e)
         {
-            ViewModel.StaticKey = 7;
+            ViewModel.StaticKey = 8;
             this.Frame.Navigate(typeof(Udstillingstemplate));
         }
 
         private void Telefon_Click(object sender, RoutedEventArgs e)
         {
-            ViewModel.StaticKey = 8;
+            ViewModel.StaticKey = 9;
             this.Frame.Navigate(typeof(Udstillingstemplate));
         }
 
         private void Mikrofon_Click(object sender, RoutedEventArgs e)
         {
-            ViewModel.StaticKey = 2;
+            ViewModel.StaticKey = 3;
             this.Frame.Navigate(typeof(Udstillingstemplate));
         }
 
         private void Pladespiller_Click(object sender, RoutedEventArgs e)
         {
-            ViewModel.StaticKey = 4;
+            ViewModel.StaticKey = 5;
             this.Frame.Navigate(typeof(Udstillingstemplate));
         }
 
         private void RagnarockBygning_Click(object sender, RoutedEventArgs e)
         {
-            ViewModel.StaticKey = 9;
+            ViewModel.StaticKey = 10;
             this.Frame.Navigate(typeof(Udstillingstemplate));
         }
 
