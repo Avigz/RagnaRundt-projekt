@@ -49,43 +49,43 @@
                         <Canvas.Background>
                             <ImageBrush ImageSource="../Assets/RagnarockKort.jpg"></ImageBrush>
                         </Canvas.Background>
-                        <Button Name="Blikfang" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="348" Margin="0,0,0,0" VerticalAlignment="Center" Canvas.Top="37" Height="138" Width="150">
+                        <Button Name="Blikfang" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="348" Margin="0,0,0,0" VerticalAlignment="Center" Canvas.Top="37" Height="138" Width="150" Click="Blikfang_Click">
                             <Image Source="../Assets/KnapBlikfanggul.png" HorizontalAlignment="Stretch" Margin="-0.4,0.2,3,15.8" VerticalAlignment="Stretch"></Image>
                         </Button>
-                        <Button Name="Hjerte1" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="804" Canvas.Top="838" VerticalAlignment="Top" Height="150" Width="106">
+                        <Button Name="Hjerte1" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="804" Canvas.Top="838" VerticalAlignment="Top" Height="150" Width="106" Click="Hjerte_Click">
                             <Image Source="../Assets/KnapHjerteGrøn.png"></Image>
                         </Button>
-                        <Button Name="Hjerte2" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="798" Canvas.Top="226" VerticalAlignment="Top" Height="150" Width="106">
+                        <Button Name="Hjerte2" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="798" Canvas.Top="226" VerticalAlignment="Top" Height="150" Width="106" Click="Hjerte_Click">
                             <Image Source="../Assets/KnapHjerteGrøn.png"></Image>
                         </Button>
-                        <Button Name="Telefon" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="510" Canvas.Top="688" VerticalAlignment="Top" Height="113" Width="164" Margin="0,0,0,0">
+                        <Button Name="Telefon" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="510" Canvas.Top="688" VerticalAlignment="Top" Height="113" Width="164" Margin="0,0,0,0" Click="Telefon_Click">
                             <Image Source="../Assets/KnapTelefongul.png"></Image>
                         </Button>
-                        <Button Name="Kassettebaand" Background="Transparent" HorizontalAlignment="Center" Canvas.Left="223" Canvas.Top="651" VerticalAlignment="Top" Height="121" Width="125" Margin="0,0,0,0">
+                        <Button Name="Kassettebaand" Background="Transparent" HorizontalAlignment="Center" Canvas.Left="223" Canvas.Top="651" VerticalAlignment="Top" Height="121" Width="125" Margin="0,0,0,0" Click="Kassettebaand_Click">
                             <Image Source="../Assets/KnapKassetteBaandgul.png"></Image>
                         </Button>
-                        <Button Name="Mikrofon" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="85" Canvas.Top="828" VerticalAlignment="Top" Height="135" Width="88">
+                        <Button Name="Mikrofon" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="85" Canvas.Top="828" VerticalAlignment="Top" Height="135" Width="88" Click="Mikrofon_Click">
                             <Image Source="../Assets/KnapTrommegul.png"></Image>
                         </Button>
-                        <Button Name="Pladespiller" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="348" Canvas.Top="838" VerticalAlignment="Top" Height="149" Width="138" Margin="0,0,0,0">
+                        <Button Name="Pladespiller" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="348" Canvas.Top="838" VerticalAlignment="Top" Height="149" Width="138" Margin="0,0,0,0" Click="Pladespiller_Click">
                             <Image Source="../Assets/KnapPladespillergul.png"></Image>
                         </Button>
-                        <Button Name="RagnarockBygning" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="517" Canvas.Top="1050" VerticalAlignment="Top" Height="102" Width="168">
+                        <Button Name="RagnarockBygning" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="517" Canvas.Top="1050" VerticalAlignment="Top" Height="102" Width="168" Click="RagnarockBygning_Click">
                             <Image Source="../Assets/KnapRoedeTraadgul.png"></Image>
                         </Button>
-                        <Button Name="Lydvaeg" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="510" Canvas.Top="238" VerticalAlignment="Top" Height="137" Width="101" Margin="0,0,0,0">
+                        <Button Name="Lydvaeg" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="510" Canvas.Top="238" VerticalAlignment="Top" Height="137" Width="101" Margin="0,0,0,0" Click="Lydvaeg_Click">
                             <Image Source="../Assets/KnapMusikVaaggul.png"></Image>
                         </Button>
-                        <Button Name="Verden" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="23" Canvas.Top="263" VerticalAlignment="Top" Height="129" Width="137">
+                        <Button Name="Verden" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="23" Canvas.Top="263" VerticalAlignment="Top" Height="129" Width="137" Click="Verden_Click">
                             <Image Source="../Assets/KnapVerdengul.png"></Image>
                         </Button>
-                        <Button Name="Lysshow" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="247" Canvas.Top="288" VerticalAlignment="Center" Height="149" Width="137" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                        <Button Name="Lysshow" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="247" Canvas.Top="288" VerticalAlignment="Center" Height="149" Width="137" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5" Click="Lysshow_Click">
                             <Button.RenderTransform>
                                 <CompositeTransform Rotation="0"/>
                             </Button.RenderTransform>
                             <Image Source="../Assets/Knaplysshowgul.png"></Image>
                         </Button>
-                        <Button Name="Cirkler" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="285" Canvas.Top="175" VerticalAlignment="Top" Height="113" Width="125">
+                        <Button Name="Cirkler" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="285" Canvas.Top="175" VerticalAlignment="Top" Height="113" Width="125" Click="Cirkler_Click">
                             <Image Source="../Assets/KnapSkaelvgul.png"></Image>
                         </Button>
                     </Canvas>

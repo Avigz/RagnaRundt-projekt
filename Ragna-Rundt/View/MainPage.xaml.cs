@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Ragna_Rundt.View;
+using Ragna_Rundt.Viewmodel;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -24,6 +25,7 @@ namespace Ragna_Rundt
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        
         public MainPage()
         {
             this.InitializeComponent();
@@ -64,7 +66,75 @@ namespace Ragna_Rundt
 
         private void FlipView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            //this.Frame.Navigate(typeof(Udstillingstemplate));
+        }
 
+        //Interaktiv kort funktionalitet
+
+        private void Blikfang_Click(object sender, RoutedEventArgs e)
+        {
+            ViewModel.StaticKey = 1;
+            this.Frame.Navigate(typeof(Udstillingstemplate));
+        }
+
+        private void Hjerte_Click(object sender, RoutedEventArgs e)
+        {
+            ViewModel.StaticKey = 10;
+            this.Frame.Navigate(typeof(Udstillingstemplate));
+        }
+
+        private void Lydvaeg_Click(object sender, RoutedEventArgs e)
+        {
+            ViewModel.StaticKey = 0;
+            this.Frame.Navigate(typeof(Udstillingstemplate));
+        }
+
+        private void Cirkler_Click(object sender, RoutedEventArgs e)
+        {
+            ViewModel.StaticKey = 5;
+            this.Frame.Navigate(typeof(Udstillingstemplate));
+        }
+
+        private void Lysshow_Click(object sender, RoutedEventArgs e)
+        {
+            ViewModel.StaticKey = 6;
+            this.Frame.Navigate(typeof(Udstillingstemplate));
+        }
+
+        private void Verden_Click(object sender, RoutedEventArgs e)
+        {
+            ViewModel.StaticKey = 3;
+            this.Frame.Navigate(typeof(Udstillingstemplate));
+        }
+
+        private void Kassettebaand_Click(object sender, RoutedEventArgs e)
+        {
+            ViewModel.StaticKey = 7;
+            this.Frame.Navigate(typeof(Udstillingstemplate));
+        }
+
+        private void Telefon_Click(object sender, RoutedEventArgs e)
+        {
+            ViewModel.StaticKey = 8;
+            this.Frame.Navigate(typeof(Udstillingstemplate));
+        }
+
+        private void Mikrofon_Click(object sender, RoutedEventArgs e)
+        {
+            ViewModel.StaticKey = 2;
+            this.Frame.Navigate(typeof(Udstillingstemplate));
+        }
+
+        private void Pladespiller_Click(object sender, RoutedEventArgs e)
+        {
+            ViewModel.StaticKey = 4;
+            this.Frame.Navigate(typeof(Udstillingstemplate));
+        }
+
+        private void RagnarockBygning_Click(object sender, RoutedEventArgs e)
+        {
+            ViewModel.StaticKey = 9;
+            this.Frame.Navigate(typeof(Udstillingstemplate));
         }
 
         //private void NavView_Navigate(NavigationViewItem item)
