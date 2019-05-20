@@ -14,12 +14,12 @@ namespace Ragna_Rundt.Viewmodel
 {
     public  class ViewModel : INotifyPropertyChanged
     {
-     
 
       Dictionary<int,Element> Catalog = ElementCatalog.Instance.Elements;
+
       public SearchList searchList = SearchList.Instance;
 
-        public static int StaticKey = 1;
+      public static int StaticKey = 1;
      
     
 
@@ -50,6 +50,8 @@ namespace Ragna_Rundt.Viewmodel
        {
            get { return Catalog[Key].description; }
        }
+
+
 
        public Dictionary<int, Element> CurrentList
        {

@@ -69,14 +69,14 @@
                     </SplitView.Pane>
                 </SplitView>
                 <StackPanel Grid.Column="1">
-                    <TextBlock Text="{Binding Name, Mode=OneWay}" TextAlignment="Center" FontWeight="Bold" FontSize="30" Foreground="White"></TextBlock>
+                    <TextBlock Text="{Binding Name, Mode=OneWay}" TextAlignment="Center" FontWeight="Bold" FontSize="50" Foreground="White"></TextBlock>
                 </StackPanel>
 
 
                 <StackPanel Grid.Column="1">
-                    <TextBlock Text="{Binding Name, Mode=OneWay}" TextAlignment="Center" FontWeight="Bold" FontSize="30"></TextBlock>
+                    <TextBlock Text="{Binding Name, Mode=OneWay}" TextAlignment="Center" FontWeight="Bold" FontSize="50" Foreground="{x:Null}"></TextBlock>
                     <WebView  x:Name="VideoLink" Margin="0,0,0.33,0" Height="720"/>
-                    <TextBlock x:Name="Description" Height="183" Width="542" VerticalAlignment="Center" Margin="0,0,0,0" HorizontalAlignment="Center" Text="{Binding Description, Mode=OneWay}" OpticalMarginAlignment="TrimSideBearings" TextAlignment="Left" TextLineBounds="TrimToBaseline" TextTrimming="None" TextWrapping="WrapWholeWords" FontSize="45" />
+                    <TextBlock x:Name="Description" Height="767" Width="542" VerticalAlignment="Center" Margin="0,0,0,0" HorizontalAlignment="Center" Text="{Binding Description, Mode=OneWay}" OpticalMarginAlignment="TrimSideBearings" TextAlignment="Left" TextLineBounds="TrimToBaseline" TextTrimming="None" TextWrapping="WrapWholeWords" FontSize="45" />
 
                 </StackPanel>
             </Grid>
