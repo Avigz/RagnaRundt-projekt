@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ragna_Rundt.Model
 {
-    class TagCatalog
+    public class TagCatalog
     {
         private Dictionary<string, Tag> _tags;
         private static TagCatalog _instance;

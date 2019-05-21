@@ -9,7 +9,7 @@ using Windows.Graphics.Imaging;
 
 namespace Ragna_Rundt.Model
 {
-    class ElementCatalog
+   public class ElementCatalog
     {
         private List<Element> _tempElements;
         private Dictionary<int, Element> _elements;
