@@ -157,7 +157,7 @@ namespace UnitTestProject1
             Assert.AreEqual(ExpectedTag, TestTag.Name);
             Assert.AreEqual(ExpectedIdDifference, ActualIdDifference );
         }
-
+        [TestMethod]
         public void TagCatalogSingletonTest()
         {
             //I dette testscenarie vil vi vurdere vores tagcatalogSingletons Add funktion, samt om objektet
@@ -181,5 +181,52 @@ namespace UnitTestProject1
             Assert.AreEqual(ExpectedCountDifference, CountAfterAdd - CountPreAdd);
             Assert.AreSame(TestTag, TestTagCatalog.Tags["TestTagKey"]);
         }
+
+        [TestMethod]
+        public void TourTest()
+        {
+            //I dette testscenarie vil vi vurdere hvor vidt vores tour klasse kan indeholde Element objekter,
+            //Samt om vi kan ekstrahere properties fra en tour, samt underelementet/ underelementerne.
+      
+            //Arrange
+            Tour TourTestTour = new Tour("TheTestTour","Den bedste tour");
+            Element Test = new Element("TestElementNavn", "TestDescription", "Http://google.dk", new Area("TestNameArea", "TestDescriptionArea", 1, 2));
+            //Act
+            int CountPreAdd = TourTestTour.Elements.Count;
+            TourTestTour.AddElement(Test);
+            int CountAfterAdd = TourTestTour.Elements.Count;
+            int ExpectedCountDifference = 1;
+
+            string ExpectedName = "TheTestTour";
+            string ActualName = TourTestTour.Name;
+
+            string ExpectedElementName = "TestElementNavn";
+            string ActualElementName = Test.Name;
+
+            //Assert
+            Assert.AreEqual(ExpectedCountDifference, CountAfterAdd - CountPreAdd );
+            Assert.AreSame(Test, TourTestTour.Elements[CountAfterAdd]);
+            Assert.AreEqual(ExpectedName, ActualName);
+            Assert.AreEqual(ExpectedElementName, ActualElementName);
+        }
+
+        [TestMethod]
+        public void TourTestAutoIncrement()
+        {
+            //I dette testscenarie vil vi vurdere hvor vidt vores tour klasses autoincrement funktion fungerer.
+
+            //Arrange
+            Tour TourTestTour = new Tour("TheTestTour", "Den bedste tour");
+            Tour TourTestTour1 = new Tour("TheTestTour1", "Den bedste tour1");
+            //Act
+
+
+            int ExpectedId = TourTestTour.Id + 1;
+            int ActualId = TourTestTour1.Id;
+
+            //Assert
+
+            Assert.AreEqual(ExpectedId, ActualId);
+        
     }
 }
