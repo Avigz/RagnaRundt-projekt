@@ -62,20 +62,23 @@ namespace UnitTestProject1
         {
             //Arrange
             Element UdstillingsElement = new Element("TestElementNavn", "TestDescription","Http://google.dk", new Area("TestNameArea","TestDescriptionArea", 1,2));
-
+         
             //Act
             string ExpectedName = "TestElementNavn";
             string ExpectedDesc = "TestDescription";
             string ExpectedUrl = "Http://google.dk";
+            string ExpectedAreaName = "TestNameArea";
 
             string ActualName = UdstillingsElement.Name;
             string ActualDesc = UdstillingsElement.description;
             string ActualUrl = UdstillingsElement.videoURL;
+            string ActualAreaName = UdstillingsElement.Area.Name;
 
             //Assert
             Assert.AreEqual(ExpectedName, ActualName);
             Assert.AreEqual(ExpectedDesc, ActualDesc);
             Assert.AreEqual(ExpectedUrl, ExpectedUrl);
+            Assert.AreEqual(ExpectedAreaName,ActualAreaName);
         }
 
         [TestMethod]
@@ -93,25 +96,44 @@ namespace UnitTestProject1
         }   
 
         [TestMethod]
-        public void TestMethod4()
+        public void AreaPropertyTest()
         {
             //Arrange
+           Area TestArea = new Area("TestName", "TestDescription", 1,2);
            
-
             //Act
+            string ExpectedName = "TestName";
+            string ExpectedDesc = "TestDescription";
+            int ExpectedMapX = 1;
+            int ExpectedMapY = 2;
 
+            string ActualName = TestArea.Name;
+            string ActualDesc = TestArea.Desciption;
+            int ActualMapX = TestArea.MapX;
+            int ActualMapY = TestArea.MapY;
             //Assert
+            Assert.AreEqual(ExpectedName, ActualName);
+            Assert.AreEqual(ExpectedDesc, ActualDesc);
+            Assert.AreEqual(ExpectedMapX, ActualMapX);
+            Assert.AreEqual(ExpectedMapY, ActualMapY);
         }
 
         [TestMethod]
-        public void TestMethod5()
+        public void AreaCatalogTest()
         {
             //Arrange
-            
+            Area TestArea = new Area("TestName", "TestDescription", 1, 2);
+
 
             //Act
+            int CountPreAdd = AreaCatalog.Instance.Areas.Count;
+            AreaCatalog.Instance.Areas.Add("Lydvæggen", TestArea);
+            int CountAfterAdd = AreaCatalog.Instance.Areas.Count;
 
             //Assert
+            Assert.AreNotEqual(CountPreAdd, CountAfterAdd);
+            Assert.AreEqual(CountPreAdd, CountAfterAdd -1);
+            Assert.AreSame(TestArea, AreaCatalog.Instance.Areas["Lydvæggen"]);
         }
 
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ragna_Rundt.Model
 {
-    class AreaCatalog
+    public class AreaCatalog
     {
         private Dictionary<string, Area> _areas;
         private static AreaCatalog _instance;
