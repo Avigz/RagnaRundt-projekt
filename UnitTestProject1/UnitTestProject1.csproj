@@ -161,6 +161,12 @@
   <ItemGroup>
     <Folder Include="UnitTests\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ragna-Rundt\Ragna-Rundt.csproj">
+      <Project>{28feedf2-d5b8-47ad-8eff-92e335965c70}</Project>
+      <Name>Ragna-Rundt</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

@@ -21,14 +21,21 @@ namespace UnitTestProject1
            
         }
 
+
         [TestMethod]
-        public void TestMethod2()
+        public void ElementPropertyTest()
         {
             //Arrange
-            ElementCatalog Catalog = new ElementCatalog();
+            Element UdstillingsElement = new Element("TestElementNavn", "TestDescription","Http://google.dk", new Area("TestNameArea","TestDescriptionArea", 1,2));
 
             //Act
+            string ExpectedName = "TestElementNavn";
+            string ExpectedDesc = "TestDescription";
+            string ExpectedUrl = "Http://google.dk";
 
+            string ActualName = UdstillingsElement.Name;
+            string ActualDesc = UdstillingsElement.description;
+            string ActualUrl = UdstillingsElement.videoURL;
             //Assert
         }
 
