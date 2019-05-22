@@ -316,6 +316,7 @@ namespace Ragna_Rundt.Model
                 if (_instance == null) _instance = new ElementCatalog();
                 return _instance;
             }
+            
         }
         public Dictionary<int, Element> Elements
         {

@@ -54,26 +54,7 @@ namespace UnitTestProject1
             Assert.AreEqual(ExpectedAreaName, ActualAreaName);
         }
 
-        [TestMethod]
-        public void AddElementToElementCatalog()
-        {
-            // I denne test vurdere vi hvor vidt vi kan tilfoeje elementer til elementCatalog
-            //Arrange
-            int amountOfElements = ElementCatalog.Instance.Elements.Count;
-            Element Test = new Element("TestElementNavn", "TestDescription", "Http://google.dk",
-                new Area("TestNameArea", "TestDescriptionArea", 1, 2));
-
-
-            //Act
-            int countPreAdd = ElementCatalog.Instance.Elements.Count;
-
-            ElementCatalog.Instance.Elements.Add(Test.Id, Test);
-
-            int countAfterAdd = ElementCatalog.Instance.Elements.Count;
-
-            //Assert
-            Assert.AreNotEqual(countPreAdd, countAfterAdd);
-        }
+      
 
         [TestMethod]
         public void GetFromElementCatalogSingleton()
@@ -81,18 +62,15 @@ namespace UnitTestProject1
             // I denne test vurdere vi om vu korrekt kan ekstrahere oplysninger fra vores ElementCatalogSingleton
             //Arrange
             ElementCatalog TestElementCatalog = ElementCatalog.Instance;
-            Element Test = new Element("TestElementNavn", "TestDescription", "Http://google.dk",
-                new Area("TestNameArea", "TestDescriptionArea", 1, 2));
-
-            TestElementCatalog.Elements.Add(Test.Id, Test);
+            Element TestElement = TestElementCatalog.Elements[1];
             //Act
-            string ExpectedName = "TestElementNavn";
-            string ExpectedDesc = "TestDescription";
-            string ExpectedUrl = "Http://google.dk";
+            string ExpectedName =TestElement.Name;
+            string ExpectedDesc = TestElement.description;
+            string ExpectedUrl = TestElement.videoURL;
 
-            string ActualName = TestElementCatalog.Elements[Test.Id].Name;
-            string ActualDesc = TestElementCatalog.Elements[Test.Id].description;
-            string ActualUrl = TestElementCatalog.Elements[Test.Id].videoURL;
+            string ActualName = TestElementCatalog.Elements[1].Name;
+            string ActualDesc = TestElementCatalog.Elements[1].description;
+            string ActualUrl = TestElementCatalog.Elements[1].videoURL;
 
             //Assert
 
@@ -100,7 +78,7 @@ namespace UnitTestProject1
             Assert.AreEqual(ExpectedDesc, ActualDesc);
             Assert.AreEqual(ExpectedUrl, ExpectedUrl);
 
-            Assert.AreSame(TestElementCatalog.Elements[Test.Id], Test);
+            Assert.AreSame(TestElementCatalog.Elements[1], TestElement);
         }
 
 
@@ -166,26 +144,24 @@ namespace UnitTestProject1
         [TestMethod]
         public void TagCatalogSingletonTest()
         {
-            //I dette testscenarie vil vi vurdere vores tagcatalogSingletons Add funktion, samt om objektet
-            //der tilfoejes er magen til det der bliver lagt i Dictionariet.
+            //I dette testscenarie vil vi vurdere vores tagcatalogSingleton fungerer optimalt, 
+            //Altsaa at vi kan ekstrahere de hardcodede tags det indeholder
+           
 
             //Arrange
             TagCatalog TestTagCatalog = TagCatalog.Instance;
-            Tag TestTag = new Tag("TestTag");
-            Tag TestTag1 = new Tag("TestTag1");
+
+            Tag TestTag = TestTagCatalog.Tags["Johnson"];
 
             //Act
-            int CountPreAdd = TestTagCatalog.Tags.Count;
-            TestTagCatalog.Tags.Add("TestTagKey", TestTag);
-            TestTagCatalog.Tags.Add("TestTagKey1", TestTag1);
-            int CountAfterAdd = TestTagCatalog.Tags.Count;
+        
+         
             int ExpectedCountDifference = 2;
 
 
             //Assert
-            Assert.AreNotEqual(CountPreAdd, CountAfterAdd);
-            Assert.AreEqual(ExpectedCountDifference, CountAfterAdd - CountPreAdd);
-            Assert.AreSame(TestTag, TestTagCatalog.Tags["TestTagKey"]);
+          
+            Assert.AreSame(TestTag, TestTagCatalog.Tags["Johnson"]);
         }
 
         [TestMethod]
@@ -235,6 +211,23 @@ namespace UnitTestProject1
 
             Assert.AreEqual(ExpectedId, ActualId);
 
+        }
+
+        [TestMethod]
+        public void TourCatalogSingletonTest()
+        {
+            //i nedenstaaende testscenarie vil vi undersoege hvor vidt vores TourCatalog klasse fungerer optimalt.
+            //Dette goeres ved at teste om vu kan tilgaa de enkelte hardcodede tours igennem Dictionaryet.
+
+            //Arrange
+            Tour testTour = TourCatalog.Instance.Tours[0];
+            //Act
+
+            string ExpectedName = testTour.Name;
+            //Assert
+
+            Assert.AreSame(TourCatalog.Instance.Tours[0], testTour);
+            Assert.AreEqual(ExpectedName, TourCatalog.Instance.Tours[0].Name);
         }
     }
 
