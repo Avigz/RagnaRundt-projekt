@@ -21,8 +21,6 @@ using Ragna_Rundt.Viewmodel;
 
 
 namespace Ragna_Rundt.View
-
-    ///NEDERST ER EN NY CLASS, SOM KAN KONVERTERE KNAPPERS VISIBILITY/INVISIBILITY TIL EN BOOL (TRUE/FALSE)!!
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
@@ -81,71 +79,5 @@ namespace Ragna_Rundt.View
         {
             this.Frame.Navigate(typeof(RundvisningsSide));
         }
-    }
-
-    /*
-
-   * Nedenfor er en converter, som gør at visibility / invisibility af knapper konverteres til en bool-værdi (true / false)
-
-   */
-
-    public class BooleanToVisibilityConverter : IValueConverter
-
-    {
-
-        public Visibility OnTrue { get; set; }
-
-        public Visibility OnFalse { get; set; }
-
-
-
-        public BooleanToVisibilityConverter()
-
-        {
-
-            OnFalse = Visibility.Collapsed;
-
-            OnTrue = Visibility.Visible;
-
-        }
-
-
-
-        public object Convert(object value, Type targetType, object parameter, string language)
-
-        {
-
-            var v = (bool)value;
-
-
-
-            return v ? OnTrue : OnFalse;
-
-        }
-
-
-
-        public object ConvertBack(object value, Type targetType, object parameter, string language)
-
-        {
-
-            if (value is Visibility == false)
-
-                return DependencyProperty.UnsetValue;
-
-
-
-            if ((Visibility)value == OnTrue)
-
-                return true;
-
-            else
-
-                return false;
-
-        }
-
-
-
     }
 }

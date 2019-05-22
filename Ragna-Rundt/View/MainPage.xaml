@@ -9,283 +9,163 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
         <Viewbox>
-
             <Grid Height="1920px" Width="1080px">
 
 
-
-
-
                 <Grid.Background>
-
                     <ImageBrush ImageSource="../Assets/Capture.PNG"></ImageBrush>
-
                 </Grid.Background>
-
                 <RelativePanel>
-
-
 
                     <Button FontFamily="Segoe MDL2 Assets" Height="150" Width="150" FontSize="55" Foreground="White" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Click="Button_Click" BorderThickness="0,0,0,0"></Button>
 
 
 
-
-
-
-
                     <!--<StackPanel Name="StackPanelFlipview">-->
-
-
 
                     <TextBlock Name="TextBlockRagnaRundt" RelativePanel.AlignHorizontalCenterWithPanel="True" Text="Ragna-Rundt" Width="500" TextAlignment="Center" FontWeight="Bold" FontSize="70" Foreground="White"></TextBlock>
 
-
-
                     <!--<Slider Margin="0,50" Maximum="3" TickPlacement="BottomRight" TickFrequency="1" SnapsTo="Ticks" Value="0">
 
-
-
                         </Slider>-->
-
-                    <FlipView RelativePanel.Below="TextBlockRagnaRundt" Name="FlipView" MaxWidth="590" MaxHeight="550" Margin="-4.4,70,78.4,440.2" RelativePanel.AlignHorizontalCenterWithPanel="true" SelectionChanged="FlipView_SelectionChanged" >
-
-
-
-                        <StackPanel Name="StackPanelFlipView" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="590" MaxHeight="550" Width="auto" Height="750">
-
-                            <Image RelativePanel.AlignBottomWith="BorderInfoBox" Height="auto" Width="auto" Stretch="UniformToFill" Source="../Assets/pop_rock_og-ungdomskultur_Rundvisning-på-RAGNAROCK.-Kredit-RAGNAROCK.jpg" VerticalAlignment="Center" Margin="0,0,0,0"/>
-
-                            <Border Name="BorderInfoBox" Background="Purple" Height="auto" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Bottom">
-
-                                <TextBlock Text="Brugbar info" TextAlignment="Center" FontSize="32" Margin="0,0,0,0" Height="60" Width="300"/>
-
+                    <FlipView RelativePanel.Below="TextBlockRagnaRundt" Name="FlipView" MaxWidth="300" MaxHeight="300" Margin="-4.4,50,78.4,440.2" RelativePanel.AlignHorizontalCenterWithPanel="true" SelectionChanged="FlipView_SelectionChanged" >
+                        <StackPanel Name="StackPanelFlipView" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Image RelativePanel.AlignBottomWith="BorderInfoBox" MaxHeight="500" MaxWidth="600" Source="../Assets/grundplan, ragnarock.jpg" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                            <Border Name="BorderInfoBox" Background="Purple" Height="60" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                                <TextBlock Text="Brugbar info" TextAlignment="Center" Margin="0,0,0,0" Height="auto" Width="300"/>
                             </Border>
-
                         </StackPanel>
-
-                        <StackPanel Name="StackPanelFlipView2" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="1080" MaxHeight="550" Width="auto" Height="750">
-
-                            <Image RelativePanel.AlignBottomWith="BorderInfoBox2" Height="auto" Width="auto" Stretch="UniformToFill" Source="../Assets/Syklub-fra-helvede-768x432.jpg" VerticalAlignment="Center" Margin="0,0,0,0"/>
-
-                            <Border Name="BorderInfoBox2" Background="Red" Height="auto" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Bottom">
-
-                                <TextBlock Text="Brugbar info" TextAlignment="Center" FontSize="32" Margin="0,0,0,0" Height="60" Width="300"/>
-
+                        <StackPanel>
+                            <Image Height="auto" Source="../Assets/Capture.PNG" VerticalAlignment="Top"></Image>
+                            <Border Background="Red" Height="60" Width="300" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                                <TextBlock Text="Brugbar info" HorizontalAlignment="Center">
+                                </TextBlock>
                             </Border>
-
                         </StackPanel>
-
-                        <StackPanel Name="StackPanelFlipView3" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="1080" MaxHeight="550" Width="auto" Height="750">
-
-                            <Image RelativePanel.AlignBottomWith="BorderInfoBox2" Height="auto" Width="auto" Stretch="UniformToFill" Source="../Assets/Rend-mig.jpg" VerticalAlignment="Center" Margin="0,0,0,0"/>
-
-                            <Border Name="BorderInfoBox3" Background="White" Height="auto" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Bottom">
-
-                                <TextBlock Text="Brugbar info" TextAlignment="Center" FontSize="32" Margin="0,0,0,0" Height="60" Width="300"/>
-
-                            </Border>
-
-                        </StackPanel>
-
                     </FlipView>
 
-
-
-                    <Canvas Name="Ragnarock_3" RelativePanel.Above="Ragnarock_2" RelativePanel.AlignVerticalCenterWith="Ragnarock_2" Width="1000" Height="600" MaxHeight="600" MaxWidth="1000" Margin="40,-171,-40,211" RelativePanel.Below="SplitviewMenu">
-
+                    <Canvas Name="Canvas_Kort" RelativePanel.AlignBottomWithPanel="True" Width="1000" Height="Auto" MaxHeight="1200" MaxWidth="1000" Margin="40,83.8,0,-84" RelativePanel.Below="SplitviewMenu" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                         <Canvas.Background>
-
-                            <ImageBrush ImageSource="../Assets/Sal 3.jpg"></ImageBrush>
-
+                            <ImageBrush ImageSource="../Assets/RagnarockKort.jpg"></ImageBrush>
                         </Canvas.Background>
-
-
-
-                        <Button Name="Blikfang" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="348" Margin="0,0,0,0" VerticalAlignment="Center" Canvas.Top="37" Height="138" Width="150">
-
+                        <Button Name="Blikfang" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="348" Margin="0,0,0,0" VerticalAlignment="Center" Canvas.Top="37" Height="138" Width="150" Click="Blikfang_Click">
                             <Image Source="../Assets/KnapBlikfanggul.png" HorizontalAlignment="Stretch" Margin="-0.4,0.2,3,15.8" VerticalAlignment="Stretch"></Image>
-
                         </Button>
-
-                        <Button Name="Cirkler" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="285" Canvas.Top="175" VerticalAlignment="Top" Height="113" Width="125">
-
-                            <Image Source="../Assets/KnapSkaelvgul.png"></Image>
-
-                        </Button>
-
-                        <Button Name="Lysshow" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="247" Canvas.Top="288" VerticalAlignment="Center" Height="149" Width="137" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
-
-                            <Button.RenderTransform>
-
-                                <CompositeTransform Rotation="0"/>
-
-                            </Button.RenderTransform>
-
-                            <Image Source="../Assets/Knaplysshowgul.png"></Image>
-
-                        </Button>
-
-                        <Button Name="Verden" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="23" Canvas.Top="263" VerticalAlignment="Top" Height="129" Width="137">
-
-                            <Image Source="../Assets/KnapVerdengul.png"></Image>
-
-                        </Button>
-
-                        <Button x:Name="Hjerte2" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="798" Canvas.Top="226" VerticalAlignment="Top" Height="150" Width="106">
-
-                            <Image Source="../Assets/KnapHjerteGrøn.png"/>
-
-                        </Button>
-
-                        <Button x:Name="Lydvaeg" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="510" Canvas.Top="238" VerticalAlignment="Top" Height="137" Width="101" Margin="0,0,0,0">
-
-                            <Image Source="../Assets/KnapMusikVaaggul.png"/>
-
-                        </Button>
-
-                    </Canvas>
-
-
-
-
-
-                    <Canvas Name="Ragnarock_2" RelativePanel.AlignBottomWithPanel="True" Width="1000" Height="Auto" MaxHeight="600" MaxWidth="1000" Margin="40,825.8,0,43" RelativePanel.Below="SplitviewMenu" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-
-                        <Canvas.Background>
-
-                            <ImageBrush ImageSource="../Assets/Sal 2.jpg"></ImageBrush>
-
-                        </Canvas.Background>
-
-                        <Button Name="Hjerte1" Background="Transparent" HorizontalAlignment="Center" Canvas.Left="804" Canvas.Top="200" VerticalAlignment="Top" Height="150" Width="106" Margin="0,0,0,0">
-
+                        <Button Name="Hjerte1" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="804" Canvas.Top="838" VerticalAlignment="Top" Height="150" Width="106" Click="Hjerte_Click">
                             <Image Source="../Assets/KnapHjerteGrøn.png"></Image>
-
                         </Button>
-
-                        <Button Name="Telefon" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="509" Canvas.Top="62" VerticalAlignment="Top" Height="113" Width="164" Margin="0,0,0,0">
-
+                        <Button Name="Hjerte2" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="798" Canvas.Top="226" VerticalAlignment="Top" Height="150" Width="106" Click="Hjerte_Click">
+                            <Image Source="../Assets/KnapHjerteGrøn.png"></Image>
+                        </Button>
+                        <Button Name="Telefon" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="510" Canvas.Top="688" VerticalAlignment="Top" Height="113" Width="164" Margin="0,0,0,0" Click="Telefon_Click">
                             <Image Source="../Assets/KnapTelefongul.png"></Image>
-
                         </Button>
-
-                        <Button Name="Kassettebaand" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="210" Canvas.Top="29" VerticalAlignment="Top" Height="121" Width="125" Margin="0,0,0,0">
-
-                            <Image Source="../Assets/KnapKassetteBaandgul.png" RenderTransformOrigin="0.496,-7.316"></Image>
-
+                        <Button Name="Kassettebaand" Background="Transparent" HorizontalAlignment="Center" Canvas.Left="223" Canvas.Top="651" VerticalAlignment="Top" Height="121" Width="125" Margin="0,0,0,0" Click="Kassettebaand_Click">
+                            <Image Source="../Assets/KnapKassetteBaandgul.png"></Image>
                         </Button>
-
-                        <Button Name="Mikrofon" Background="Transparent" HorizontalAlignment="Center" Canvas.Left="85" Canvas.Top="202" VerticalAlignment="Top" Height="135" Width="88" Margin="0,0,0,0">
-
+                        <Button Name="Mikrofon" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="85" Canvas.Top="828" VerticalAlignment="Top" Height="135" Width="88" Click="Mikrofon_Click">
                             <Image Source="../Assets/KnapTrommegul.png"></Image>
-
                         </Button>
-
-                        <Button Name="Pladespiller" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="347" Canvas.Top="200" VerticalAlignment="Top" Height="149" Width="138" Margin="0,0,0,0">
-
+                        <Button Name="Pladespiller" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="348" Canvas.Top="838" VerticalAlignment="Top" Height="149" Width="138" Margin="0,0,0,0" Click="Pladespiller_Click">
                             <Image Source="../Assets/KnapPladespillergul.png"></Image>
-
                         </Button>
-
-                        <Button Name="RagnarockBygning" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="510" Canvas.Top="422" VerticalAlignment="Top" Height="102" Width="168">
-
+                        <Button Name="RagnarockBygning" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="517" Canvas.Top="1050" VerticalAlignment="Top" Height="102" Width="168" Click="RagnarockBygning_Click">
                             <Image Source="../Assets/KnapRoedeTraadgul.png"></Image>
-
                         </Button>
-
-
-
+                        <Button Name="Lydvaeg" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="510" Canvas.Top="238" VerticalAlignment="Top" Height="137" Width="101" Margin="0,0,0,0" Click="Lydvaeg_Click">
+                            <Image Source="../Assets/KnapMusikVaaggul.png"></Image>
+                        </Button>
+                        <Button Name="Verden" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="23" Canvas.Top="263" VerticalAlignment="Top" Height="129" Width="137" Click="Verden_Click">
+                            <Image Source="../Assets/KnapVerdengul.png"></Image>
+                        </Button>
+                        <Button Name="Lysshow" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="247" Canvas.Top="288" VerticalAlignment="Center" Height="149" Width="137" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5" Click="Lysshow_Click">
+                            <Button.RenderTransform>
+                                <CompositeTransform Rotation="0"/>
+                            </Button.RenderTransform>
+                            <Image Source="../Assets/Knaplysshowgul.png"></Image>
+                        </Button>
+                        <Button Name="Cirkler" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="285" Canvas.Top="175" VerticalAlignment="Top" Height="113" Width="125" Click="Cirkler_Click">
+                            <Image Source="../Assets/KnapSkaelvgul.png"></Image>
+                        </Button>
                     </Canvas>
-
-
-
 
 
                     <SplitView  x:Name="SplitviewMenu" DisplayMode="CompactInline" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="350" Margin="0,0,0,0">
-
                         <SplitView.Pane>
-
                             <StackPanel HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
-
-
 
                                 <Button FontFamily="Segoe MDL2 Assets" Height="150" Width="150" FontSize="55" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" Click="Button_Click" BorderThickness="0,0,0,0"/>
 
-
-
                                 <Button Background="Gray" x:Name="Kort_Button" Click="Kort_Button_Click" BorderThickness="0,0,0,0" Width="150">
-
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="250">
-
                                         <TextBlock Margin="0,0,0,0" IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="150" Width="150" FontSize="55" Text="&#xE909;" HorizontalAlignment="Center"/>
-
                                         <TextBlock IsTextSelectionEnabled="False" Text="Kort" FontSize="26" HorizontalAlignment="Left"/>
-
                                     </StackPanel>
-
                                 </Button>
-
-
 
                                 <Button Background="Transparent" x:Name="Søg_Button" Click="Søg_Button_Click" BorderThickness="0,0,0,0" Width="150">
-
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-25.2,0,0,0" VerticalAlignment="Stretch" Width="105">
-
                                         <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE721;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-
                                         <TextBlock IsTextSelectionEnabled="False"  Text="Søg" FontSize="16" HorizontalAlignment="Left"/>
-
                                     </StackPanel>
-
                                 </Button>
-
-
 
                                 <Button Background="Transparent"  x:Name="Rundvisnings_Button" Click="Rundvisnings_Button_OnClick" BorderThickness="0,0,0,0" Width="150">
-
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-5.2,0,0,0" VerticalAlignment="Stretch" Width="125">
-
                                         <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="ຊ" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-
                                         <TextBlock IsTextSelectionEnabled="False" Text="Rundvisning" FontSize="16" HorizontalAlignment="Left"/>
-
                                     </StackPanel>
-
                                 </Button>
-
-
 
                                 <Button Background="Transparent"  x:Name="Udstilling_Button" Click="Udstilling_Button_Click" BorderThickness="0,0,0,0" Width="150">
-
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-5.2,0,0,0" VerticalAlignment="Stretch" Width="125">
-
                                         <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE8A2;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-
                                         <TextBlock IsTextSelectionEnabled="False" Text="Udstilling" FontSize="16" HorizontalAlignment="Left"/>
-
                                     </StackPanel>
-
                                 </Button>
 
-
-
                             </StackPanel>
-
                         </SplitView.Pane>
-
                     </SplitView>
-
                     <!--</StackPanel>-->
-
                 </RelativePanel>
-
             </Grid>
-
         </Viewbox>
-
     </Grid>
-
 </Page>
+<!--<NavigationView IsBackButtonVisible="Collapsed" IsSettingsVisible="False" PaneDisplayMode="Left" Background="Aqua" Grid.ColumnSpan="2" Margin="0,0,308.4,0" VerticalAlignment="Stretch">
+
+    <NavigationView.MenuItems>
+        <NavigationViewItem Content="Kort" x:Name="Kort"  Background="Blue" Tag="Kort">
+            <NavigationViewItem.Icon>
+                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE909;"></FontIcon>
+
+            </NavigationViewItem.Icon>
+        </NavigationViewItem>
+
+        -->
+<!--Prøve knap-->
+<!--<Button Height="Auto" Width="Auto" Margin="-15,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Segoe MDL2 Assets"  Background="DeepPink" >
+                    <StackPanel Orientation="Horizontal"  HorizontalAlignment="Left">
+                        <TextBlock Text="&#xE721;"></TextBlock>
+                        <TextBlock FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Left"> </TextBlock>
+                    </StackPanel>
+                </Button>-->
+<!--
+        <NavigationViewItem Content="Søg" x:Name="Søg"  Background="Red" Tag="Søg" SelectsOnInvoked="True" >
+            <NavigationViewItem.Icon>
+                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE721;"></FontIcon>
+
+            </NavigationViewItem.Icon>
+        </NavigationViewItem>
+
+        <NavigationViewItem  Content="Udstilling" x:Name="Udstilling"  Background="Orange" Tag="Udstilling">
+            <NavigationViewItem.Icon>
+                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE8A2;"></FontIcon>
+
+            </NavigationViewItem.Icon>
+        </NavigationViewItem>
+    </NavigationView.MenuItems>
+
+</NavigationView>-->

@@ -12,140 +12,73 @@ using Ragna_Rundt.Model;
 
 namespace Ragna_Rundt.Viewmodel
 {
-    public class ViewModel : INotifyPropertyChanged
+    public  class ViewModel : INotifyPropertyChanged
     {
 
-        Dictionary<int, Element> Catalog = ElementCatalog.Instance.Elements;
+      Dictionary<int,Element> Catalog = ElementCatalog.Instance.Elements;
 
-        public SearchList searchList = SearchList.Instance;
+      public SearchList searchList = SearchList.Instance;
 
-        public static int StaticKey = 1;
+      public static int StaticKey = 1;
+     
+    
 
-        private bool _tilbageIsVisible = true;
+       public int Key
+       {
+           get { return StaticKey; }
+           set
+           {
+               StaticKey = value;
+               OnPropertyChanged();
+               OnPropertyChanged(nameof(Name));
+               OnPropertyChanged(nameof(VideoLink));
+               OnPropertyChanged(nameof(Description));
+           }
+       }
+    
+       public  string VideoLink
+       {
+           get {return Catalog[Key].videoURL;}
+       }
 
-        private bool _næsteIsVisible = true;
+       public  string Name
+       {
+           get{ return Catalog[Key].Name;}
+       }
 
-        private bool _afslutTourIsVisible = true;
-
-
-
-        public bool TilbageIsVisible
-
-        {
-
-            get { return _tilbageIsVisible; }
-
-            set
-
-            {
-
-                _tilbageIsVisible = value;
-
-                OnPropertyChanged(nameof(TilbageIsVisible));
-
-            }
-
-        }
-
-
-
-        public bool NæsteIsVisible
-
-        {
-
-            get { return _næsteIsVisible; }
-
-            set
-
-            {
-
-                _næsteIsVisible = value;
-
-                OnPropertyChanged(nameof(NæsteIsVisible));
-
-            }
-
-        }
+       public string Description
+       {
+           get { return Catalog[Key].description; }
+       }
 
 
 
-        public bool AfslutTourIsVisible
+       public Dictionary<int, Element> CurrentList
+       {
+           get { return SearchList.Instance.CurrentList; }
+       }
 
-        {
+       public List<Tag> Filters
+       {
+           get { return SearchList.Instance.Filters; }
+       }
 
-            get { return _afslutTourIsVisible; }
+       public List<Tag> AllFilters
+       {
+           get { return SearchList.Instance.AllFilters; }
+       }
 
-            set
-
-            {
-
-                _afslutTourIsVisible = value;
-
-                OnPropertyChanged(nameof(AfslutTourIsVisible));
-
-            }
-
-        }
-
-
-        public int Key
-        {
-            get { return StaticKey; }
-            set
-            {
-                StaticKey = value;
-                OnPropertyChanged();
-                OnPropertyChanged(nameof(Name));
-                OnPropertyChanged(nameof(VideoLink));
-                OnPropertyChanged(nameof(Description));
-            }
-        }
-
-        public string VideoLink
-        {
-            get { return Catalog[Key].videoURL; }
-        }
-
-        public string Name
-        {
-            get { return Catalog[Key].Name; }
-        }
-
-        public string Description
-        {
-            get { return Catalog[Key].description; }
-        }
-
-
-
-        public Dictionary<int, Element> CurrentList
-        {
-            get { return SearchList.Instance.CurrentList; }
-        }
-
-        public List<Tag> Filters
-        {
-            get { return SearchList.Instance.Filters; }
-        }
-
-        public List<Tag> AllFilters
-        {
-            get { return SearchList.Instance.AllFilters; }
-        }
-
-        public string SearchWord
-        {
-            get { return SearchList.Instance.SearchWord; }
-        }
+       public string SearchWord
+       {
+           get { return SearchList.Instance.SearchWord; }
+       }
 
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        { PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName)); }
+       protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        { PropertyChanged?.Invoke(this,new  PropertyChangedEventArgs(propertyName));}
 
     }
-
-
 }
 
