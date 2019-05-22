@@ -19,7 +19,7 @@ namespace Ragna_Rundt.Model
         private ElementCatalog()
         {
 
-            _tempElements = new List<Element>();
+            _tempElements = new List<Element>(45);
 
             //Lad der bliver lys:
 
@@ -316,6 +316,7 @@ namespace Ragna_Rundt.Model
                 if (_instance == null) _instance = new ElementCatalog();
                 return _instance;
             }
+            
         }
         public Dictionary<int, Element> Elements
         {

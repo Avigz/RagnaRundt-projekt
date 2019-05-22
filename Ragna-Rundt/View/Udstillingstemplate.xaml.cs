@@ -35,7 +35,7 @@ namespace Ragna_Rundt.View
             this.InitializeComponent();
             DataContext = viewModel;
           
-            VideoLink.NavigateToString($"<iframe height=\"1920\" width=\"1024\" src=" + $"{ElementCatalog.Instance.Elements[(viewModel.Key)].videoURL}" + "frameborder=\"0\" allow=\"accelerometer; encrypted-media; gyroscope; picture-in-picture\"></iframe>");
+            VideoLink.NavigateToString($"<iframe height=\"1920\" width=\"1024\" src=" + $"{viewModel.Catalog.Elements[(viewModel.Key)].videoURL}" + "frameborder=\"0\" allow=\"accelerometer; encrypted-media; gyroscope; picture-in-picture\"></iframe>");
             
 
 

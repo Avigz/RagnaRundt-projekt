@@ -51,11 +51,13 @@ namespace Ragna_Rundt.Model
                 if (_instance == null) _instance = new TourCatalog();
                 return _instance;
             }
+            
         }
 
         public Dictionary<int, Tour> Tours
         {
             get { return _tours; }
+            set { _tours = value; }
         }
     }
 }
