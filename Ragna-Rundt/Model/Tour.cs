@@ -7,7 +7,7 @@ using Windows.Storage.Pickers.Provider;
 
 namespace Ragna_Rundt.Model
 {
-   public class Tour
+    public class Tour
     {
         private int _id;
         private string _name;
