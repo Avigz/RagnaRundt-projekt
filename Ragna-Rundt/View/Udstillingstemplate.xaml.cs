@@ -37,21 +37,12 @@ namespace Ragna_Rundt.View
 
             this.InitializeComponent();
             DataContext = viewModel;
-            VideoLink.NavigateToString($"<iframe height=\"768\" width=\"1024\" src=" + $"{viewModel.Catalog.VideoLink(viewModel.Key)}" + "frameborder=\"0\" allow=\"accelerometer; encrypted-media; gyroscope; picture-in-picture\"></iframe>");
+            VideoLink.NavigateToString($"<iframe height=\"768\" width=\"1024\" src=" + $"{viewModel.Catalog.Elements[viewModel.Key].videoURL}" + "frameborder=\"0\" allow=\"accelerometer; encrypted-media; gyroscope; picture-in-picture\"></iframe>");
 
 
 
         }
 
-        //public void ClickButton(object sender, RoutedEventArgs e)
-        //{
-        //    VideoLink.NavigateToString($"<iframe height=\"768\" width=\"1024\" src=" + $"{viewModel.Catalog.VideoLink(viewModel.Key)}" + "frameborder=\"0\" allow=\"accelerometer; encrypted-media; gyroscope; picture-in-picture\"></iframe>");
-        //}
-
-        private void Slider_OnValueChanged(object sender, RangeBaseValueChangedEventArgs e)
-        {
-            VideoLink.NavigateToString($"<iframe height=\"768\" width=\"1024\" src=" + $"{viewModel.Catalog.VideoLink(viewModel.Key)}" + "frameborder=\"0\" allow=\"accelerometer; encrypted-media; gyroscope; picture-in-picture\"></iframe>");
-        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
