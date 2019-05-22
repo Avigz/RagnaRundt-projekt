@@ -26,7 +26,7 @@ namespace Ragna_Rundt.View
     public sealed partial class Søgeside : Page
     {
      
-        public int ElementKey;
+        //public int ElementKey;
         ViewModel viewModel = new ViewModel();
 
         public Søgeside()
@@ -82,6 +82,7 @@ namespace Ragna_Rundt.View
             this.Frame.Navigate(typeof(Udstillingstemplate));
         }
 
+        /*
         private void AutoSuggestBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
         {
             // Only get results when it was a user typing, 
@@ -116,7 +117,7 @@ namespace Ragna_Rundt.View
                 viewModel.searchList.Search();
                 viewModel.searchList.Update();
             }
-        }
+        }*/
 
         
     }

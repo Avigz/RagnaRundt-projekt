@@ -24,10 +24,15 @@ namespace Ragna_Rundt.Model
         private SearchList()
         {
             _allElements = ElementCatalog.Instance;
-            _currentList = _allElements.Elements;
-            _searchWord = "";
+            _allAreas = AreaCatalog.Instance;
             _allTags = TagCatalog.Instance;
+           
+
+            _currentList = _allElements.Elements;
+
+            _filters = new List<Tag>();
             _allFilters = new List<Tag>();
+            _searchWord = "";
 
             foreach (var tag in _allTags.Tags)
             {
@@ -77,27 +82,33 @@ namespace Ragna_Rundt.Model
                 bool exists = false;
                 foreach(Tag tag in element.Value.Tags)
                 {
-                    if (filters.Exists(x=>x.Id==tag.Id)) exists = true;
+                    if (filters.Count > 0)
+                    {
+                        if (filters.Exists(x => x.Id == tag.Id)) exists = true;
+                    }
                 }
-                if (!exists) filterList.Add(element.Key,element.Value);
+                if (exists) filterList.Add(element.Key,element.Value);
             }
             _currentList = filterList;
         }
-        public void AddFilter(Tag tag)
+        public void AddFilter(int key)  
         {
-            if (!_filters.Exists(x => x.Id == tag.Id))
+            if (!_filters.Exists(x => x.Id == key))
             {
-                _filters.Add(tag);
-                _allFilters.Remove(tag);
+                _filters.Add(_allFilters.Find(x => x.Id == key));
+                _allFilters.Remove(_allFilters.Find(x => x.Id == key));
                 Update();
 
             }
         }
-        public void RemoveFilter(Tag tag)
+        public void RemoveFilter(int key)
         {
-            _filters.Remove(tag);
-            _allFilters.Add(tag);
-            Update();
+            if (!_allFilters.Exists(x => x.Id == key))
+            {
+                _filters.Remove(_filters.Find(x => x.Id == key));
+                _allFilters.Add(_filters.Find(x => x.Id == key));
+                Update();
+            }
         }
         public void ClearFilters()
         {
