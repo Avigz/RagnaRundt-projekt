@@ -22,11 +22,13 @@ namespace Ragna_Rundt.Model
             _tags.Add("COmegalulD", new Tag("Pop"));
             _tags.Add("Kassettebånd", new Tag("Kassettebånd"));
             _tags.Add("Medier", new Tag("Medier"));
+            _tags.Add("Mediernes indflydelse", new Tag("Mediernes indflydelse"));
             _tags.Add("Medie", new Tag("Medie"));
             _tags.Add("Medie afstemning", new Tag("Medie afstemning"));
             _tags.Add("Jagten på den fede lyd", new Tag("Jagten på den fede lyd"));
             _tags.Add("Instrument", new Tag("Instrument"));
             _tags.Add("Instrumenter", new Tag("Instrumenter"));
+            _tags.Add("Indflydelse", new Tag("Indflydelse"));
             _tags.Add("Funk", new Tag("Funk"));
             _tags.Add("Funk and run", new Tag("Funk and run"));
             _tags.Add("Lyd", new Tag("Lyd"));
@@ -41,11 +43,9 @@ namespace Ragna_Rundt.Model
             _tags.Add("Sjov", new Tag("Sjov"));
             _tags.Add("Game", new Tag("Game"));
             _tags.Add("Plade", new Tag("Plade"));
-            _tags.Add("Pladespiller", new Tag("Pladespiller"));
             _tags.Add("Telefonens påvirkning", new Tag("Telefonens påvirkning"));
             _tags.Add("Elektrisk Intimitet", new Tag("Elektrisk Intimitet"));
             _tags.Add("Forandring", new Tag("Forandring"));
-            _tags.Add("Udvikling", new Tag("Udvikling"));
             _tags.Add("Telefon", new Tag("Telefon"));
             _tags.Add("Fest og farver", new Tag("Fest og farver"));
             _tags.Add("God dag", new Tag("God dag"));
@@ -100,7 +100,7 @@ namespace Ragna_Rundt.Model
             _tags.Add("Hest", new Tag("Hest"));
             _tags.Add("Ungdoms kultur", new Tag("Ungdoms kultur"));
             _tags.Add("Ungdom", new Tag("Ungdom"));
-            _tags.Add("Skævle", new Tag("Skævle"));
+            _tags.Add("Skælv", new Tag("Skælv"));
             _tags.Add("2010'erne", new Tag("2010'erne"));
             _tags.Add("2000'erne", new Tag("2000'erne"));
             _tags.Add("90'erne", new Tag("90'erne"));
@@ -115,6 +115,11 @@ namespace Ragna_Rundt.Model
             _tags.Add("Lys", new Tag("Lys"));
             _tags.Add("Teknologisk", new Tag("Teknologisk"));
             _tags.Add("Levende Lys", new Tag("Levende Lys"));
+            _tags.Add("Fan", new Tag("Fan"));
+            _tags.Add("Fans", new Tag("Fans"));
+            _tags.Add("Telefonens udvikling", new Tag("Telefonens udvikling"));
+            _tags.Add("Spil", new Tag("Spil"));
+            _tags.Add("Stop funk and run", new Tag("Stop funk and run"));
         }
         public static TagCatalog Instance
         {

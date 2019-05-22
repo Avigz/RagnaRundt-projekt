@@ -64,7 +64,7 @@ namespace UnitTestProject1
             ElementCatalog TestElementCatalog = ElementCatalog.Instance;
             Element TestElement = TestElementCatalog.Elements[1];
             //Act
-            string ExpectedName =TestElement.Name;
+            string ExpectedName = TestElement.Name;
             string ExpectedDesc = TestElement.description;
             string ExpectedUrl = TestElement.videoURL;
 
@@ -154,10 +154,7 @@ namespace UnitTestProject1
             Tag TestTag = TestTagCatalog.Tags["Johnson"];
 
             //Act
-        
-         
-            int ExpectedCountDifference = 2;
-
+      
 
             //Assert
           
@@ -220,14 +217,14 @@ namespace UnitTestProject1
             //Dette goeres ved at teste om vu kan tilgaa de enkelte hardcodede tours igennem Dictionaryet.
 
             //Arrange
-            Tour testTour = TourCatalog.Instance.Tours[0];
+            Tour testTour = TourCatalog.Instance.Tours[2];
             //Act
 
             string ExpectedName = testTour.Name;
             //Assert
 
-            Assert.AreSame(TourCatalog.Instance.Tours[0], testTour);
-            Assert.AreEqual(ExpectedName, TourCatalog.Instance.Tours[0].Name);
+            Assert.AreSame(TourCatalog.Instance.Tours[2], testTour);
+            Assert.AreEqual(ExpectedName, TourCatalog.Instance.Tours[2].Name);
         }
     }
 
