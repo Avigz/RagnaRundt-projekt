@@ -19,7 +19,7 @@ namespace Ragna_Rundt.Model
         private ElementCatalog()
         {
 
-            _tempElements = new List<Element>(45);
+            _tempElements = new List<Element>();
 
             //Lad der bliver lys:
 
