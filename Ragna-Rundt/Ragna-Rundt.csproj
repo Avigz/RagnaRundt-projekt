@@ -127,6 +127,7 @@
     <Compile Include="Model\Tag.cs" />
     <Compile Include="Model\TagCatalog.cs" />
     <Compile Include="Model\Tour.cs" />
+    <Compile Include="Model\TourCatalog.cs" />
     <Compile Include="Viewmodel\ViewModel.cs" />
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
