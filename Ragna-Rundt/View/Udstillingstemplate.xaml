@@ -3,6 +3,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Ragna_Rundt.View"
+    xmlns:converters="using:Ragna_Rundt.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:VM="using:Ragna_Rundt.Viewmodel"
@@ -11,6 +12,10 @@
     <Page.DataContext>
         <VM:ViewModel></VM:ViewModel>
     </Page.DataContext>
+    <Page.Resources>
+        <converters:BooleanToVisibilityConverter x:Key="BoolToVisibility"/>
+        <converters:BooleanToVisibilityConverter x:Key="BoolToVisibilityInverse" OnTrue="Collapsed" OnFalse="Visible"/>
+    </Page.Resources>
 
     <Grid>
         <Viewbox>
@@ -25,19 +30,39 @@
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="5*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
+
                 </Grid.ColumnDefinitions>
 
+                <StackPanel Grid.Column="0" Grid.ColumnSpan="3">
+                    <TextBlock Name="InfoTextBlock" Text="{Binding Name, Mode=OneWay}" Height="100" TextAlignment="Center" FontSize="70" FontWeight="Bold" Foreground="White"></TextBlock>
+                    <WebView  x:Name="VideoLink" Height="800" MaxWidth="1080" Margin="0,30,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 
-                <Button FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,100,0" VerticalAlignment="Top" Click="Button_Click" BorderThickness="0,0,0,0"></Button>
+                </StackPanel>
+                <RelativePanel Grid.Column="1">
 
+                    <StackPanel>
+                        <TextBlock Width="771" Height="550" Margin="0,950,0,0" TextWrapping="WrapWholeWords" TextAlignment="Start" FontSize="30" Foreground="White">Få testet din/jeres viden om Kim Larsen på bedste pubquizmanér, når RAGNAROCK's quizvært hopper i guldjakken og tager dig/jer på en rejse gennem legendens liv.
 
-                <SplitView x:Name="SplitviewMenu" Opacity="1" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="150" Margin="0,0,0,0">
+                            I fem årtier har Kim Larsen dannet lydkulisse til Danmark på tværs af generationer, sociale skel og politiske overbevisninger - så der er god chance for, at dig og dine holdkammerater kan quizze med i de forskellige runder om alt fra Christianshavn til Haveje.
+                            Museets stemningsfulde café danner rammen om besøget, så der er selvfølgelig mulighed for en fadøl i Larsens ånd.</TextBlock>
+                        <Image Height="auto" Width="auto" Source="../Assets/Ragnarock3kort.jpg" Margin="0,10,0,0"></Image>
+
+                        <StackPanel Orientation="Horizontal">
+                            <Button Name="Tilbage_knap" Margin="0,0,85,0" Foreground="White" Background="Black" Content="Tilbage" FontSize="35" Height="100" Width="200" Visibility="{Binding TilbageIsVisible, Converter={StaticResource BoolToVisibility}, Mode=OneWay}"></Button>
+                            <Button Name="Næste_knap" Foreground="White" Background="Black" Content="Næste" FontSize="35" Height="100" Width="200"  Visibility="{Binding NæsteIsVisible, Converter={StaticResource BoolToVisibility}, Mode=OneWay}"/>
+                            <Button Name="Afslut_knap" Margin="85,0,0,0" Foreground="White" Background="Black" Content="Afslut Tour" FontSize="35" Height="100" Width="200" Visibility="{Binding AfslutTourIsVisible, Converter={StaticResource BoolToVisibility}, Mode=OneWay}"></Button>
+                        </StackPanel>
+
+                    </StackPanel>
+                </RelativePanel>
+                <Button Grid.Column="0" FontFamily="Segoe MDL2 Assets" Foreground="White" Height="50" Width="50" FontSize="25" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,100,0" VerticalAlignment="Top" Click="Button_Click" BorderThickness="0,0,0,0"/>
+                <SplitView Grid.Column="0" x:Name="SplitviewMenu" Opacity="1" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="150" Margin="0,0,0,0">
                     <SplitView.Pane>
                         <StackPanel>
 
-                            <Button FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,100,0" VerticalAlignment="Top" Click="Button_Click" BorderThickness="0,0,0,0"></Button>
+                            <Button FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,100,0" VerticalAlignment="Top" Click="Button_Click" BorderThickness="0,0,0,0"/>
 
-                            <Button Background="Transparent" Name="Kort_Button" Click="Kort_Button_Click" BorderThickness="0,0,0,0" Width="150">
+                            <Button Background="Transparent" x:Name="Kort_Button" Click="Kort_Button_Click" BorderThickness="0,0,0,0" Width="150">
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-25.2,0,0,0" VerticalAlignment="Stretch" Width="105">
                                     <TextBlock Margin="0,0,0,0" IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE909;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
                                     <TextBlock IsTextSelectionEnabled="False" Text="Kort" FontSize="16" HorizontalAlignment="Left"/>
@@ -51,36 +76,49 @@
                                 </StackPanel>
                             </Button>
 
-                            <Button Background="Transparent"  Name="Rundvisnings_Button" Click="Rundvisnings_Button_OnClick" BorderThickness="0,0,0,0" Width="150">
+                            <Button Background="Transparent"  x:Name="Rundvisnings_Button" Click="Rundvisnings_Button_OnClick" BorderThickness="0,0,0,0" Width="150">
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-5.2,0,0,0" VerticalAlignment="Stretch" Width="125">
-                                    <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE8A;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-                                    <TextBlock IsTextSelectionEnabled="False" Text="Rundvisnings" FontSize="16" HorizontalAlignment="Left"></TextBlock>
+                                    <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="ຊ" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+                                    <TextBlock IsTextSelectionEnabled="False" Text="Rundvisnings" FontSize="16" HorizontalAlignment="Left"/>
                                 </StackPanel>
                             </Button>
 
-                            <Button Background="Gray"  Name="Udstilling_Button" Click="Udstilling_Button_Click" BorderThickness="0,0,0,0" Width="150">
+                            <Button Background="Gray"  x:Name="Udstilling_Button" Click="Udstilling_Button_Click" BorderThickness="0,0,0,0" Width="150">
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-5.2,0,0,0" VerticalAlignment="Stretch" Width="125">
                                     <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE8A2;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-                                    <TextBlock IsTextSelectionEnabled="False" Text="Udstilling" FontSize="16" HorizontalAlignment="Left"></TextBlock>
+                                    <TextBlock IsTextSelectionEnabled="False" Text="Udstilling" FontSize="16" HorizontalAlignment="Left"/>
                                 </StackPanel>
                             </Button>
 
                         </StackPanel>
                     </SplitView.Pane>
                 </SplitView>
-                <StackPanel Grid.Column="1">
-                    <TextBlock Text="{Binding Name, Mode=OneWay}" TextAlignment="Center" FontWeight="Bold" FontSize="50" Foreground="White"></TextBlock>
-                </StackPanel>
-
-
-                <StackPanel Grid.Column="1">
-                    <TextBlock Text="{Binding Name, Mode=OneWay}" TextAlignment="Center" FontWeight="Bold" FontSize="50" Foreground="{x:Null}"></TextBlock>
-                    <WebView  x:Name="VideoLink" Margin="0,0,0.33,0" Height="720"/>
-                    <TextBlock x:Name="Description" Height="767" Width="542" VerticalAlignment="Center" Margin="0,0,0,0" HorizontalAlignment="Center" Text="{Binding Description, Mode=OneWay}" OpticalMarginAlignment="TrimSideBearings" TextAlignment="Left" TextLineBounds="TrimToBaseline" TextTrimming="None" TextWrapping="WrapWholeWords" FontSize="45" />
-
-                </StackPanel>
             </Grid>
         </Viewbox>
     </Grid>
 </Page>
 
+<!--<NavigationView IsBackButtonVisible="Collapsed" IsSettingsVisible="False" PaneDisplayMode="Left" Background="MediumVioletRed" Grid.ColumnSpan="2" Margin="0,0,308.4,0" VerticalAlignment="Stretch">
+
+    <NavigationView.MenuItems>
+        <NavigationViewItem Content="Kort" x:Name="Kort"  Background="Blue">
+            <NavigationViewItem.Icon>
+                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE909;"></FontIcon>
+
+            </NavigationViewItem.Icon>
+        </NavigationViewItem>
+        <NavigationViewItem Content="Søg" x:Name="Søg"  Background="Red">
+            <NavigationViewItem.Icon>
+                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE721;"></FontIcon>
+
+            </NavigationViewItem.Icon>
+        </NavigationViewItem>
+        <NavigationViewItem Content="Udstilling" x:Name="Udstilling"  Background="Orange">
+            <NavigationViewItem.Icon>
+                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE8A2;"></FontIcon>
+
+            </NavigationViewItem.Icon>
+        </NavigationViewItem>
+    </NavigationView.MenuItems>
+
+</NavigationView>-->
