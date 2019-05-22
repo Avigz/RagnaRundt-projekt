@@ -178,8 +178,12 @@
     <Content Include="Assets\ragnarock2kort.jpg" />
     <Content Include="Assets\Ragnarock3akort.jpg" />
     <Content Include="Assets\Ragnarock3kort.jpg" />
+    <Content Include="Assets\ragnarockfoto.jpg" />
     <Content Include="Assets\RagnarockKort.jpg" />
     <Content Include="Assets\RagnarockKortInvisible.png" />
+    <Content Include="Assets\Rend-mig.jpg" />
+    <Content Include="Assets\Sal 2.jpg" />
+    <Content Include="Assets\Sal 3.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

@@ -73,6 +73,42 @@ namespace Ragna_Rundt.Viewmodel
            get { return SearchList.Instance.SearchWord; }
        }
 
+       private bool _tilbageIsVisible = true;
+       private bool _næsteIsVisible = true;
+       private bool _afslutTourIsVisible = true;
+
+       public bool TilbageIsVisible
+       {
+           get { return _tilbageIsVisible; }
+           set
+           {
+               _tilbageIsVisible = value;
+               OnPropertyChanged(nameof(TilbageIsVisible));
+           }
+       }
+
+       public bool NæsteIsVisible
+       {
+           get { return _næsteIsVisible; }
+           set
+           {
+               _næsteIsVisible = value;
+               OnPropertyChanged(nameof(NæsteIsVisible));
+           }
+       }
+
+       public bool AfslutTourIsVisible
+       {
+           get { return _afslutTourIsVisible; }
+           set
+           {
+               _afslutTourIsVisible = value;
+               OnPropertyChanged(nameof(AfslutTourIsVisible));
+           }
+       }
+
+
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 

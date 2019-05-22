@@ -25,18 +25,20 @@ namespace Ragna_Rundt.View
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
+
+    /// NEDERST ER EN NY CLASS, SOM KAN KONVERTERE FRA VISIBILITY/INVISBLE STATUS TIL BOOL-VÆRDI (TRUE/FALSE)!!
+
     public sealed partial class Udstillingstemplate : Page
     {
         ViewModel viewModel = new ViewModel();
-        
+
         public Udstillingstemplate()
         {
-            
+
             this.InitializeComponent();
             DataContext = viewModel;
-          
-            VideoLink.NavigateToString($"<iframe height=\"1920\" width=\"1024\" src=" + $"{ElementCatalog.Instance.Elements[(viewModel.Key)].videoURL}" + "frameborder=\"0\" allow=\"accelerometer; encrypted-media; gyroscope; picture-in-picture\"></iframe>");
-            
+            VideoLink.NavigateToString($"<iframe height=\"768\" width=\"1024\" src=" + $"{viewModel.Catalog.VideoLink(viewModel.Key)}" + "frameborder=\"0\" allow=\"accelerometer; encrypted-media; gyroscope; picture-in-picture\"></iframe>");
+
 
 
         }
@@ -46,7 +48,10 @@ namespace Ragna_Rundt.View
         //    VideoLink.NavigateToString($"<iframe height=\"768\" width=\"1024\" src=" + $"{viewModel.Catalog.VideoLink(viewModel.Key)}" + "frameborder=\"0\" allow=\"accelerometer; encrypted-media; gyroscope; picture-in-picture\"></iframe>");
         //}
 
-        
+        private void Slider_OnValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            VideoLink.NavigateToString($"<iframe height=\"768\" width=\"1024\" src=" + $"{viewModel.Catalog.VideoLink(viewModel.Key)}" + "frameborder=\"0\" allow=\"accelerometer; encrypted-media; gyroscope; picture-in-picture\"></iframe>");
+        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -72,12 +77,48 @@ namespace Ragna_Rundt.View
 
         private void Udstilling_Button_Click(object sender, RoutedEventArgs e)
         {
-            
+
         }
 
         private void Rundvisnings_Button_OnClick(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(RundvisningsSide));
         }
+
+
+    }
+    /*
+     * Nedenfor er en converter, som gør at visibility / invisibility af knapper konverteres til en bool-værdi (true / false)
+     */
+    public class BooleanToVisibilityConverter : IValueConverter
+    {
+        public Visibility OnTrue { get; set; }
+        public Visibility OnFalse { get; set; }
+
+        public BooleanToVisibilityConverter()
+        {
+            OnFalse = Visibility.Collapsed;
+            OnTrue = Visibility.Visible;
+        }
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            var v = (bool)value;
+
+            return v ? OnTrue : OnFalse;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            if (value is Visibility == false)
+                return DependencyProperty.UnsetValue;
+
+            if ((Visibility)value == OnTrue)
+                return true;
+            else
+                return false;
+        }
+
     }
 }
+
