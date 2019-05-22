@@ -141,6 +141,7 @@ namespace Ragna_Rundt.Model
             _tempElements[10].AddTag(TagCatalog.Instance.Tags["Jason Richard"]);
             _tempElements[10].AddTag(TagCatalog.Instance.Tags["Gojira"]);
             _tempElements[10].AddTag(TagCatalog.Instance.Tags["Fiends"]);
+            _tempElements[10].AddTag(TagCatalog.Instance.Tags["Metallica"]);
 
             _tempElements.Add(new Element("Den Klassike side", "PlaceHolder text", "https://www.youtube.com/embed/kz7JELU29wc", AreaCatalog.Instance.Areas["Musikalske strømme"]));
             _tempElements[10].AddTag(TagCatalog.Instance.Tags["Musikalske strømme"]);
