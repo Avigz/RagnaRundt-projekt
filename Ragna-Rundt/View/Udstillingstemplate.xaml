@@ -41,17 +41,18 @@
                 <RelativePanel Grid.Column="1">
 
                     <StackPanel>
-                        <TextBlock Width="771" Height="550" Margin="0,950,0,0" TextWrapping="WrapWholeWords" TextAlignment="Start" FontSize="30" Foreground="White">Få testet din/jeres viden om Kim Larsen på bedste pubquizmanér, når RAGNAROCK's quizvært hopper i guldjakken og tager dig/jer på en rejse gennem legendens liv.
+                        <TextBlock Width="771" Height="500" Margin="0,950,0,0" TextWrapping="WrapWholeWords" TextAlignment="Start" FontSize="30" Foreground="White">Få testet din/jeres viden om Kim Larsen på bedste pubquizmanér, når RAGNAROCK's quizvært hopper i guldjakken og tager dig/jer på en rejse gennem legendens liv.
 
                             I fem årtier har Kim Larsen dannet lydkulisse til Danmark på tværs af generationer, sociale skel og politiske overbevisninger - så der er god chance for, at dig og dine holdkammerater kan quizze med i de forskellige runder om alt fra Christianshavn til Haveje.
                             Museets stemningsfulde café danner rammen om besøget, så der er selvfølgelig mulighed for en fadøl i Larsens ånd.</TextBlock>
-                        <Image Height="auto" Width="auto" Source="../Assets/Ragnarock3kort.jpg" Margin="0,10,0,0"></Image>
-
+                       
                         <StackPanel Orientation="Horizontal">
-                            <Button Name="Tilbage_knap" Margin="0,0,85,0" Foreground="White" Background="Black" Content="Tilbage" FontSize="35" Height="100" Width="200" Visibility="{Binding TilbageIsVisible, Converter={StaticResource BoolToVisibility}, Mode=OneWay}"></Button>
-                            <Button Name="Næste_knap" Foreground="White" Background="Black" Content="Næste" FontSize="35" Height="100" Width="200"  Visibility="{Binding NæsteIsVisible, Converter={StaticResource BoolToVisibility}, Mode=OneWay}"/>
-                            <Button Name="Afslut_knap" Margin="85,0,0,0" Foreground="White" Background="Black" Content="Afslut Tour" FontSize="35" Height="100" Width="200" Visibility="{Binding AfslutTourIsVisible, Converter={StaticResource BoolToVisibility}, Mode=OneWay}"></Button>
+                            <Button Name="Tilbage_knap" Margin="0,0,85,10" Foreground="White" Background="Black" Content="Tilbage" FontSize="35" Height="100" Width="200" Visibility="{Binding TilbageIsVisible, Converter={StaticResource BoolToVisibility}, Mode=OneWay}"></Button>
+                            <Button Name="Næste_knap" Margin="0,0,0,10" Foreground="White" Background="Black" Content="Næste" FontSize="35" Height="100" Width="200"  Visibility="{Binding NæsteIsVisible, Converter={StaticResource BoolToVisibility}, Mode=OneWay}"/>
+                            <Button Name="Afslut_knap" Margin="85,0,0,10" Foreground="White" Background="Black" Content="Afslut Tour" FontSize="35" Height="100" Width="200" Visibility="{Binding AfslutTourIsVisible, Converter={StaticResource BoolToVisibility}, Mode=OneWay}"></Button>
                         </StackPanel>
+                        <Image Height="300" Width="auto" Source="../Assets/Ragnarock3kort.jpg" Margin="0,10,0,0"></Image>
+
 
                     </StackPanel>
                 </RelativePanel>
