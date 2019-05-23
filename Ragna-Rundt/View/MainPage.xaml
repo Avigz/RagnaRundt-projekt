@@ -106,20 +106,20 @@
                     </Canvas>
 
 
-                    <SplitView  x:Name="SplitviewMenu" DisplayMode="CompactInline" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="350" Margin="0,0,0,0">
+                    <SplitView  x:Name="SplitviewMenu" DisplayMode="CompactInline" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="350" Margin="0,0,-24.4,-187.8">
                         <SplitView.Pane>
-                            <StackPanel HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+                            <StackPanel Margin="0,0,0.4,237">
 
                                 <Button FontFamily="Segoe MDL2 Assets" Height="150" Width="150" FontSize="55" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" Click="Button_Click" BorderThickness="0,0,0,0"/>
 
-                                <Button Background="Gray" x:Name="Kort_Button" Click="Kort_Button_Click" BorderThickness="0,0,0,0" Width="150">
+                                <Button Background="Gray" x:Name="Kort_Button" Click="Kort_Button_Click" BorderThickness="0,0,0,0" Width="350">
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="250">
-                                        <TextBlock Margin="0,0,0,0" IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="150" Width="150" FontSize="55" Text="&#xE909;" HorizontalAlignment="Center"/>
+                                        <TextBlock Margin="0,0,0,0" IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="150" Width="150" FontSize="55" Text="&#xE909;" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                                         <TextBlock IsTextSelectionEnabled="False" Text="Kort" FontSize="26" HorizontalAlignment="Left"/>
                                     </StackPanel>
                                 </Button>
 
-                                <Button Background="Transparent" x:Name="Søg_Button" Click="Søg_Button_Click" BorderThickness="0,0,0,0" Width="150">
+                                <Button Background="Transparent" x:Name="Søg_Button" Click="Søg_Button_Click" BorderThickness="0,0,0,0" Width="350" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center">
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-25.2,0,0,0" VerticalAlignment="Stretch" Width="105">
                                         <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE721;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
                                         <TextBlock IsTextSelectionEnabled="False"  Text="Søg" FontSize="16" HorizontalAlignment="Left"/>
@@ -136,7 +136,7 @@
                                 <Button Background="Transparent"  x:Name="Udstilling_Button" Click="Udstilling_Button_Click" BorderThickness="0,0,0,0" Width="150">
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-5.2,0,0,0" VerticalAlignment="Stretch" Width="125">
                                         <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE8A2;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-                                        <TextBlock IsTextSelectionEnabled="False" Text="Udstilling" FontSize="16" HorizontalAlignment="Left"/>
+                                        <TextBlock IsTextSelectionEnabled="False" Text="Udstilling" FontSize="16" HorizontalAlignment="Left" Margin="-0.4,0,0,0" VerticalAlignment="Stretch" Width="277"/>
                                     </StackPanel>
                                 </Button>
 
