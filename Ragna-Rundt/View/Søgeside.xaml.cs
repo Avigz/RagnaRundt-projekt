@@ -82,6 +82,9 @@ namespace Ragna_Rundt.View
             this.Frame.Navigate(typeof(Udstillingstemplate));
         }
 
+        
+
+
         /*
         private void AutoSuggestBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
         {
@@ -119,6 +122,6 @@ namespace Ragna_Rundt.View
             }
         }*/
 
-        
+
     }
 }

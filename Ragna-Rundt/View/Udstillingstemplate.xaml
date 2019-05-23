@@ -45,49 +45,51 @@
 
                             I fem årtier har Kim Larsen dannet lydkulisse til Danmark på tværs af generationer, sociale skel og politiske overbevisninger - så der er god chance for, at dig og dine holdkammerater kan quizze med i de forskellige runder om alt fra Christianshavn til Haveje.
                             Museets stemningsfulde café danner rammen om besøget, så der er selvfølgelig mulighed for en fadøl i Larsens ånd.</TextBlock>
-                       
+
                         <StackPanel Orientation="Horizontal">
-                            <Button Name="Tilbage_knap" Margin="0,0,85,10" Foreground="White" Background="Black" Content="Tilbage" FontSize="35" Height="100" Width="200" Visibility="{Binding TilbageIsVisible, Converter={StaticResource BoolToVisibility}, Mode=OneWay}"></Button>
-                            <Button Name="Næste_knap" Margin="0,0,0,10" Foreground="White" Background="Black" Content="Næste" FontSize="35" Height="100" Width="200"  Visibility="{Binding NæsteIsVisible, Converter={StaticResource BoolToVisibility}, Mode=OneWay}"/>
-                            <Button Name="Afslut_knap" Margin="85,0,0,10" Foreground="White" Background="Black" Content="Afslut Tour" FontSize="35" Height="100" Width="200" Visibility="{Binding AfslutTourIsVisible, Converter={StaticResource BoolToVisibility}, Mode=OneWay}"></Button>
+                            <Button Name="Tilbage_knap" Margin="0,0,85,10" Foreground="White" Background="Black" BorderBrush="White" Content="Tilbage" FontSize="35" Height="100" Width="200" Visibility="{Binding TilbageIsVisible, Converter={StaticResource BoolToVisibility}, Mode=OneWay}"></Button>
+                            <Button Name="Næste_knap" Margin="0,0,0,10" Foreground="White" Background="Black"  BorderBrush="White" Content="Næste" FontSize="35" Height="100" Width="200"  Visibility="{Binding NæsteIsVisible, Converter={StaticResource BoolToVisibility}, Mode=OneWay}"/>
+                            <Button Name="Afslut_knap" Margin="85,0,0,10" Foreground="White" Background="Black" BorderBrush="White" Content="Afslut Tour" FontSize="35" Height="100" Width="200" Visibility="{Binding AfslutTourIsVisible, Converter={StaticResource BoolToVisibility}, Mode=OneWay}"></Button>
                         </StackPanel>
                         <Image Height="300" Width="auto" Source="../Assets/Ragnarock3kort.jpg" Margin="0,10,0,0"></Image>
 
 
                     </StackPanel>
                 </RelativePanel>
-                <Button Grid.Column="0" FontFamily="Segoe MDL2 Assets" Foreground="White" Height="50" Width="50" FontSize="25" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,100,0" VerticalAlignment="Top" Click="Button_Click" BorderThickness="0,0,0,0"/>
-                <SplitView Grid.Column="0" x:Name="SplitviewMenu" Opacity="1" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="150" Margin="0,0,0,0">
+
+                <Button FontFamily="Segoe MDL2 Assets" Height="150" Width="150" FontSize="55" Foreground="White" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Click="Button_Click" BorderThickness="0,0,0,0" Grid.ColumnSpan="2"></Button>
+
+                <SplitView  x:Name="SplitviewMenu" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="350" Margin="0,150,525.6,1296" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <SplitView.Pane>
-                        <StackPanel>
+                        <StackPanel Margin="0,0,0.4,6.4" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
 
-                            <Button FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,100,0" VerticalAlignment="Top" Click="Button_Click" BorderThickness="0,0,0,0"/>
+                            <!--<Button FontFamily="Segoe MDL2 Assets" Height="150" Width="150" FontSize="55" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" Click="Button_Click" BorderThickness="0,0,0,0"/>-->
 
-                            <Button Background="Transparent" x:Name="Kort_Button" Click="Kort_Button_Click" BorderThickness="0,0,0,0" Width="150">
-                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-25.2,0,0,0" VerticalAlignment="Stretch" Width="105">
-                                    <TextBlock Margin="0,0,0,0" IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE909;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-                                    <TextBlock IsTextSelectionEnabled="False" Text="Kort" FontSize="16" HorizontalAlignment="Left"/>
+                            <Button Background="Transparent"  x:Name="Kort_Button" Click="Kort_Button_Click" BorderThickness="0,0,0,0" Width="350" Height="120">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="350">
+                                    <TextBlock Margin="0,0,0,0" IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="106" Width="124" FontSize="55" Text="&#xE909;" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                                    <TextBlock IsTextSelectionEnabled="False" Text="Kort" FontSize="35" HorizontalAlignment="Left" Margin="-0.4,0,0,0" Width="185" VerticalAlignment="Stretch"/>
                                 </StackPanel>
                             </Button>
 
-                            <Button Background="Transparent" x:Name="Søg_Button" Click="Søg_Button_Click" BorderThickness="0,0,0,0" Width="150">
-                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-25.2,0,0,0" VerticalAlignment="Stretch" Width="105">
-                                    <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE721;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-                                    <TextBlock IsTextSelectionEnabled="False"  Text="Søg" FontSize="16" HorizontalAlignment="Left"/>
+                            <Button Background="Transparent" x:Name="Søg_Button" Click="Søg_Button_Click" BorderThickness="0,0,0,0" Width="350" Height="120">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,0" Width="342">
+                                    <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="106" Width="124" FontSize="55" Text="&#xE721;" TextAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0"/>
+                                    <TextBlock IsTextSelectionEnabled="False"  Text="Søg" FontSize="35" HorizontalAlignment="Left" Margin="-0.4,0,0,0" Width="187"/>
                                 </StackPanel>
                             </Button>
 
-                            <Button Background="Transparent"  x:Name="Rundvisnings_Button" Click="Rundvisnings_Button_OnClick" BorderThickness="0,0,0,0" Width="150">
-                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-5.2,0,0,0" VerticalAlignment="Stretch" Width="125">
-                                    <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="ຊ" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-                                    <TextBlock IsTextSelectionEnabled="False" Text="Rundvisnings" FontSize="16" HorizontalAlignment="Left"/>
+                            <Button Background="Transparent"  x:Name="Rundvisnings_Button" Click="Rundvisnings_Button_OnClick" BorderThickness="0,0,0,0" Width="350" Height="120">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-5.2,0,0,0" VerticalAlignment="Stretch" Width="350">
+                                    <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="106" Width="123" FontSize="55" TextAlignment="Center" Text="ຊ" HorizontalAlignment="Center" Margin="0,0,0,0"/>
+                                    <TextBlock IsTextSelectionEnabled="False" Text="Rundvisning" FontSize="35" HorizontalAlignment="Left" Margin="-0.4,0,0,0" VerticalAlignment="Stretch" Width="197"/>
                                 </StackPanel>
                             </Button>
 
-                            <Button Background="Gray"  x:Name="Udstilling_Button" Click="Udstilling_Button_Click" BorderThickness="0,0,0,0" Width="150">
-                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-5.2,0,0,0" VerticalAlignment="Stretch" Width="125">
-                                    <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE8A2;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-                                    <TextBlock IsTextSelectionEnabled="False" Text="Udstilling" FontSize="16" HorizontalAlignment="Left"/>
+                            <Button Background="Khaki"  x:Name="Udstilling_Button" Click="Udstilling_Button_Click" BorderThickness="0,0,0,0" Width="350" Height="120">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-5.2,0,0,0" VerticalAlignment="Stretch" Width="350">
+                                    <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="106" Width="117" FontSize="55" Text="&#xE8A2;" TextAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+                                    <TextBlock IsTextSelectionEnabled="False" Text="Udstilling" FontSize="35" HorizontalAlignment="Center" Margin="0,0,0,0" Width="191" VerticalAlignment="Stretch"/>
                                 </StackPanel>
                             </Button>
 

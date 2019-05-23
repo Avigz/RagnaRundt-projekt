@@ -29,29 +29,71 @@
                     <!--<Slider Margin="0,50" Maximum="3" TickPlacement="BottomRight" TickFrequency="1" SnapsTo="Ticks" Value="0">
 
                         </Slider>-->
-                    <FlipView RelativePanel.Below="TextBlockRagnaRundt" Name="FlipView" MaxWidth="590" MaxHeight="550" Margin="-4.4,70,78.4,440.2" RelativePanel.AlignHorizontalCenterWithPanel="true" SelectionChanged="FlipView_SelectionChanged" >
+                    <FlipView RelativePanel.Below="TextBlockRagnaRundt" Name="FlipView" MaxWidth="590" MaxHeight="550" Margin="-4.4,70.4,-66.2,439.4" RelativePanel.AlignHorizontalCenterWithPanel="true" SelectionChanged="FlipView_SelectionChanged" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
 
                         <StackPanel Name="StackPanelFlipView" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="590" MaxHeight="550" Width="auto" Height="750">
-                            <Image RelativePanel.AlignBottomWith="BorderInfoBox" Height="auto" Width="auto" Stretch="UniformToFill" Source="../Assets/ragnarockfoto.jpg" VerticalAlignment="Center" Margin="0,0,0,0"/>
-                            <Border Name="BorderInfoBox" Background="Purple" Height="auto" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Bottom">
-                                <TextBlock Text="Brugbar info" TextAlignment="Center" FontSize="32" Margin="0,0,0,0" Height="60" Width="300"/>
+                            <Image RelativePanel.AlignBottomWith="BorderInfoBox" Height="auto" Width="auto" Stretch="UniformToFill" Source="../Assets/Tour1.jpg" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                            <Border Name="BorderInfoBox" Background="Black" Height="auto" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                                <TextBlock Foreground="White" Text="Tour 1" TextAlignment="Center" FontSize="35" Margin="0,0,0,0" Height="60" Width="484"/>
                             </Border>
                         </StackPanel>
                         <StackPanel Name="StackPanelFlipView2" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="1080" MaxHeight="550" Width="auto" Height="750">
-                            <Image RelativePanel.AlignBottomWith="BorderInfoBox2" Height="auto" Width="auto" Stretch="UniformToFill" Source="../Assets/Syklub-fra-helvede-768x432.jpg" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                            <Image RelativePanel.AlignBottomWith="BorderInfoBox2" Height="auto" Width="auto" Stretch="UniformToFill" Source="../Assets/Tour2.jpg" VerticalAlignment="Center" Margin="0,0,0,0"/>
                             <Border Name="BorderInfoBox2" Background="Red" Height="auto" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Bottom">
-                                <TextBlock Text="Brugbar info" TextAlignment="Center" FontSize="32" Margin="0,0,0,0" Height="60" Width="300"/>
+                                <TextBlock Text="Tour 2" TextAlignment="Center" FontSize="35" Margin="0,0,0,0" Height="60" Width="300"/>
                             </Border>
                         </StackPanel>
                         <StackPanel Name="StackPanelFlipView3" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="1080" MaxHeight="550" Width="auto" Height="750">
-                            <Image RelativePanel.AlignBottomWith="BorderInfoBox2" Height="auto" Width="auto" Stretch="UniformToFill" Source="../Assets/Rend-mig.jpg" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                            <Image RelativePanel.AlignBottomWith="BorderInfoBox2" Height="auto" Width="auto" Stretch="UniformToFill" Source="../Assets/Tour3.jpg" VerticalAlignment="Center" Margin="0,0,0,0"/>
                             <Border Name="BorderInfoBox3" Background="White" Height="auto" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Bottom">
-                                <TextBlock Text="Brugbar info" TextAlignment="Center" FontSize="32" Margin="0,0,0,0" Height="60" Width="300"/>
+                                <TextBlock Text="Tour 3" TextAlignment="Center" FontSize="35" Margin="0,0,0,0" Height="60" Width="300"/>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Name="StackPanelFlipView4" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="1080" MaxHeight="550" Width="auto" Height="750">
+                            <Image RelativePanel.AlignBottomWith="BorderInfoBox2" Height="auto" Width="auto" Stretch="UniformToFill" Source="../Assets/Tour4.jpg.jpg" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                            <Border Name="BorderInfoBox4" Background="White" Height="auto" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                                <TextBlock Text="Tour 4" TextAlignment="Center" FontSize="35" Margin="0,0,0,0" Height="60" Width="300"/>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Name="StackPanelFlipView5" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="1080" MaxHeight="550" Width="auto" Height="750">
+                            <Image RelativePanel.AlignBottomWith="BorderInfoBox2" Height="auto" Width="auto" Stretch="UniformToFill" Source="../Assets/Tour5.jpg" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                            <Border Name="BorderInfoBox5" Background="White" Height="auto" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                                <TextBlock Text="Tour 5" TextAlignment="Center" FontSize="35" Margin="0,0,0,0" Height="60" Width="300"/>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Name="StackPanelFlipView6" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="1080" MaxHeight="550" Width="auto" Height="750">
+                            <Image RelativePanel.AlignBottomWith="BorderInfoBox2" Height="auto" Width="auto" Stretch="UniformToFill" Source="../Assets/Tour6.jpg" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                            <Border Name="BorderInfoBox6" Background="White" Height="auto" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                                <TextBlock Text="Tour 6" TextAlignment="Center" FontSize="35" Margin="0,0,0,0" Height="60" Width="300"/>
                             </Border>
                         </StackPanel>
                     </FlipView>
+                    <Canvas x:Name="Ragnarock_2" RelativePanel.AlignBottomWithPanel="True" Width="1000" Height="Auto" MaxHeight="600" MaxWidth="1000" Margin="40,1123,0,43" RelativePanel.Below="SplitviewMenu" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <Canvas.Background>
+                            <ImageBrush ImageSource="../Assets/Sal 2.jpg"/>
+                        </Canvas.Background>
+                        <Button x:Name="Hjerte1" Background="Transparent" HorizontalAlignment="Center" Canvas.Left="804" Canvas.Top="200" VerticalAlignment="Top" Height="150" Width="106" Margin="0,0,0,0">
+                            <Image Source="../Assets/KnapHjerteGrøn.png"/>
+                        </Button>
+                        <Button x:Name="Telefon" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="509" Canvas.Top="62" VerticalAlignment="Top" Height="113" Width="164" Margin="0,0,0,0">
+                            <Image Source="../Assets/KnapTelefongul.png"/>
+                        </Button>
+                        <Button x:Name="Kassettebaand" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="210" Canvas.Top="29" VerticalAlignment="Top" Height="121" Width="125" Margin="0,0,0,0">
+                            <Image Source="../Assets/KnapKassetteBaandgul.png" RenderTransformOrigin="0.496,-7.316"/>
+                        </Button>
+                        <Button x:Name="Mikrofon" Background="Transparent" HorizontalAlignment="Center" Canvas.Left="85" Canvas.Top="202" VerticalAlignment="Top" Height="135" Width="88" Margin="0,0,0,0">
+                            <Image Source="../Assets/KnapTrommegul.png"/>
+                        </Button>
+                        <Button x:Name="Pladespiller" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="347" Canvas.Top="200" VerticalAlignment="Top" Height="149" Width="138" Margin="0,0,0,0">
+                            <Image Source="../Assets/KnapPladespillergul.png"/>
+                        </Button>
+                        <Button x:Name="RagnarockBygning" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="510" Canvas.Top="422" VerticalAlignment="Top" Height="102" Width="168">
+                            <Image Source="../Assets/KnapRoedeTraadgul.png"/>
+                        </Button>
 
-                    <Canvas Name="Ragnarock_3" RelativePanel.Above="Ragnarock_2" RelativePanel.AlignVerticalCenterWith="Ragnarock_2" Width="1000" Height="600" MaxHeight="600" MaxWidth="1000" Margin="40,-171,-40,211" RelativePanel.Below="SplitviewMenu">
+                    </Canvas>
+
+                    <Canvas Name="Ragnarock_3" RelativePanel.Above="Ragnarock_2" RelativePanel.AlignVerticalCenterWith="Ragnarock_2" Width="1000" Height="600" MaxHeight="600" MaxWidth="1000" Margin="40,-38,-40,78" RelativePanel.Below="SplitviewMenu" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                         <Canvas.Background>
                             <ImageBrush ImageSource="../Assets/Sal 3.jpg"></ImageBrush>
                         </Canvas.Background>
@@ -80,65 +122,39 @@
                     </Canvas>
 
 
-                    <Canvas Name="Ragnarock_2" RelativePanel.AlignBottomWithPanel="True" Width="1000" Height="Auto" MaxHeight="600" MaxWidth="1000" Margin="40,825.8,0,43" RelativePanel.Below="SplitviewMenu" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                        <Canvas.Background>
-                            <ImageBrush ImageSource="../Assets/Sal 2.jpg"></ImageBrush>
-                        </Canvas.Background>
-                        <Button Name="Hjerte1" Background="Transparent" HorizontalAlignment="Center" Canvas.Left="804" Canvas.Top="200" VerticalAlignment="Top" Height="150" Width="106" Margin="0,0,0,0">
-                            <Image Source="../Assets/KnapHjerteGrøn.png"></Image>
-                        </Button>
-                        <Button Name="Telefon" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="509" Canvas.Top="62" VerticalAlignment="Top" Height="113" Width="164" Margin="0,0,0,0">
-                            <Image Source="../Assets/KnapTelefongul.png"></Image>
-                        </Button>
-                        <Button Name="Kassettebaand" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="210" Canvas.Top="29" VerticalAlignment="Top" Height="121" Width="125" Margin="0,0,0,0">
-                            <Image Source="../Assets/KnapKassetteBaandgul.png" RenderTransformOrigin="0.496,-7.316"></Image>
-                        </Button>
-                        <Button Name="Mikrofon" Background="Transparent" HorizontalAlignment="Center" Canvas.Left="85" Canvas.Top="202" VerticalAlignment="Top" Height="135" Width="88" Margin="0,0,0,0">
-                            <Image Source="../Assets/KnapTrommegul.png"></Image>
-                        </Button>
-                        <Button Name="Pladespiller" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="347" Canvas.Top="200" VerticalAlignment="Top" Height="149" Width="138" Margin="0,0,0,0">
-                            <Image Source="../Assets/KnapPladespillergul.png"></Image>
-                        </Button>
-                        <Button Name="RagnarockBygning" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="510" Canvas.Top="422" VerticalAlignment="Top" Height="102" Width="168">
-                            <Image Source="../Assets/KnapRoedeTraadgul.png"></Image>
-                        </Button>
-
-                    </Canvas>
-
-
-                    <SplitView  x:Name="SplitviewMenu" DisplayMode="CompactInline" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="350" Margin="0,0,-24.4,-187.8">
+                    <SplitView  x:Name="SplitviewMenu" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="350" Margin="0,143,-24.4,-334.8">
                         <SplitView.Pane>
-                            <StackPanel Margin="0,0,0.4,237">
+                            <StackPanel Margin="0,0,0,0" Background="White">
 
-                                <Button FontFamily="Segoe MDL2 Assets" Height="150" Width="150" FontSize="55" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" Click="Button_Click" BorderThickness="0,0,0,0"/>
+                                <!--<Button FontFamily="Segoe MDL2 Assets" Height="150" Width="150" FontSize="55" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" Click="Button_Click" BorderThickness="0,0,0,0"/>-->
 
-                                <Button Background="Gray" x:Name="Kort_Button" Click="Kort_Button_Click" BorderThickness="0,0,0,0" Width="350">
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="250">
-                                        <TextBlock Margin="0,0,0,0" IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="150" Width="150" FontSize="55" Text="&#xE909;" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                                        <TextBlock IsTextSelectionEnabled="False" Text="Kort" FontSize="26" HorizontalAlignment="Left"/>
+                                <Button Background="Khaki"  x:Name="Kort_Button" Click="Kort_Button_Click" BorderThickness="0,0,0,0" Width="350" Height="120">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="350">
+                                        <TextBlock Margin="0,0,0,0" IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="106" Width="124" FontSize="55" Text="&#xE909;" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                                        <TextBlock IsTextSelectionEnabled="False" Text="Kort" FontSize="35" HorizontalAlignment="Left" Margin="-0.4,0,0,0" Width="185" VerticalAlignment="Stretch"/>
                                     </StackPanel>
                                 </Button>
 
-                                <Button Background="Transparent" x:Name="Søg_Button" Click="Søg_Button_Click" BorderThickness="0,0,0,0" Width="350" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center">
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-25.2,0,0,0" VerticalAlignment="Stretch" Width="105">
-                                        <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE721;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-                                        <TextBlock IsTextSelectionEnabled="False"  Text="Søg" FontSize="16" HorizontalAlignment="Left"/>
+                                <Button Background="Transparent" x:Name="Søg_Button" Click="Søg_Button_Click" BorderThickness="0,0,0,0" Width="350" Height="120">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,0" Width="342">
+                                        <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="106" Width="124" FontSize="55" Text="&#xE721;" TextAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0"/>
+                                        <TextBlock IsTextSelectionEnabled="False"  Text="Søg" FontSize="35" HorizontalAlignment="Left" Margin="-0.4,0,0,0" Width="187"/>
                                     </StackPanel>
                                 </Button>
 
-                                <Button Background="Transparent"  x:Name="Rundvisnings_Button" Click="Rundvisnings_Button_OnClick" BorderThickness="0,0,0,0" Width="150">
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-5.2,0,0,0" VerticalAlignment="Stretch" Width="125">
-                                        <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="ຊ" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-                                        <TextBlock IsTextSelectionEnabled="False" Text="Rundvisning" FontSize="16" HorizontalAlignment="Left"/>
+                                <Button Background="Transparent"  x:Name="Rundvisnings_Button" Click="Rundvisnings_Button_OnClick" BorderThickness="0,0,0,0" Width="350" Height="120">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-5.2,0,0,0" VerticalAlignment="Stretch" Width="350">
+                                        <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="106" Width="123" FontSize="55" TextAlignment="Center" Text="ຊ" HorizontalAlignment="Center" Margin="0,0,0,0"/>
+                                        <TextBlock IsTextSelectionEnabled="False" Text="Rundvisning" FontSize="35" HorizontalAlignment="Left" Margin="-0.4,0,0,0" VerticalAlignment="Stretch" Width="197"/>
                                     </StackPanel>
                                 </Button>
 
-                                <Button Background="Transparent"  x:Name="Udstilling_Button" Click="Udstilling_Button_Click" BorderThickness="0,0,0,0" Width="150">
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-5.2,0,0,0" VerticalAlignment="Stretch" Width="125">
-                                        <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE8A2;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-                                        <TextBlock IsTextSelectionEnabled="False" Text="Udstilling" FontSize="16" HorizontalAlignment="Left" Margin="-0.4,0,0,0" VerticalAlignment="Stretch" Width="277"/>
+                                <!--<Button Background="Transparent"  x:Name="Udstilling_Button" Click="Udstilling_Button_Click" BorderThickness="0,0,0,0" Width="350" Height="120">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-5.2,0,0,0" VerticalAlignment="Stretch" Width="350">
+                                        <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="106" Width="117" FontSize="55" Text="&#xE8A2;" TextAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+                                        <TextBlock IsTextSelectionEnabled="False" Text="Udstilling" FontSize="35" HorizontalAlignment="Center" Margin="0,0,0,0" Width="191" VerticalAlignment="Stretch"/>
                                     </StackPanel>
-                                </Button>
+                                </Button>-->
 
                             </StackPanel>
                         </SplitView.Pane>

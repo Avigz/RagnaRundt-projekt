@@ -23,70 +23,60 @@
                     <ColumnDefinition Width="5*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-
-
-                <Button FontFamily="Segoe MDL2 Assets" Foreground="White" Height="50" Width="50" FontSize="25" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,100,0" VerticalAlignment="Top" Click="Button_Click" BorderThickness="0,0,0,0"></Button>
-
-
-                <SplitView Grid.Column="0" x:Name="SplitviewMenu" Opacity="1" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="150" Margin="0,0,0,0">
-                    <SplitView.Pane>
-                        <StackPanel>
-
-                            <Button FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,100,0" VerticalAlignment="Top" Click="Button_Click" BorderThickness="0,0,0,0"></Button>
-
-                            <Button Background="Transparent" x:Name="Kort_Button" Click="Kort_Button_Click" BorderThickness="0,0,0,0" Width="150">
-                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-25.2,0,0,0" VerticalAlignment="Stretch" Width="105">
-                                    <TextBlock Margin="0,0,0,0" IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE909;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-                                    <TextBlock IsTextSelectionEnabled="False" Text="Kort" FontSize="16" HorizontalAlignment="Left"/>
-                                </StackPanel>
-                            </Button>
-
-                            <Button Background="Transparent" x:Name="Søg_Button" Click="Søg_Button_Click" BorderThickness="0,0,0,0" Width="150">
-                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-25.2,0,0,0" VerticalAlignment="Stretch" Width="105">
-                                    <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE721;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-                                    <TextBlock IsTextSelectionEnabled="False"  Text="Søg" FontSize="16" HorizontalAlignment="Left"/>
-                                </StackPanel>
-                            </Button>
-
-                            <Button Background="Gray"  x:Name="Rundvisnings_Button" Click="Rundvisnings_Button_OnClick" BorderThickness="0,0,0,0" Width="150">
-                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-5.2,0,0,0" VerticalAlignment="Stretch" Width="125">
-                                    <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE8A;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-                                    <TextBlock IsTextSelectionEnabled="False" Text="Rundvisning" FontSize="16" HorizontalAlignment="Left"></TextBlock>
-                                </StackPanel>
-                            </Button>
-
-                            <Button Background="Transparent"  x:Name="Udstilling_Button" Click="Udstilling_Button_Click" BorderThickness="0,0,0,0" Width="150">
-                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-5.2,0,0,0" VerticalAlignment="Stretch" Width="125">
-                                    <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="50" Width="50" FontSize="25" Text="&#xE8A2;" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-                                    <TextBlock IsTextSelectionEnabled="False" Text="Udstilling" FontSize="16" HorizontalAlignment="Left"></TextBlock>
-                                </StackPanel>
-                            </Button>
-
-                        </StackPanel>
-                    </SplitView.Pane>
-                </SplitView>
                 <StackPanel Opacity="0.45" Background="Black" Grid.Column="1">
-                    <TextBlock Text="{Binding Name, Mode=OneWay}" TextAlignment="Center" FontWeight="Bold" FontSize="30" Foreground="White"></TextBlock>
+                    <TextBlock Text="{Binding Name, Mode=OneWay}" TextAlignment="Center" FontWeight="Bold" FontSize="35" Foreground="White"/>
                 </StackPanel>
 
 
                 <StackPanel Grid.Column="1">
-                    <TextBlock Width="600" Height="80" Text="Rundvisnings-Side" FontFamily="Helvetica" Foreground="White" FontSize="70" TextAlignment="Center"></TextBlock>
-                    <TextBlock Width="600" Height="auto" TextAlignment="Left" VerticalAlignment="Center" Margin="0,70,0,0" HorizontalAlignment="Center" FontSize="24" TextWrapping="WrapWholeWords" Foreground="BlanchedAlmond" FontFamily="Matura MT Script Capitals">Tag med på en medrivende rejse gennem musikkens og ungdomskulturens historie og udvikling fra 1950´erne og frem – en rejse der både engagerer, aktiverer og giver dig sved på panden.
-                        <LineBreak></LineBreak>
-                        <LineBreak></LineBreak>RAGNAROCKs 1200 kvadratmeter store hovedudstilling består af 11 temaer, der præsentere dig for en fortællingen om, hvordan musikken og ungdommen gennem tiden har flyttet grænser og påvirket samfundet
-                        <LineBreak></LineBreak>
-                        <LineBreak></LineBreak>Eksempler på disse temaer er; Når musikken så lyset! – om lyset indvirken på musikken, Fanboys og Fangirls! – fortællingen om den sociale indflydelse Beatles og andre kunstnere har haft på unge fans og ”Kan musik ændre verden?” – et kig på musikken og kunstnernes sociopolitiske påvirkning.
-                        <LineBreak></LineBreak>
-                        <LineBreak></LineBreak>Ud over disse kommer du også tæt på Dans! Musikalske Strømme! Den røde tråd! Elektrisk intimitet! Jagten på den gode lyd!, Demoteket! og Verdens største kor!</TextBlock>
-                    <ListView  Background="AntiqueWhite" x:Name="ListView_RundvisningsSide" Height="1080" Margin="0,25,0,0" SelectionMode="Single" FontSize="12" FontFamily="Arial" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <TextBlock Height="106" Text="Rundvisnings-Side" FontWeight="Bold" Foreground="White" FontSize="70" TextAlignment="Center" Margin="86,0,61.2,0"/>
+                    <TextBlock Width="600" Height="auto" TextAlignment="Left" VerticalAlignment="Center" Margin="0,70,0,0" HorizontalAlignment="Center" FontSize="24" TextWrapping="WrapWholeWords" Foreground="BlanchedAlmond" FontFamily="Helvetica"><Run Text="Tag med på en medrivende rejse gennem musikkens og ungdomskulturens historie og udvikling fra 1950'erne og frem – en rejse der både engagerer, aktiverer og giver dig sved på panden. "/><LineBreak/><Run Text=" "/><LineBreak/><Run Text="RAGNAROCKs 1200 kvadratmeter store hovedudstilling består af 11 temaer, der præsentere dig for en fortællingen om, hvordan musikken og ungdommen gennem tiden har flyttet grænser og påvirket samfundet "/><LineBreak/><Run Text=" "/><LineBreak/><Run Text="Eksempler på disse temaer er; Når musikken så lyset! – om lyset indvirken på musikken, Fanboys og Fangirls! – fortællingen om den sociale indflydelse Beatles og andre kunstnere har haft på unge fans og ''Kan musik ændre verden?'' – et kig på musikken og kunstnernes sociopolitiske påvirkning. "/><LineBreak/><Run Text=" "/><LineBreak/><Run Text="Ud over disse kommer du også tæt på Dans! Musikalske Strømme! Den røde tråd! Elektrisk intimitet! Jagten på den gode lyd!, Demoteket! og Verdens største kor!"/></TextBlock>
+                    <ListView  Background="AntiqueWhite" x:Name="ListView_RundvisningsSide" Height="697" Margin="0,70,0.2,0" SelectionMode="Single" FontSize="20" FontFamily="Arial">
                         <ListView.ItemTemplate>
                             <DataTemplate>
-                                <TextBlock></TextBlock>
+                                <TextBlock/>
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
                 </StackPanel>
+                <Button FontFamily="Segoe MDL2 Assets" Height="150" Width="150" FontSize="55" Foreground="White" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Click="Button_Click" BorderThickness="0,0,0,0"/>
+                <SplitView  x:Name="SplitviewMenu" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="350" Margin="0,143,525.6,1420" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <SplitView.Pane>
+                        <StackPanel Margin="0,0,0.4,3.8" Background="White">
+
+                            <!--<Button FontFamily="Segoe MDL2 Assets" Height="150" Width="150" FontSize="55" Content="&#xE700;" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" Click="Button_Click" BorderThickness="0,0,0,0"/>-->
+
+                            <Button Background="Transparent"  x:Name="Kort_Button" Click="Kort_Button_Click" BorderThickness="0,0,0,0" Width="350" Height="120">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="350">
+                                    <TextBlock Margin="0,0,0,0" IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="106" Width="124" FontSize="55" Text="&#xE909;" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                                    <TextBlock IsTextSelectionEnabled="False" Text="Kort" FontSize="35" HorizontalAlignment="Left" Margin="-0.4,0,0,0" Width="185" VerticalAlignment="Stretch"/>
+                                </StackPanel>
+                            </Button>
+
+                            <Button Background="Transparent" x:Name="Søg_Button" Click="Søg_Button_Click" BorderThickness="0,0,0,0" Width="350" Height="120">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,0" Width="342">
+                                    <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="106" Width="124" FontSize="55" Text="&#xE721;" TextAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0"/>
+                                    <TextBlock IsTextSelectionEnabled="False"  Text="Søg" FontSize="35" HorizontalAlignment="Left" Margin="-0.4,0,0,0" Width="187"/>
+                                </StackPanel>
+                            </Button>
+
+                            <Button Background="Khaki"  x:Name="Rundvisnings_Button" Click="Rundvisnings_Button_OnClick" BorderThickness="0,0,0,0" Width="350" Height="120">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-5.2,0,0,0" VerticalAlignment="Stretch" Width="350">
+                                    <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="106" Width="123" FontSize="55" TextAlignment="Center" Text="ຊ" HorizontalAlignment="Center" Margin="0,0,0,0"/>
+                                    <TextBlock IsTextSelectionEnabled="False" Text="Rundvisning" FontSize="35" HorizontalAlignment="Left" Margin="-0.4,0,0,0" VerticalAlignment="Stretch" Width="197"/>
+                                </StackPanel>
+                            </Button>
+
+                            <!--<Button Background="Transparent"  x:Name="Udstilling_Button" Click="Udstilling_Button_Click" BorderThickness="0,0,0,0" Width="350" Height="120">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="-5.2,0,0,0" VerticalAlignment="Stretch" Width="350">
+                                    <TextBlock IsTextSelectionEnabled="False" FontFamily="Segoe MDL2 Assets" Height="106" Width="117" FontSize="55" Text="&#xE8A2;" TextAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+                                    <TextBlock IsTextSelectionEnabled="False" Text="Udstilling" FontSize="35" HorizontalAlignment="Center" Margin="0,0,0,0" Width="191" VerticalAlignment="Stretch"/>
+                                </StackPanel>
+                            </Button>-->
+
+                        </StackPanel>
+                    </SplitView.Pane>
+                </SplitView>
             </Grid>
         </Viewbox>
     </Grid>
