@@ -45,7 +45,7 @@ namespace Ragna_Rundt.Viewmodel
            get { return StaticKey; }
            set
            {
-               StaticKey = value;
+               Key = StaticKey;
                OnPropertyChanged();
                OnPropertyChanged(nameof(Name));
                OnPropertyChanged(nameof(VideoLink));

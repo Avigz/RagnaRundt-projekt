@@ -56,19 +56,19 @@
                             <ImageBrush ImageSource="../Assets/Sal 3.jpg"></ImageBrush>
                         </Canvas.Background>
 
-                        <Button Name="Blikfang" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="348" Margin="0,0,0,0" VerticalAlignment="Center" Canvas.Top="37" Height="138" Width="150">
+                        <Button Name="Blikfang" Click="Blikfang_Click" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="348" Margin="0,0,0,0" VerticalAlignment="Center" Canvas.Top="37" Height="138" Width="150">
                             <Image Source="../Assets/KnapBlikfanggul.png" HorizontalAlignment="Stretch" Margin="-0.4,0.2,3,15.8" VerticalAlignment="Stretch"></Image>
                         </Button>
-                        <Button Name="Cirkler" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="285" Canvas.Top="175" VerticalAlignment="Top" Height="113" Width="125">
+                        <Button Name="Cirkler" Click="Cirkler_Click" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="285" Canvas.Top="175" VerticalAlignment="Top" Height="113" Width="125">
                             <Image Source="../Assets/KnapSkaelvgul.png"></Image>
                         </Button>
-                        <Button Name="Lysshow" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="247" Canvas.Top="288" VerticalAlignment="Center" Height="149" Width="137" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                        <Button Name="Lysshow" Click="Lysshow_Click" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="247" Canvas.Top="288" VerticalAlignment="Center" Height="149" Width="137" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
                             <Button.RenderTransform>
                                 <CompositeTransform Rotation="0"/>
                             </Button.RenderTransform>
                             <Image Source="../Assets/Knaplysshowgul.png"></Image>
                         </Button>
-                        <Button Name="Verden" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="23" Canvas.Top="263" VerticalAlignment="Top" Height="129" Width="137">
+                        <Button Name="Verden"  Background="Transparent" HorizontalAlignment="Left" Canvas.Left="23" Canvas.Top="263" VerticalAlignment="Top" Height="129" Width="137">
                             <Image Source="../Assets/KnapVerdengul.png"></Image>
                         </Button>
                         <Button x:Name="Hjerte2" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="798" Canvas.Top="226" VerticalAlignment="Top" Height="150" Width="106">
