@@ -64,10 +64,10 @@ namespace UnitTestProject1
             //Arrange
 
             Element TestElement = ElementCatalog.Instance.Elements[1];
+
             //Act
             string ExpectedName = TestElement.Name;
-    
-
+   
             string ActualName = ElementCatalog.Instance.Elements[1].Name;
 
 
@@ -213,15 +213,32 @@ namespace UnitTestProject1
             //Dette goeres ved at teste om vu kan tilgaa de enkelte hardcodede tours igennem Dictionaryet.
 
             //Arrange
-            Tour testTour = TourCatalog.Instance.Tours[2];
+            Tour testTour = TourCatalog.Instance.Tours[1];
             //Act
-
-            int ExpectedCount = testTour.Elements.Count;
+       
+            
 
             //Assert
 
-            Assert.AreSame(TourCatalog.Instance.Tours[2], testTour);
-            Assert.AreEqual(ExpectedCount, TourCatalog.Instance.Tours[2].Elements.Count);
+            Assert.AreSame(TourCatalog.Instance.Tours[1], testTour);
+        
+        }
+
+        [TestMethod]
+        public void SearchlistTest()
+        {
+           
+
+            //Arrange
+           
+            //Act
+
+
+
+            //Assert
+
+          
+
         }
     }
 
