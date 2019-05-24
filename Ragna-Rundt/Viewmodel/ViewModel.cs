@@ -155,11 +155,13 @@ namespace Ragna_Rundt.Viewmodel
            OnPropertyChanged(nameof(CurrentList));
         }
 		
+
 	   //tour navigation på elementside
+
 	   private bool _tilbageIsVisible = true;
        private bool _næsteIsVisible = true;
        private bool _afslutTourIsVisible = true;
-
+       
        public bool TilbageIsVisible
        {
            get { return _tilbageIsVisible; }
