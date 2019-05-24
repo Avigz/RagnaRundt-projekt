@@ -112,7 +112,7 @@
                                         <ListView.ItemTemplate>
                                             <DataTemplate>
                                                 <StackPanel>
-                                                    <TextBlock Text="{Binding Name}" Tag="{Binding Id}" FontSize="30"></TextBlock>
+                                                    <TextBlock Foreground="White" Text="{Binding Name}" Tag="{Binding Id}" FontSize="30"></TextBlock>
                                                 </StackPanel>
                                             </DataTemplate>
                                         </ListView.ItemTemplate>
