@@ -68,7 +68,7 @@
                             </Border>
                         </StackPanel>
                     </FlipView>
-                    <Canvas x:Name="Ragnarock_2" RelativePanel.AlignBottomWithPanel="True" Width="1000" Height="Auto" MaxHeight="600" MaxWidth="1000" Margin="40,1123,0,43" RelativePanel.Below="SplitviewMenu" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Canvas x:Name="Ragnarock_2" RelativePanel.AlignBottomWithPanel="True" Width="1000" Height="580" MaxHeight="600" MaxWidth="1000" Margin="40,1123,0,43" RelativePanel.Below="SplitviewMenu" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                         <Canvas.Background>
                             <ImageBrush ImageSource="../Assets/Sal 2.jpg"/>
                         </Canvas.Background>
