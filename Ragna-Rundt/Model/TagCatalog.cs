@@ -17,9 +17,6 @@ namespace Ragna_Rundt.Model
             _tags.Add("Johnson", new Tag("Johnson"));
             _tags.Add("Doc", new Tag("Doc"));
             _tags.Add("Demoteket", new Tag("Demoteket"));
-            _tags.Add("Omegalul", new Tag("Metallica"));
-            _tags.Add("CD", new Tag("Rock"));
-            _tags.Add("COmegalulD", new Tag("Pop"));
             _tags.Add("Kassettebånd", new Tag("Kassettebånd"));
             _tags.Add("Medier", new Tag("Medier"));
             _tags.Add("Mediernes indflydelse", new Tag("Mediernes indflydelse"));

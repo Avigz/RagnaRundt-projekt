@@ -78,16 +78,17 @@ namespace Ragna_Rundt.Model
         {
             Dictionary<int,Element> filterList = new Dictionary<int, Element>();
             foreach(var element in _currentList)
-            {
-                bool exists = false;
-                foreach(Tag tag in element.Value.Tags)
+            {   
+                if (filters.Count > 0)
                 {
-                    if (filters.Count > 0)
+                    bool notExists = false;
+                    foreach (Tag tag in filters)
                     {
-                        if (filters.Exists(x => x.Id == tag.Id)) exists = true;
+                        //only adds if matches all tags in filters
+                        if (!element.Value.Tags.Exists(x => x.Id == tag.Id)) notExists = true;
                     }
+                    if (!notExists) filterList.Add(element.Key, element.Value);
                 }
-                if (exists) filterList.Add(element.Key,element.Value);
             }
             _currentList = filterList;
         }
@@ -105,8 +106,8 @@ namespace Ragna_Rundt.Model
         {
             if (!_allFilters.Exists(x => x.Id == key))
             {
-                _filters.Remove(_filters.Find(x => x.Id == key));
                 _allFilters.Add(_filters.Find(x => x.Id == key));
+                _filters.Remove(_filters.Find(x => x.Id == key));
                 Update();
             }
         }
@@ -132,8 +133,7 @@ namespace Ragna_Rundt.Model
         //search
         public void Search()
         {
-            string word = _searchWord.Replace(" ", ".*");
-            word = ".*" + word + ".*";
+            Array words = Regex.Split(_searchWord, @"\s+");
             Dictionary<int,Element> returnList = new Dictionary<int, Element>();
 
             List<Tag> tagMatches = new List<Tag>();
@@ -143,20 +143,35 @@ namespace Ragna_Rundt.Model
             {
                 foreach (Tag tag in _allTags.Tags.Values)
                 {
-                    if (Regex.Match(tag.Name, word).Success) tagMatches.Add(tag);
+                    bool allMatch = true;
+                    foreach (string word in words)
+                    {
+                        if (!Regex.Match(tag.Name, word, RegexOptions.IgnoreCase).Success) allMatch = false;
+                    }
+                    if(allMatch)tagMatches.Add(tag);
                 }
             }
             if (_area == null)
             {
                 foreach (Area area in _allAreas.Areas.Values)
                 {
-                    if (Regex.Match(area.Name, word).Success) areas.Add(area);
+                    bool allMatch = true;
+                    foreach (string word in words)
+                    {
+                        if (!Regex.Match(area.Name, word, RegexOptions.IgnoreCase).Success) allMatch = false;
+                    }
+                    if(allMatch)areas.Add(area);
                 }
             }
 
             foreach (var element in _currentList)
             {
-                if (Regex.Match(element.Value.Name, word).Success||(areas.Count>0&&areas.Exists(x=>x.Id==element.Value.Area.Id))) returnList.Add(element.Key,element.Value);
+                bool allMatch = true;
+                foreach(string word in words)
+                {
+                    if(!Regex.Match(element.Value.Name, word, RegexOptions.IgnoreCase).Success)allMatch = false;
+                }
+                if (allMatch||(areas.Count>0&&areas.Exists(x=>x.Id==element.Value.Area.Id))) returnList.Add(element.Key,element.Value);
                 else if (tagMatches.Count > 0)
                 {
                     bool exists = false;

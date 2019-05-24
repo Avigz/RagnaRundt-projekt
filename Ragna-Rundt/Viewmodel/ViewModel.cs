@@ -21,21 +21,21 @@ namespace Ragna_Rundt.Viewmodel
 
 		public ElementCatalog Catalog = ElementCatalog.Instance;
         public SearchList searchList = SearchList.Instance;
+
         
 
         public static int StaticKey = 1;
         private static int _filterKey;
-        //private static int _allFilterKey;
 
         private ObservableCollection<Tag> _filters;
         private ObservableCollection<Tag> _allFilters;
-        private Tag _selectedTag;
 
         public ViewModel()
         {
             ClearFilterCommand = new RelayCommand(ClearFilter);
             RemoveFilterCommand = new RelayCommand(RemoveFilter);
             AddFilterCommand = new RelayCommand(AddFilter);
+            SearchUpdateCommand = new RelayCommand(SearchUpdate);
             _filters = new ObservableCollection<Tag>();
             _allFilters = new ObservableCollection<Tag>();
         }
@@ -52,11 +52,6 @@ namespace Ragna_Rundt.Viewmodel
                OnPropertyChanged(nameof(Description));
            }
        }
-       public Tag SelectedTag
-        {
-            get { return _selectedTag; }
-            set { _selectedTag = value; }
-        }
        public int FilterKey
        {
             get { return _filterKey; }
@@ -79,6 +74,11 @@ namespace Ragna_Rundt.Viewmodel
        {
            get { return Catalog.Elements[Key].description; }
        }
+       //Map
+       public Dictionary<string, Area> Areas
+        {
+            get { return AreaCatalog.Instance.Areas; }
+        }
 
        // searchlist
        public Dictionary<int, Element> CurrentList
@@ -114,7 +114,11 @@ namespace Ragna_Rundt.Viewmodel
        public ICommand SearchUpdateCommand { get; set; }
         public string SearchWord
        {
-           get { return SearchList.Instance.SearchWord; }
+           get { return searchList.SearchWord; }
+           set {
+                searchList.SearchWord = value;
+                OnPropertyChanged(nameof(SearchWord));
+            }
        }
        /*  Methods*/
        public void AddFilter()
@@ -143,14 +147,16 @@ namespace Ragna_Rundt.Viewmodel
 
        public void SearchUpdate()
        {
+           
+           OnPropertyChanged(nameof(SearchWord));
            searchList.Update();
            OnPropertyChanged(nameof(Filters));
            OnPropertyChanged(nameof(AllFilters));
            OnPropertyChanged(nameof(CurrentList));
         }
 		
-		
-		 private bool _tilbageIsVisible = true;
+	   //tour navigation på elementside
+	   private bool _tilbageIsVisible = true;
        private bool _næsteIsVisible = true;
        private bool _afslutTourIsVisible = true;
 

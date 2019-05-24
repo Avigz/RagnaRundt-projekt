@@ -13,7 +13,6 @@ namespace Ragna_Rundt.Model
     {
         private List<Element> _tempElements;
         private Dictionary<int, Element> _elements;
-        private TagCatalog lol;
         private static ElementCatalog _instance;
 
         private ElementCatalog()
@@ -224,10 +223,6 @@ namespace Ragna_Rundt.Model
             _tempElements[28].AddTag(TagCatalog.Instance.Tags["Udvikling"]);
             _tempElements[28].AddTag(TagCatalog.Instance.Tags["Forandring"]);
 
-            _tempElements.Add(new Element("Telefonens påvirkning", "PlaceHolder text", "https://www.youtube.com/embed/kz7JELU29wc", AreaCatalog.Instance.Areas["Elektrisk intimitet"]));
-            _tempElements[28].AddTag(TagCatalog.Instance.Tags["Elektrisk Intimitet"]);
-            _tempElements[28].AddTag(TagCatalog.Instance.Tags["Telefonens påvirkning"]);
-
             _tempElements.Add(new Element("Mediernes indflydelse", "PlaceHolder text", "https://www.youtube.com/embed/kz7JELU29wc", AreaCatalog.Instance.Areas["Elektrisk intimitet"]));
             _tempElements[29].AddTag(TagCatalog.Instance.Tags["Elektrisk Intimitet"]);
             _tempElements[29].AddTag(TagCatalog.Instance.Tags["Mediernes indflydelse"]);
@@ -293,8 +288,6 @@ namespace Ragna_Rundt.Model
 
             _tempElements.Add(new Element("COmegalulD", "PlaceHolder text", "https://www.youtube.com/embed/kz7JELU29wc", AreaCatalog.Instance.Areas["Demoteket"]));
             _tempElements[39].AddTag(TagCatalog.Instance.Tags["Demoteket"]);
-            _tempElements[39].AddTag(TagCatalog.Instance.Tags["CD"]);
-            _tempElements[39].AddTag(TagCatalog.Instance.Tags["Omegalul"]);
 
             _tempElements.Add(new Element("Doc Johnson", "PlaceHolder text", "https://www.youtube.com/embed/kz7JELU29wc", AreaCatalog.Instance.Areas["Demoteket"]));
             _tempElements[40].AddTag(TagCatalog.Instance.Tags["Demoteket"]);

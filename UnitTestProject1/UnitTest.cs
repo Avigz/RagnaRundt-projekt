@@ -15,11 +15,12 @@ namespace UnitTestProject1
         {
             //I denne test vil vi vurdere hvor vidt vores autoincrement funktion ved oprettelse af et Element objekt
             // fungerer optimalt.
+
             //Arrange
             Element TestElement = new Element("TestElementNavn", "TestDescription", "Http://google.dk",
-                new Area("TestNameArea", "TestDescriptionArea", 1, 2));
+                new Area("TestNameArea", "TestDescriptionArea", 1, 2, "path", 1));
             Element TestElement1 = new Element("TestElementNavn1", "TestDescription1", "Http://google.dk1",
-                new Area("TestNameArea1", "TestDescriptionArea1", 1, 2));
+                new Area("TestNameArea1", "TestDescriptionArea1", 1, 2, "Path", 1));
             //Act
             int ExpectedIncrement = 1;
             int ActualIncrement = TestElement1.Id - TestElement.Id;
@@ -34,7 +35,7 @@ namespace UnitTestProject1
             // I denne test undersoeger vi hvor vidt vi kan tilgaa properties paa vores Element objekt
             //Arrange
             Element UdstillingsElement = new Element("TestElementNavn", "TestDescription", "Http://google.dk",
-                new Area("TestNameArea", "TestDescriptionArea", 1, 2));
+            new Area("TestNameArea", "TestDescriptionArea", 1, 2, "path", 1));
 
             //Act
             string ExpectedName = "TestElementNavn";
@@ -61,24 +62,19 @@ namespace UnitTestProject1
         {
             // I denne test vurdere vi om vu korrekt kan ekstrahere oplysninger fra vores ElementCatalogSingleton
             //Arrange
-            ElementCatalog TestElementCatalog = ElementCatalog.Instance;
-            Element TestElement = TestElementCatalog.Elements[1];
+
+            Element TestElement = ElementCatalog.Instance.Elements[1];
             //Act
             string ExpectedName = TestElement.Name;
-            string ExpectedDesc = TestElement.description;
-            string ExpectedUrl = TestElement.videoURL;
+    
 
-            string ActualName = TestElementCatalog.Elements[1].Name;
-            string ActualDesc = TestElementCatalog.Elements[1].description;
-            string ActualUrl = TestElementCatalog.Elements[1].videoURL;
+            string ActualName = ElementCatalog.Instance.Elements[1].Name;
+
 
             //Assert
 
             Assert.AreEqual(ExpectedName, ActualName);
-            Assert.AreEqual(ExpectedDesc, ActualDesc);
-            Assert.AreEqual(ExpectedUrl, ExpectedUrl);
-
-            Assert.AreSame(TestElementCatalog.Elements[1], TestElement);
+            Assert.AreSame(ElementCatalog.Instance.Elements[1], TestElement);
         }
 
 
@@ -86,7 +82,7 @@ namespace UnitTestProject1
         public void AreaPropertyTest()
         {
             //Arrange
-            Area TestArea = new Area("TestName", "TestDescription", 1, 2);
+            Area TestArea = new Area("TestName", "TestDescription", 1, 2, "Path", 1);
 
             //Act
             string ExpectedName = "TestName";
@@ -96,8 +92,8 @@ namespace UnitTestProject1
 
             string ActualName = TestArea.Name;
             string ActualDesc = TestArea.Desciption;
-            int ActualMapX = TestArea.MapX;
-            int ActualMapY = TestArea.MapY;
+            int ActualMapX = TestArea.MapLeft;
+            int ActualMapY = TestArea.MapTop;
             //Assert
             Assert.AreEqual(ExpectedName, ActualName);
             Assert.AreEqual(ExpectedDesc, ActualDesc);
@@ -109,7 +105,7 @@ namespace UnitTestProject1
         public void AreaCatalogSingletonTest()
         {
             //Arrange
-            Area TestArea = new Area("TestName", "TestDescription", 1, 2);
+            Area TestArea = new Area("TestName", "TestDescription", 1, 2, "path", 1);
 
 
             //Act
@@ -169,7 +165,7 @@ namespace UnitTestProject1
 
             //Arrange
             Tour TourTestTour = new Tour("TheTestTour", "Den bedste tour");
-            Element Test = new Element("TestElementNavn", "TestDescription", "Http://google.dk", new Area("TestNameArea", "TestDescriptionArea", 1, 2));
+            Element Test = new Element("TestElementNavn", "TestDescription", "Http://google.dk", new Area("TestNameArea", "TestDescriptionArea", 1, 2, "Path", 1));
             
             //Act
             int CountPreAdd = TourTestTour.Elements.Count;
@@ -220,11 +216,12 @@ namespace UnitTestProject1
             Tour testTour = TourCatalog.Instance.Tours[2];
             //Act
 
-            string ExpectedName = testTour.Name;
+            int ExpectedCount = testTour.Elements.Count;
+
             //Assert
 
             Assert.AreSame(TourCatalog.Instance.Tours[2], testTour);
-            Assert.AreEqual(ExpectedName, TourCatalog.Instance.Tours[2].Name);
+            Assert.AreEqual(ExpectedCount, TourCatalog.Instance.Tours[2].Elements.Count);
         }
     }
 

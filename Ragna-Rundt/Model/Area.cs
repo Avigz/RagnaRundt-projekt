@@ -10,26 +10,38 @@ namespace Ragna_Rundt.Model
    public class Area:Tag
     {
         private string _description;
-        private int _mapX;
-        private int _mapY;
+        private int _mapLeft;
+        private int _mapTop;
+        private string _imgPath;
+        private int _floor;
 
-        public Area(string name, string description, int mapX, int mapY):base(name)
+        public Area(string name, string description, int mapLeft, int mapTop, string imgPath, int floor):base(name)
         {
             _description = description;
-            _mapX = mapX;
-            _mapY = mapY;
+            _mapLeft = mapLeft;
+            _mapTop = mapTop;
+            _imgPath = imgPath;
+            _floor = floor;
         }
         public string Desciption
         {
             get { return _description; }
         }
-        public int MapX
+        public int MapLeft
         {
-            get { return _mapX; }
+            get { return _mapLeft; }
         }
-        public int MapY
+        public int MapTop
         {
-            get { return _mapY; }
+            get { return _mapTop; }
+        }
+        public string ImgPath
+        {
+            get { return _imgPath; }
+        }
+        public int Floor
+        {
+            get { return _floor; }
         }
     }
 }
