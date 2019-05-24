@@ -124,6 +124,7 @@
     <Compile Include="Model\AreaCatalog.cs" />
     <Compile Include="Model\Element.cs" />
     <Compile Include="Model\ElementCatalog.cs" />
+    <Compile Include="Model\Map.cs" />
     <Compile Include="Model\SearchList.cs" />
     <Compile Include="Model\Tag.cs" />
     <Compile Include="Model\TagCatalog.cs" />

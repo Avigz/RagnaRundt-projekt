@@ -56,24 +56,8 @@
                                 <ImageBrush ImageSource="../Assets/Sal 2.jpg"/>
                             </Canvas.Background>
                             <Button x:Name="Hjerte1" Background="Transparent" HorizontalAlignment="Center" Canvas.Left="804" Canvas.Top="200" VerticalAlignment="Top" Height="150" Width="106" Margin="0,0,0,0">
-                                <Image Source="../Assets/KnapHjerteGrøn.png"/>
+                                <Image Source="{Binding }"/>
                             </Button>
-                            <Button x:Name="Telefon" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="509" Canvas.Top="62" VerticalAlignment="Top" Height="113" Width="164" Margin="0,0,0,0">
-                                <Image Source="../Assets/KnapTelefongul.png"/>
-                            </Button>
-                            <Button x:Name="Kassettebaand" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="210" Canvas.Top="29" VerticalAlignment="Top" Height="121" Width="125" Margin="0,0,0,0">
-                                <Image Source="../Assets/KnapKassetteBaandgul.png" RenderTransformOrigin="0.496,-7.316"/>
-                            </Button>
-                            <Button x:Name="Mikrofon" Background="Transparent" HorizontalAlignment="Center" Canvas.Left="85" Canvas.Top="202" VerticalAlignment="Top" Height="135" Width="88" Margin="0,0,0,0">
-                                <Image Source="../Assets/KnapTrommegul.png"/>
-                            </Button>
-                            <Button x:Name="Pladespiller" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="347" Canvas.Top="200" VerticalAlignment="Top" Height="149" Width="138" Margin="0,0,0,0">
-                                <Image Source="../Assets/KnapPladespillergul.png"/>
-                            </Button>
-                            <Button x:Name="RagnarockBygning" Background="Transparent" HorizontalAlignment="Left" Canvas.Left="510" Canvas.Top="422" VerticalAlignment="Top" Height="102" Width="168">
-                                <Image Source="../Assets/KnapRoedeTraadgul.png"/>
-                            </Button>
-
                         </Canvas>
 
 

@@ -27,7 +27,7 @@ namespace Ragna_Rundt.View
     {
      
         //public int ElementKey;
-        ViewModel viewModel = new ViewModel();
+        ViewModel viewModel1 = new ViewModel();
 
         public Søgeside()
         {

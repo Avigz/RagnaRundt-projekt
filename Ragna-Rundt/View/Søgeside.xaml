@@ -88,7 +88,7 @@
                                 <!-- allfilters-->
                                 <StackPanel Background="Black" Opacity="0.8" Margin="0,0,20.2,0" Height="574" VerticalAlignment="Stretch" >
 
-                                    <ListView x:Name="allfilters" ItemsSource="{Binding AllFilters}" SelectionMode="Single" SelectedValuePath="Id" SelectedValue="{Binding FilterKey, Mode=TwoWay}" Height="574" Margin="0,0,0.2,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                    <ListView x:Name="allfilters" ItemsSource="{Binding AllFilters}"  SelectionMode="Single" SelectedValuePath="Id" SelectedValue="{Binding FilterKey, Mode=TwoWay}" Height="574" Margin="0,0,0.2,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                                         <ListView.ItemTemplate>
                                             <DataTemplate>
                                                 <StackPanel>
