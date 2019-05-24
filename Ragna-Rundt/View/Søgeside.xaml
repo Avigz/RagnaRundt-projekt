@@ -33,8 +33,8 @@
                     <TextBlock Text="Ragna-Rundt" TextAlignment="Center" FontWeight="Bold" FontSize="70" Foreground="White"></TextBlock>
                     <StackPanel>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="0,20,0,20" VerticalAlignment="Stretch">
-                            <TextBox Margin="20,0,20,0" Text="{Binding SearchWord, Mode=TwoWay}" Height="65" Width="500" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                            <Button Content="Update" Foreground="White" Background="Black" Command="{Binding SearchUpdateCommand, Mode=TwoWay}" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" FontSize="30" Width="200" Height="60" BorderBrush="White"/>
+                            <TextBox Margin="20,0,20,0" Text="{Binding SearchWord, Mode=TwoWay}" Height="65" Width="500" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="30"/>
+                            <Button FontFamily="Segoe MDL2 Assets" Content="&#xE721;" Foreground="White" Background="Black" Command="{Binding SearchUpdateCommand}" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" FontSize="30" Width="200" Height="60" BorderBrush="White"/>
                         </StackPanel>
 
                         <!--Kode under til funktionaliteten for searchbar-->
@@ -59,32 +59,36 @@
                             </GridView>
                         </StackPanel>-->
                         <!-- filters -->
-                        <StackPanel Background="AntiqueWhite" BorderBrush="Black" BorderThickness="5" Opacity="0.9" Margin="0,0,0.2,0" Height="382" HorizontalAlignment="Stretch">
+                        <StackPanel Background="AntiqueWhite" BorderBrush="Black" BorderThickness="5" Opacity="0.9" Margin="0,0,0.2,0" Height="827" HorizontalAlignment="Stretch">
 
-
-
-                            <ListView x:Name="filters" ItemsSource="{Binding Filters}" SelectionMode="Single" SelectedValuePath="Id" SelectedValue="{Binding FilterKey, Mode=TwoWay}">
+                            <ListView x:Name="UdstillingsElementerList" ItemsSource="{Binding CurrentList}" SelectionMode="Single" Height="809" Margin="0.2,0,0.4,0">
                                 <ListView.ItemTemplate>
                                     <DataTemplate>
                                         <StackPanel>
-                                            <TextBlock Text="{Binding Name}" Tag="{Binding Id}" FontSize="30"></TextBlock>
+                                            <Button  Margin="5,5,5,5" FontSize="30" Background="Black" Foreground="White" Content="{Binding Value.Name }" Tag="{Binding Value.Id}" Click="ListButton_OnClick" ></Button>
+
                                         </StackPanel>
                                     </DataTemplate>
                                 </ListView.ItemTemplate>
                             </ListView>
-                        </StackPanel>
 
+
+
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Width="250" Height="60" Content="Add Filter" Margin="0,20,10,50" BorderBrush="White" Background="Black" Foreground="White" FontSize="35" Command="{Binding AddFilterCommand}" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                            <Button Width="250" Height="60" Content="Remove Filter" BorderBrush="White" Background="Black" Foreground="White" FontSize="35" Margin="0,20,10,50" Command="{Binding RemoveFilterCommand}" HorizontalAlignment="Left" VerticalAlignment="Top"></Button>
+                            <Button Width="250" Height="60" Content="Clear Filter" BorderBrush="White" Background="Black" Foreground="White" FontSize="35" Margin="0,20,15,50" Command="{Binding ClearFilterCommand}"></Button>
+                        </StackPanel>
                         <StackPanel Orientation="Horizontal">
 
                             <StackPanel>
                                 <StackPanel>
-                                    <Button Width="250" Height="60" Content="Remove Filter" BorderBrush="White" Background="Black" Foreground="White" FontSize="35" Margin="0,20,0,0" Command="{Binding RemoveFilterCommand}" HorizontalAlignment="Left" VerticalAlignment="Top"></Button>
-                                    <Button Width="250" Height="60" Content="Clear Filter" BorderBrush="White" Background="Black" Foreground="White" FontSize="35" Margin="0,20,20,20" Command="{Binding ClearFilterCommand}"></Button>
                                 </StackPanel>
                                 <!-- allfilters-->
-                                <StackPanel Background="Black" Opacity="0.8" Margin="0,0,20.2,0" Height="926" HorizontalAlignment="Stretch" >
+                                <StackPanel Background="Black" Opacity="0.8" Margin="0,0,20.2,0" Height="574" VerticalAlignment="Stretch" >
 
-                                    <ListView x:Name="allfilters" ItemsSource="{Binding AllFilters}" SelectionMode="Single" SelectedValuePath="Id" SelectedValue="{Binding FilterKey, Mode=TwoWay}" Height="952" Margin="0,0,0.2,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                    <ListView x:Name="allfilters" ItemsSource="{Binding AllFilters}" SelectionMode="Single" SelectedValuePath="Id" SelectedValue="{Binding FilterKey, Mode=TwoWay}" Height="574" Margin="0,0,0.2,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                                         <ListView.ItemTemplate>
                                             <DataTemplate>
                                                 <StackPanel>
@@ -98,29 +102,32 @@
                             </StackPanel>
                             <StackPanel>
                                 <StackPanel>
-                                    <Button Width="250" Height="60" Content="Add Filter" Margin="0,100,0,20" BorderBrush="White" Background="Black" Foreground="White" FontSize="35" Command="{Binding AddFilterCommand}" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                                 </StackPanel>
 
                                 <!-- Elementer-->
-                                <StackPanel Background="Black" Opacity="0.8" Margin="0,0,-93.2,0" Height="927" HorizontalAlignment="Stretch">
+                                <StackPanel Background="Black" Opacity="0.8" Margin="0,0,-363,0" Height="574" VerticalAlignment="Stretch">
 
-                                    <ListView x:Name="UdstillingsElementerList" ItemsSource="{Binding CurrentList}" SelectionMode="Single" Height="952" Margin="0,0,0.4,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
+                                    <ListView x:Name="filters" ItemsSource="{Binding Filters}" SelectionMode="Single" SelectedValuePath="Id" SelectedValue="{Binding FilterKey, Mode=TwoWay}" Height="574" Margin="0,0,0.2,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                                         <ListView.ItemTemplate>
                                             <DataTemplate>
                                                 <StackPanel>
-                                                    <Button FontSize="30" Background="Black" Foreground="White" Content="{Binding Value.Name }" Tag="{Binding Value.Id}" Click="ListButton_OnClick" ></Button>
-
+                                                    <TextBlock Text="{Binding Name}" Tag="{Binding Id}" FontSize="30"></TextBlock>
                                                 </StackPanel>
                                             </DataTemplate>
                                         </ListView.ItemTemplate>
                                     </ListView>
+
+
+
+
+
                                 </StackPanel>
 
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
 
-                    <TextBlock IsTextSelectionEnabled="False" FontSize="40" TextAlignment="Center" Height="120" Foreground="Black" Text="Scroll i listerne for flere tags!" HorizontalAlignment="Stretch" Margin="0,0,0.2,0" VerticalAlignment="Stretch"></TextBlock>
 
                 </StackPanel>
                 <SplitView  x:Name="SplitviewMenu" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="350" Margin="0,143,563.6,1420" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">

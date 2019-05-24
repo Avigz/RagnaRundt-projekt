@@ -33,38 +33,38 @@
 
                         <StackPanel Name="StackPanelFlipView" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="590" MaxHeight="550" Width="auto" Height="750">
                             <Image RelativePanel.AlignBottomWith="BorderInfoBox" Height="auto" Width="auto" Stretch="UniformToFill" Source="../Assets/Tour1.jpg" VerticalAlignment="Center" Margin="0,0,0,0"/>
-                            <Border Name="BorderInfoBox" Background="Black" Height="auto" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Bottom">
-                                <TextBlock Foreground="White" Text="Tour 1" TextAlignment="Center" FontSize="35" Margin="0,0,0,0" Height="60" Width="484"/>
+                            <Border Name="BorderInfoBox" Background="Black" Height="auto" Width="590" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                                <TextBlock Foreground="White" Text="Tour 1" TextAlignment="Center" FontSize="35" Margin="0,0,0,0" Height="60" Width="300"/>
                             </Border>
                         </StackPanel>
                         <StackPanel Name="StackPanelFlipView2" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="1080" MaxHeight="550" Width="auto" Height="750">
                             <Image RelativePanel.AlignBottomWith="BorderInfoBox2" Height="auto" Width="auto" Stretch="UniformToFill" Source="../Assets/Tour2.jpg" VerticalAlignment="Center" Margin="0,0,0,0"/>
-                            <Border Name="BorderInfoBox2" Background="Red" Height="auto" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Bottom">
-                                <TextBlock Text="Tour 2" TextAlignment="Center" FontSize="35" Margin="0,0,0,0" Height="60" Width="300"/>
+                            <Border Name="BorderInfoBox2" Background="Red" Height="auto" Width="590" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                                <TextBlock Foreground="White" Text="Tour 2" TextAlignment="Center" FontSize="35" Margin="0,0,0,0" Height="60" Width="300"/>
                             </Border>
                         </StackPanel>
                         <StackPanel Name="StackPanelFlipView3" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="1080" MaxHeight="550" Width="auto" Height="750">
                             <Image RelativePanel.AlignBottomWith="BorderInfoBox2" Height="auto" Width="auto" Stretch="UniformToFill" Source="../Assets/Tour3.jpg" VerticalAlignment="Center" Margin="0,0,0,0"/>
-                            <Border Name="BorderInfoBox3" Background="White" Height="auto" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                            <Border Name="BorderInfoBox3" Background="White" Height="auto" Width="590" HorizontalAlignment="Center" VerticalAlignment="Bottom">
                                 <TextBlock Text="Tour 3" TextAlignment="Center" FontSize="35" Margin="0,0,0,0" Height="60" Width="300"/>
                             </Border>
                         </StackPanel>
                         <StackPanel Name="StackPanelFlipView4" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="1080" MaxHeight="550" Width="auto" Height="750">
-                            <Image RelativePanel.AlignBottomWith="BorderInfoBox2" Height="auto" Width="auto" Stretch="UniformToFill" Source="../Assets/Tour4.jpg.jpg" VerticalAlignment="Center" Margin="0,0,0,0"/>
-                            <Border Name="BorderInfoBox4" Background="White" Height="auto" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Bottom">
-                                <TextBlock Text="Tour 4" TextAlignment="Center" FontSize="35" Margin="0,0,0,0" Height="60" Width="300"/>
+                            <Image RelativePanel.AlignBottomWith="BorderInfoBox2" Height="auto" Width="auto" Stretch="UniformToFill" Source="../Assets/Tour4.jpg" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                            <Border Name="BorderInfoBox4" Background="BlueViolet"  Height="auto" Width="590" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                                <TextBlock Foreground="White" Text="Tour 4" TextAlignment="Center" FontSize="35" Margin="0,0,0,0" Height="60" Width="300"/>
                             </Border>
                         </StackPanel>
                         <StackPanel Name="StackPanelFlipView5" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="1080" MaxHeight="550" Width="auto" Height="750">
-                            <Image RelativePanel.AlignBottomWith="BorderInfoBox2" Height="auto" Width="auto" Stretch="UniformToFill" Source="../Assets/Tour5.jpg" VerticalAlignment="Center" Margin="0,0,0,0"/>
-                            <Border Name="BorderInfoBox5" Background="White" Height="auto" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                            <Image RelativePanel.AlignBottomWith="BorderInfoBox2" Height="auto" Width="590" Stretch="UniformToFill" Source="../Assets/Tour5.jpg" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                            <Border Name="BorderInfoBox5" Background="Goldenrod"  Height="auto" Width="590" HorizontalAlignment="Center" VerticalAlignment="Bottom">
                                 <TextBlock Text="Tour 5" TextAlignment="Center" FontSize="35" Margin="0,0,0,0" Height="60" Width="300"/>
                             </Border>
                         </StackPanel>
                         <StackPanel Name="StackPanelFlipView6" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="1080" MaxHeight="550" Width="auto" Height="750">
                             <Image RelativePanel.AlignBottomWith="BorderInfoBox2" Height="auto" Width="auto" Stretch="UniformToFill" Source="../Assets/Tour6.jpg" VerticalAlignment="Center" Margin="0,0,0,0"/>
-                            <Border Name="BorderInfoBox6" Background="White" Height="auto" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Bottom">
-                                <TextBlock Text="Tour 6" TextAlignment="Center" FontSize="35" Margin="0,0,0,0" Height="60" Width="300"/>
+                            <Border Name="BorderInfoBox6" Background="ForestGreen"  Height="auto" Width="590" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                                <TextBlock Foreground="White" Text="Tour 6" TextAlignment="Center" FontSize="35" Margin="0,0,0,0" Height="60" Width="300"/>
                             </Border>
                         </StackPanel>
                     </FlipView>
